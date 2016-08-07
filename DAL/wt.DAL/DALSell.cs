@@ -37,6 +37,26 @@ namespace wt.DAL
 				text += ",CustomerID";
 				text2 = text2 + "," + model.CustomerID.ToString();
 			}
+            if (model.CustomerID2 > 0)
+            {
+                text += ",CustomerID2";
+                text2 = text2 + "," + model.CustomerID2.ToString();
+            }      
+                text += ",isDai";
+                text2 = text2 + "," + model.isDai;
+                if (model.LinkMan2 != string.Empty)
+                {
+                    text += ",LinkMan2";
+                    text2 = text2 + ",'" + model.LinkMan2 + "'";
+                } if (model.Tel2 != string.Empty)
+                {
+                    text += ",Tel2";
+                    text2 = text2 + ",'" + model.Tel2 + "'";
+                } if (model.Adr2 != string.Empty)
+                {
+                    text += ",Adr2";
+                    text2 = text2 + ",'" + model.Adr2 + "'";
+                }
 			if (model.DeptID > 0)
 			{
 				text += ",DeptID";
@@ -52,6 +72,7 @@ namespace wt.DAL
 				text += ",OperationID";
 				text2 = text2 + ",'" + model.OperationID + "'";
 			}
+
 			if (model.AutoNO != string.Empty)
 			{
 				text += ",AutoNO";
@@ -72,16 +93,19 @@ namespace wt.DAL
 				text += ",LinkMan";
 				text2 = text2 + ",'" + model.LinkMan + "'";
 			}
+          
 			if (model.Tel != string.Empty)
 			{
 				text += ",Tel";
 				text2 = text2 + ",'" + model.Tel + "'";
 			}
+         
 			if (model.Adr != string.Empty)
 			{
 				text += ",Adr";
 				text2 = text2 + ",'" + model.Adr + "'";
 			}
+           
 			if (model.AccountID > 0)
 			{
 				text += ",AccountID";
@@ -239,14 +263,19 @@ namespace wt.DAL
 			string text2 = string.Empty;
 			text = text + "OperatorID=" + model.OperatorID.ToString();
 			text = text + ",_Date='" + model._Date + "'";
+            text = text + ",isDai=" + model.isDai.ToString();
 			text = text + ",CustomerID=" + model.CustomerID.ToString();
+            text = text + ",CustomerID2=" + model.CustomerID2.ToString();
 			text = text + ",InCash=" + model.InCash.ToString();
 			text = text + ",Remark='" + model.Remark + "'";
 			text = text + ",OperationID='" + model.OperationID + "'";
 			text = text + ",AutoNO='" + model.AutoNO + "'";
 			text = text + ",LinkMan='" + model.LinkMan + "'";
+            text = text + ",LinkMan2='" + model.LinkMan2 + "'";
 			text = text + ",Tel='" + model.Tel + "'";
+            text = text + ",Tel2='" + model.Tel2 + "'";
 			text = text + ",Adr='" + model.Adr + "'";
+            text = text + ",Adr2='" + model.Adr2+ "'";
             text = text + ",BrandName='" + model.BrandName + "'";
             text = text + ",BrandTaxRate=" + model.BrandTaxRate;
             text = text + ",BrandTaxRateType='" + model.BrandTaxRateType + "'";
@@ -479,7 +508,7 @@ namespace wt.DAL
 		public SellInfo GetModel(int ID)
 		{
 			StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append("select a.[ID],a.ChkDate,a.ChkOperatorID,a.Status,a.OperationID,a.Remark,a.DeptID,a.BillID,a.Type,_Date=convert(char(20), a._Date,120),a.OperatorID,a.PersonID,a.CustomerID,a.InCash,b._Name as CusName,a.AutoNO,a.[LinkMan],a.[Tel],a.[Adr],a.SndOperatorID,a.InvoiceDate,a.AccountID,a.InvoiceMoney,a.InvoiceNO,a.ChargeModeID,a.InvoiceClassID,a.BrandTaxRate,a.BrandTaxRateType,a.BrandName from Sell a left join CustomerList b on a.CustomerID=b.[ID] ");
+            stringBuilder.Append("select a.[ID],a.ChkDate,a.ChkOperatorID,a.Status,a.OperationID,a.Remark,a.DeptID,a.BillID,a.Type,_Date=convert(char(20), a._Date,120),a.OperatorID,a.isDai,a.PersonID,a.CustomerID,a.CustomerID2,a.InCash,b._Name as CusName,a.AutoNO,a.[LinkMan],a.[Tel],a.[Adr],a.[LinkMan2],a.[Tel2],a.[Adr2],a.SndOperatorID,a.InvoiceDate,a.AccountID,a.InvoiceMoney,a.InvoiceNO,a.ChargeModeID,a.InvoiceClassID,a.BrandTaxRate,a.BrandTaxRateType,a.BrandName,c._Name as CusName2 from Sell a left join CustomerList b on a.CustomerID=b.[ID] left join CustomerList c on a.CustomerID2=c.[ID]");
 			stringBuilder.Append(" where a.[ID]=@ID ");
 			SqlParameter[] array = new SqlParameter[]
 			{
@@ -531,19 +560,31 @@ namespace wt.DAL
 				{
 					sellInfo.CustomerID = int.Parse(dataSet.Tables[0].Rows[0]["CustomerID"].ToString());
 				}
+                if (dataSet.Tables[0].Rows[0]["CustomerID2"].ToString() != "")
+                {
+                    sellInfo.CustomerID2 = int.Parse(dataSet.Tables[0].Rows[0]["CustomerID2"].ToString());
+                }
 				if (dataSet.Tables[0].Rows[0]["InCash"].ToString() != "")
 				{
 					sellInfo.InCash = decimal.Parse(dataSet.Tables[0].Rows[0]["InCash"].ToString());
 				}
 				sellInfo.CusName = dataSet.Tables[0].Rows[0]["CusName"].ToString();
+                sellInfo.CusName2 = dataSet.Tables[0].Rows[0]["CusName2"].ToString();
 				sellInfo.AutoNO = dataSet.Tables[0].Rows[0]["AutoNO"].ToString();
 				if (dataSet.Tables[0].Rows[0]["SndOperatorID"].ToString() != "")
 				{
 					sellInfo.SndOperatorID = int.Parse(dataSet.Tables[0].Rows[0]["SndOperatorID"].ToString());
 				}
+                if (dataSet.Tables[0].Rows[0]["isDai"].ToString() != "")
+                {
+                    sellInfo.isDai = int.Parse(dataSet.Tables[0].Rows[0]["isDai"].ToString());
+                }
 				sellInfo.LinkMan = dataSet.Tables[0].Rows[0]["LinkMan"].ToString();
 				sellInfo.Tel = dataSet.Tables[0].Rows[0]["Tel"].ToString();
 				sellInfo.Adr = dataSet.Tables[0].Rows[0]["Adr"].ToString();
+                sellInfo.LinkMan2 = dataSet.Tables[0].Rows[0]["LinkMan2"].ToString();
+                sellInfo.Tel2 = dataSet.Tables[0].Rows[0]["Tel2"].ToString();
+                sellInfo.Adr2 = dataSet.Tables[0].Rows[0]["Adr2"].ToString();
 				sellInfo.InvoiceNO = dataSet.Tables[0].Rows[0]["InvoiceNO"].ToString();
 				if (dataSet.Tables[0].Rows[0]["InvoiceMoney"].ToString() != "")
 				{

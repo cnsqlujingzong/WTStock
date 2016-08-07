@@ -25,3 +25,14 @@ F:\WTStock\DAL\bin\Debug\Library.pdb
 F:\WTStock\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 F:\WTStock\DAL\obj\Debug\DAL.dll
 F:\WTStock\DAL\obj\Debug\DAL.pdb
+F:\workspace\WTStock\DAL\bin\Debug\DAL.dll
+F:\workspace\WTStock\DAL\bin\Debug\DAL.pdb
+F:\workspace\WTStock\DAL\bin\Debug\DB.dll
+F:\workspace\WTStock\DAL\bin\Debug\Model.dll
+F:\workspace\WTStock\DAL\bin\Debug\Library.dll
+F:\workspace\WTStock\DAL\bin\Debug\DB.pdb
+F:\workspace\WTStock\DAL\bin\Debug\Model.pdb
+F:\workspace\WTStock\DAL\bin\Debug\Library.pdb
+F:\workspace\WTStock\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\workspace\WTStock\DAL\obj\Debug\DAL.dll
+F:\workspace\WTStock\DAL\obj\Debug\DAL.pdb

@@ -8,6 +8,9 @@
         .sdivs,table {
         width:100%;
         }
+            td {
+                padding-left: 0px;
+            }
     </style>
 </head>
 <body>
@@ -15,118 +18,139 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="main">
     <div class="maincon">
-    <div id="sad" style="width:786px;">
+    <div id="sad" style="width:960px;">
     <div class="fdivs">
     <div class="sdivs" style="padding:3px 0 3px 0px;">
     <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
     <ContentTemplate>
         <table cellpadding="0" cellspacing="0" class="tb1">
         <tr>
-            <td><asp:Label ID="lbType" runat="server" Text="销售"></asp:Label>单号：</td>
+            <td style="padding-left:0px;"> <asp:Label ID="lbType" runat="server" Text="销售"></asp:Label>单号：</td>
             <td style="padding-left:0px;"><asp:TextBox ID="tbBillID" runat="server" CssClass="pinb" ReadOnly="true" Width="102"></asp:TextBox></td>
-            <td align="right">日期：</td>
-            <td style="padding-left:0px;"><asp:TextBox ID="tbDate" runat="server" CssClass="pin" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"></asp:TextBox></td>
-            <td colspan="2" align="right">业务员：</td>
+            <td align="right" style="padding-left:0px;">日期：</td>
+            <td style="padding-left:0px;"><asp:TextBox ID="tbDate" runat="server" CssClass="pin" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" Width="100"></asp:TextBox></td>
+            <td colspan="2" align="right" style="padding-left:0px;">业务员：</td>
             <td style="padding-left:0px;">
                 <asp:DropDownList ID="ddlOperator" runat="server" CssClass="pindl" Width="106">
                 </asp:DropDownList>
             </td>
-            <td align="right">送货人：</td>
+            <td align="right" style="padding-left:0px;">送货人：</td>
             <td style="padding-left:0px;">
                 <asp:DropDownList ID="ddlSndOperator" runat="server" CssClass="pindl" Width="106">
                 </asp:DropDownList>
             </td>
+            <td style="padding-left:0px;">自编号：</td>
+            <td style="padding-left:0px;">
+                <asp:TextBox ID="tbAutoNO" runat="server" CssClass="pin" Width="100"></asp:TextBox>
+            </td>
         </tr>
         <tr>
-            <td align="right">自编号：</td>
-            <td style="padding-left:0px;"><asp:TextBox ID="tbAutoNO" runat="server" CssClass="pin" Width="100"></asp:TextBox></td>
-            <td class="sysred" align="right">客户名称：</td>
+            <td align="right" style="padding-left:0px;"></td>
+            <td style="padding-left:0px;">&nbsp;</td>
+            <td class="sysred" align="right" style="padding-left:0px;">客户名称：</td>
             <td style="padding-left:0px;">
                 <div class="isinDiv">
-                <asp:TextBox ID="tbCusName" runat="server" CssClass="pin autot" onmousedown="getSearchResult('../Customer/SchCusList.aspx','tbCusName','hfCusID','1','btnCusInfo',event);" onkeyup="getSearchResult('../Customer/SchCusList.aspx','tbCusName','hfCusID','1','btnCusInfo',event);" AutoCompleteType="Disabled"></asp:TextBox>
+                <asp:TextBox ID="tbCusName" runat="server"  Width="120" CssClass="pin autot" onmousedown="getSearchResult('../Customer/SchCusList.aspx','tbCusName','hfCusID','1','btnCusInfo',event);" onkeyup="getSearchResult('../Customer/SchCusList.aspx','tbCusName','hfCusID','1','btnCusInfo',event);" AutoCompleteType="Disabled"></asp:TextBox>
                 </div>
             </td>
             <td style="padding:0px;"><input id="btnSlt" type="button" value="" onclick="SltCus();" class="bview"/></td>
-            <td align="right">联系人：</td>
+            <td align="right" style="padding-left:0px;">联系人：</td>
             <td style="padding-left:0px;"><asp:TextBox ID="tbLinkMan" Visible="false" runat="server" CssClass="pin" Width="100"></asp:TextBox>
                     <asp:DropDownList ID="ddl_LinkMan" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_LinkMan_SelectedIndexChanged">
                       <asp:ListItem Value="-1">请选择客户联系人</asp:ListItem>
                 </asp:DropDownList>
             </td>
-            <td align="right">联系电话：</td>
+            <td align="right" style="padding-left:0px;">联系电话：</td>
             <td style="padding-left:0px;"><asp:TextBox ID="tbTel" runat="server" CssClass="pin" Width="100"></asp:TextBox></td>
+              <td style="padding-left:0px;">地址:</td>
+            <td style="padding-left:0px;"><asp:TextBox ID="tbAdr" runat="server" CssClass="pin" Width="100"></asp:TextBox></td>
         </tr>
-        <tr>
-            <td>结算方式：</td>
+             <tr>
+                <td>代发货</td>
+                <td><asp:DropDownList ID="ddl_isdai" runat="server">
+                    <asp:ListItem Value="0" Selected="True">否</asp:ListItem>
+                        <asp:ListItem Value="1" >是</asp:ListItem>
+                    </asp:DropDownList></td>
+                   <td class="sysred" align="right">客户2：</td>
             <td style="padding-left:0px;">
-                <asp:DropDownList ID="ddlChargeStyle" Width="106" runat="server" CssClass="pindl">
+                <div class="isinDiv">
+                    <asp:TextBox ID="tbCusName2" runat="server"  Width="120" CssClass="pin autot" onmousedown="getSearchResult('../Customer/SchCusList.aspx','tbCusName2','hfCusID2','1','btnCusInfo2',event);" onkeyup="getSearchResult('../Customer/SchCusList.aspx','tbCusName2','hfCusID2','1','btnCusInfo2',event);" AutoCompleteType="Disabled"></asp:TextBox>
+                <%--<asp:TextBox ID="tbCusName2" runat="server" CssClass="pin autot"  Width="120" onmousedown="getSearchResult('../Customer/SchCusList.aspx','tbCusName2','hfCusID2','1','btnCusInfo2',event);" onkeyup="getSearchResult('../Customer/SchCusList.aspx','tbCusName2','hfCusID2','1','btnCusInfo2',event);" AutoCompleteType="Disabled"></asp:TextBox>--%>
+                </div>
+            </td>
+            <td style="padding:0px;"><input id="btnSlt2" type="button" onclick="SltCus2();" class="bview"/></td>
+            <td align="right">联系人2</td>
+            <td style="padding-left:0px;"><asp:TextBox ID="tbLinkMan2" Visible="false" runat="server" CssClass="pin"  Width="120"></asp:TextBox>
+                <asp:DropDownList ID="ddl_LinkMan2" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_LinkMan2_SelectedIndexChanged">
+                      <asp:ListItem Value="-1">请选择客户联系人</asp:ListItem>
+                </asp:DropDownList>
+                <input id="Button2" type="button" onclick="addCuslink()" class="bview" style="display:none"/>
+            </td>
+            <td align="right">电话2：</td>
+            <td style="padding-left:0px;"><asp:TextBox ID="tbTel2" runat="server" CssClass="pin"  Width="100"></asp:TextBox></td>
+                  <td>地址2：</td>
+                 <td  style="padding-left:0px;">
+                     <asp:TextBox ID="tbAdr2" runat="server" CssClass="pin" Width="100"></asp:TextBox>
+                 </td>
+            </tr>
+        <tr>
+            <td style="padding-left:0px;">结算网点:</td>
+            <td style="padding-left:0px;">
+                <asp:TextBox ID="tbwangdian" runat="server" Width="100" AutoCompleteType="Disabled" CssClass="pin" onkeyup="getSearchResult('../Customer/c_getbrandch.aspx','btnwangdian','hfwangdianID','1','btnwangdian',event);" onmousedown="getSearchResult('../Customer/c_getbrandch.aspx','tbwangdian','hfwangdianID','1','btnwangdian',event);"></asp:TextBox>
+            </td>
+            <td align="right" style="padding-left:0px;">
+                网点税率</td>
+            <td style="padding-left:0px;">
+                <asp:DropDownList ID="ddl_branchFax" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_branchFax_SelectedIndexChanged" Width="120">
+                    <asp:ListItem Selected="True" Value="no-0">不含税</asp:ListItem>
                 </asp:DropDownList>
             </td>
-            <td align="right">
-            地址：</td>
-            <td style="padding-left:0px;"><asp:TextBox ID="tbAdr" runat="server" CssClass="pin" ></asp:TextBox></td>
-            <td colspan="2" align="right">
-            备注：</td>
-            <td style="padding-left:0px;"><asp:TextBox ID="tbRemark" runat="server" CssClass="pin" Width="100"></asp:TextBox>
+            <td colspan="2" align="right" style="padding-left:0px;">
+                结算方式：</td>
+            <td style="padding-left:0px;">
             <span style="display:none;"><asp:Button ID="btnCusInfo" runat="server" Text="..." OnClick="btnCusInfo_Click"/></span>
-                  <span style="display:none;">  <asp:Button ID="btnwangdian" runat="server" Text="..." OnClick="btnWangdian_Click"/></span>
+                   <span style="display:none;"> <asp:Button ID="btnCusInfo2" runat="server" Text="..." OnClick="btnCusInfo2_Click"/></span>
+                  <span style="display:none;">  <asp:Button ID="btnwangdian" runat="server" Text="..." OnClick="btnWangdian_Click"/>
+                
+                </span><asp:DropDownList ID="ddlChargeStyle" runat="server" CssClass="pindl" Width="106">
+                </asp:DropDownList>
             </td>
-            <td align="right">
+            <td align="right" style="padding-left:0px;">
             结算帐户：</td>
             <td style="padding-left:0px;">
                     <asp:DropDownList ID="ddlChargeAccount" runat="server" Width="106" CssClass="pindl">
                     </asp:DropDownList>
             </td>
+              <td style="padding-left:0px;">备注：</td>
+            <td style="padding-left:0px;">     
+                <asp:TextBox ID="tbRemark" runat="server" CssClass="pin" Width="100"></asp:TextBox>
+                <asp:DropDownList ID="ddlInvoiceClass" runat="server" CssClass="pindl" Width="106"  Visible="false">
+                    </asp:DropDownList></td>
         </tr>
         <tr>
-            <td align="right">
-            发票类型：</td>
+            <td align="right" style="padding-left:0px;">
+                &nbsp;</td>
+            <td style="padding-left:0px;">&nbsp;</td>
+            <td align="right" style="padding-left:2px;">
+                &nbsp;</td>
             <td style="padding-left:0px;">
-                    <asp:DropDownList ID="ddlInvoiceClass" runat="server" CssClass="pindl" Width="106">
-                    </asp:DropDownList>
+                &nbsp;</td>
+            <td align="right" colspan="2" style="padding-left:0px;">
+                发票号码</td>
+            <td style="padding-left:0px;" >
+                <asp:TextBox ID="tbInvoiceNO" runat="server" CssClass="pin" Width="100"></asp:TextBox>
             </td>
-            <td align="right">
-            发票号码：</td>
+            <td align="right" style="padding-left:0px;">
+                开票日期：</td>
             <td style="padding-left:0px;">
-                <asp:TextBox ID="tbInvoiceNO" runat="server" CssClass="pin"></asp:TextBox>
+                <asp:TextBox ID="tbInvoiceDate" runat="server" CssClass="Wdate" onfocus="WdatePicker()" Width="102"></asp:TextBox>
             </td>
-            <td align="right" colspan="2">
-            开票日期：</td>
+              <td style="padding-left:0px;">开票金额：</td>
             <td style="padding-left:0px;">
-                <asp:TextBox ID="tbInvoiceDate" runat="server" CssClass="Wdate" Width="102" onfocus="WdatePicker()"></asp:TextBox>
-            </td>
-            <td align="right">
-            开票金额：</td>
-            <td style="padding-left:0px;">
-                <asp:TextBox ID="tbInvoiceAmount" runat="server" CssClass="pin" Width="100" ></asp:TextBox>
-            </td>
-        </tr>
-            <tr>
-            <td align="right">
-            结算网点：</td>
-            <td style="padding-left:0px;">
-                   <div class="isinDiv">             
-                        <asp:TextBox Width="100px" ID="tbwangdian"  runat="server" CssClass="pin autot" onmousedown="getSearchResult('../Customer/c_getbrandch.aspx','tbwangdian','hfwangdianID','1','btnwangdian',event);" onkeyup="getSearchResult('../Customer/c_getbrandch.aspx','btnwangdian','hfwangdianID','1','btnwangdian',event);" AutoCompleteType="Disabled"></asp:TextBox>
-                </div>
-            </td>
-            <td align="right">
-            网点税率：</td>
-          <td style="padding-left:0px;"><%-- <div class="isinDiv">  <asp:TextBox ID="tbwdTaxrate"   runat="server" CssClass="pin autot" AutoCompleteType="Disabled" ReadOnly="True"  ></asp:TextBox>--%>
-              <asp:DropDownList ID="ddl_branchFax" runat="server" Width="150" AutoPostBack="True" OnSelectedIndexChanged="ddl_branchFax_SelectedIndexChanged">
-                        <asp:ListItem Value="no-0" Selected="True">不含税</asp:ListItem>
-              </asp:DropDownList>
-              </div></td>
-            <td align="right" colspan="2">
-                     &nbsp;</td>
-            <td style="padding-left:0px;">
-              
-            </td>
-            <td align="right">
-        </td>
-            <td style="padding-left:0px;">
-              
+                <asp:TextBox ID="tbInvoiceAmount" runat="server" CssClass="pin" Width="100"></asp:TextBox>
             </td>
         </tr>
+          
      </table>
      </ContentTemplate>
     <Triggers>
@@ -134,6 +158,7 @@
         <asp:AsyncPostBackTrigger ControlID="btnChk" EventName="Click" />
         <asp:AsyncPostBackTrigger ControlID="btnClean" EventName="Click" />
         <asp:AsyncPostBackTrigger ControlID="btnCusInfo" EventName="Click" />
+                <asp:AsyncPostBackTrigger ControlID="btnCusInfo2" EventName="Click" />
         <asp:AsyncPostBackTrigger ControlID="ddl_LinkMan" EventName="SelectedIndexChanged" />
     </Triggers>
     </asp:UpdatePanel>
@@ -248,6 +273,7 @@
                     <asp:HiddenField ID="hfOperationID" runat="server" />
                     <asp:HiddenField ID="hfSltID" runat="server" />
                     <asp:HiddenField ID="hfCusID" runat="server" />
+                         <asp:HiddenField ID="hfCusID2" runat="server" />
                       <asp:HiddenField ID="hfwangdianID" runat="server" />
                     <asp:HiddenField ID="hfPrintID" runat="server" />
                      <span style="display:none;">
@@ -437,6 +463,10 @@ function EditSN(goodsid,unitid,SN,nums)
 function SltCus()
 {
     parent.ShowDialog1(800, 500, 'Customer/SltCus.aspx?f=2', '选择客户');
+}
+function SltCus2()
+{
+    parent.ShowDialog1(800, 500, 'Customer/SltCus2.aspx?f=2', '选择客户');
 }
 function Caculate()
 {

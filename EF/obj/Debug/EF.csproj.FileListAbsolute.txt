@@ -12,3 +12,17 @@ F:\WTStock\EF\bin\Debug\DAL.pdb
 F:\WTStock\EF\bin\Debug\Model.pdb
 F:\WTStock\EF\bin\Debug\DB.pdb
 F:\WTStock\EF\bin\Debug\Library.pdb
+F:\workspace\WTStock\EF\bin\Debug\EF.dll.config
+F:\workspace\WTStock\EF\bin\Debug\EF.dll
+F:\workspace\WTStock\EF\bin\Debug\EF.pdb
+F:\workspace\WTStock\EF\bin\Debug\DAL.dll
+F:\workspace\WTStock\EF\bin\Debug\Model.dll
+F:\workspace\WTStock\EF\bin\Debug\DB.dll
+F:\workspace\WTStock\EF\bin\Debug\Library.dll
+F:\workspace\WTStock\EF\bin\Debug\DAL.pdb
+F:\workspace\WTStock\EF\bin\Debug\Model.pdb
+F:\workspace\WTStock\EF\bin\Debug\DB.pdb
+F:\workspace\WTStock\EF\bin\Debug\Library.pdb
+F:\workspace\WTStock\EF\obj\Debug\EF.csprojResolveAssemblyReference.cache
+F:\workspace\WTStock\EF\obj\Debug\EF.dll
+F:\workspace\WTStock\EF\obj\Debug\EF.pdb

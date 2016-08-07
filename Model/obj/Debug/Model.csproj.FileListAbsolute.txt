@@ -8,3 +8,8 @@ F:\WTStock\Model\bin\Debug\Model.pdb
 F:\WTStock\Model\obj\Debug\Model.dll
 F:\WTStock\Model\obj\Debug\Model.pdb
 F:\WTStock\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+F:\workspace\WTStock\Model\bin\Debug\Model.dll
+F:\workspace\WTStock\Model\bin\Debug\Model.pdb
+F:\workspace\WTStock\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+F:\workspace\WTStock\Model\obj\Debug\Model.dll
+F:\workspace\WTStock\Model\obj\Debug\Model.pdb

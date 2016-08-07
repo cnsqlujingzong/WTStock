@@ -28,7 +28,7 @@ namespace wt.Model
 		private int _operatorid;
 
 		private int _personid;
-
+        public int isDai{get;set;}
 		private int _customerid;
 
 		private decimal _incash;
@@ -92,7 +92,11 @@ namespace wt.Model
 				this.__date = value;
 			}
 		}
-
+              public int CustomerID2{get;set;} 
+              public string LinkMan2 {get;set;} 
+              public string Tel2 {get;set;}
+              public string Adr2 { get; set; }
+              public string CusName2 { get; set; }
 		public int AccountID
 		{
 			get

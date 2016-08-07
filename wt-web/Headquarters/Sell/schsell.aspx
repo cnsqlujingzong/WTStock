@@ -249,7 +249,7 @@ function Purchase()
 
 function ModBill()
 {
-    ChkMod(850, 566,'Sell/SellMod.aspx','销售单');
+    ChkMod(970, 566,'Sell/SellMod.aspx','销售单');
 }
 
 function Chkset()

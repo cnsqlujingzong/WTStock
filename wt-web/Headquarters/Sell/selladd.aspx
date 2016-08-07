@@ -32,6 +32,7 @@
                 <asp:DropDownList ID="ddlSndOperator" runat="server" CssClass="pindl">
                 </asp:DropDownList>
             </td>
+            <td></td>
         </tr>
         <tr>
             <td align="right">自编号：</td>
@@ -52,11 +53,42 @@
             </td>
             <td align="right">联系电话：</td>
             <td style="padding-left:0px;"><asp:TextBox ID="tbTel" runat="server" CssClass="pin"></asp:TextBox></td>
+              <td>地址：<asp:TextBox ID="tbAdr" runat="server" CssClass="pin"></asp:TextBox></td>
         </tr>
+            <tr>
+                <td>是否代发货</td>
+                
+                <td><asp:DropDownList ID="ddl_isdai" runat="server">
+                    <asp:ListItem Value="0" Selected="True">否</asp:ListItem>
+                        <asp:ListItem Value="1" >是</asp:ListItem>
+                    </asp:DropDownList></td>
+                   <td class="sysred" align="right">客户2：</td>
+            <td style="padding-left:0px;">
+                <div class="isinDiv">
+                <asp:TextBox ID="tbCusName2" runat="server" CssClass="pin autot" onmousedown="getSearchResult('../Customer/SchCusList.aspx','tbCusName2','hfCusID2','1','btnCusInfo2',event);" onkeyup="getSearchResult('../Customer/SchCusList.aspx','tbCusName2','hfCusID2','1','btnCusInfo2',event);" AutoCompleteType="Disabled"></asp:TextBox>
+                </div>
+            </td>
+            <td style="padding:0px;"><input id="btnSlt2" type="button" onclick="SltCus2();" class="bview"/></td>
+            <td align="right">联系人2</td>
+            <td style="padding-left:0px;"><asp:TextBox ID="tbLinkMan2" Visible="false" runat="server" CssClass="pin"></asp:TextBox>
+                <asp:DropDownList ID="ddl_LinkMan2" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_LinkMan2_SelectedIndexChanged">
+                      <asp:ListItem Value="-1">请选择客户联系人</asp:ListItem>
+                </asp:DropDownList>
+                <input id="Button2" type="button" onclick="addCuslink()" class="bview" style="display:none"/>
+            </td>
+            <td align="right">电话2：</td>
+            <td style="padding-left:0px;"><asp:TextBox ID="tbTel2" runat="server" CssClass="pin"></asp:TextBox></td>
+                  <td>地址2：<asp:TextBox ID="tbAdr2" runat="server" CssClass="pin"></asp:TextBox></td>
+            </tr>
         <tr>
-            <td align="right">
-            地址：</td>
-            <td style="padding-left:0px;"><asp:TextBox ID="tbAdr" runat="server" CssClass="pin"></asp:TextBox></td>
+           <td align="right">
+            结算网点：</td>
+            <td style="padding-left:0px;">
+                   <div class="isinDiv">             
+                        <asp:TextBox ID="tbwangdian"  runat="server" CssClass="pin autot" onmousedown="getSearchResult('../Customer/c_getbrandch.aspx','tbwangdian','hfwangdianID','1','btnwangdian',event);" onkeyup="getSearchResult('../Customer/c_getbrandch.aspx','tbwangdian','hfwangdianID','1','btnwangdian',event);" AutoCompleteType="Disabled"></asp:TextBox>
+                </div>
+            </td>
+           
             <td>结算方式：</td>
             <td style="padding-left:0px;">
                 <asp:DropDownList ID="ddlChargeStyle" runat="server" CssClass="pindl">
@@ -66,6 +98,7 @@
             备注：</td>
             <td style="padding-left:0px;"><asp:TextBox ID="tbRemark" runat="server" CssClass="pin"></asp:TextBox>
             <span style="display:none;"><asp:Button ID="btnCusInfo" runat="server" Text="..." OnClick="btnCusInfo_Click"/></span>
+                 <span style="display:none;"><asp:Button ID="btnCusInfo2" runat="server" Text="..." OnClick="btnCusInfo2_Click"/></span>
             </td>
             <td align="right">
             结算帐户：</td>
@@ -73,14 +106,17 @@
                     <asp:DropDownList ID="ddlChargeAccount" runat="server" CssClass="pindl">
                     </asp:DropDownList>
             </td>
+              <td></td>
         </tr>
         <tr>
-            <td align="right">
-            发票类型：</td>
-            <td style="padding-left:0px;">
-                    <asp:DropDownList ID="ddlInvoiceClass" runat="server" CssClass="pindl">
-                    </asp:DropDownList>
-            </td>
+             <td align="right">
+            网点税率：</td>
+          <td style="padding-left:0px;"><%-- <div class="isinDiv">  <asp:TextBox ID="tbwdTaxrate"   runat="server" CssClass="pin autot" AutoCompleteType="Disabled" ReadOnly="True"  ></asp:TextBox>--%>
+              <asp:DropDownList ID="ddl_branchFax" runat="server" Width="150" AutoPostBack="True" OnSelectedIndexChanged="ddl_branchFax_SelectedIndexChanged">
+                        <asp:ListItem Value="no-0" Selected="True">不含税</asp:ListItem>
+              </asp:DropDownList>
+              </div>   <asp:DropDownList ID="ddlInvoiceClass" runat="server" CssClass="pindl" Visible="false">
+                    </asp:DropDownList></td>          
             <td align="right">
             发票号码：</td>
             <td style="padding-left:0px;">
@@ -96,34 +132,10 @@
             <td style="padding-left:0px;">
                 <asp:TextBox ID="tbInvoiceAmount" runat="server" CssClass="pin" ></asp:TextBox>
             </td>
+              <td></td>
         </tr>
 
-              <tr>
-            <td align="right">
-            结算网点：</td>
-            <td style="padding-left:0px;">
-                   <div class="isinDiv">             
-                        <asp:TextBox ID="tbwangdian"  runat="server" CssClass="pin autot" onmousedown="getSearchResult('../Customer/c_getbrandch.aspx','tbwangdian','hfwangdianID','1','btnwangdian',event);" onkeyup="getSearchResult('../Customer/c_getbrandch.aspx','tbwangdian','hfwangdianID','1','btnwangdian',event);" AutoCompleteType="Disabled"></asp:TextBox>
-                </div>
-            </td>
-            <td align="right">
-            网点税率：</td>
-          <td style="padding-left:0px;"><%-- <div class="isinDiv">  <asp:TextBox ID="tbwdTaxrate"   runat="server" CssClass="pin autot" AutoCompleteType="Disabled" ReadOnly="True"  ></asp:TextBox>--%>
-              <asp:DropDownList ID="ddl_branchFax" runat="server" Width="150" AutoPostBack="True" OnSelectedIndexChanged="ddl_branchFax_SelectedIndexChanged">
-                        <asp:ListItem Value="no-0" Selected="True">不含税</asp:ListItem>
-              </asp:DropDownList>
-              </div></td>
-            <td align="right" colspan="2">
-                     &nbsp;</td>
-            <td style="padding-left:0px;">
               
-            </td>
-            <td align="right">
-        </td>
-            <td style="padding-left:0px;">
-              
-            </td>
-        </tr>
      </table>   <span style="display:none;">  <asp:Button ID="btnwangdian" runat="server" Text="..." OnClick="btnWangdian_Click"/></span>
      </ContentTemplate>
     <Triggers>
@@ -132,7 +144,9 @@
         <asp:AsyncPostBackTrigger ControlID="btnClean" EventName="Click" />
         <asp:AsyncPostBackTrigger ControlID="btnSltBill" EventName="Click" />
         <asp:AsyncPostBackTrigger ControlID="btnCusInfo" EventName="Click" />
+          <asp:AsyncPostBackTrigger ControlID="btnCusInfo2" EventName="Click" />
         <asp:AsyncPostBackTrigger ControlID="ddl_LinkMan" EventName="SelectedIndexChanged" />
+             <asp:AsyncPostBackTrigger ControlID="ddl_LinkMan2" EventName="SelectedIndexChanged" />
     </Triggers>
     </asp:UpdatePanel>
     <div class="divh"></div>
@@ -244,6 +258,7 @@
                     <asp:HiddenField ID="hfSltID" runat="server" />
                     <asp:HiddenField ID="hfSltID1" runat="server" />
                     <asp:HiddenField ID="hfCusID" runat="server" />
+                      <asp:HiddenField ID="hfCusID2" runat="server" />
                     <asp:HiddenField ID="hfPrintID" runat="server" />
                         <asp:HiddenField ID="hfwangdianID" runat="server" />
                     <asp:HiddenField ID="hfFlag" runat="server" Value="-1" />
@@ -390,6 +405,12 @@ function ChkSave()
        window.alert("操作失败！客户联系人不能为空");
        return false
    }
+   if ($("ddl_isdai").value == "1") {
+       if ($("ddl_LinkMan2").value == "-1") {
+           window.alert("操作失败！联系人2不能为空");
+           return false
+       }
+   }
     if(!isMoney($("tbInCash").value))
     {
         alert("操作失败！现结金额格式不正确，请重新输入");
@@ -419,6 +440,9 @@ function ChkSave()
 function SltCus()
 {
     parent.ShowDialog1(800, 500, 'Customer/SltCus.aspx?f=2&fid='+parent.$("hfActiveWin").value, '选择客户');
+}
+function SltCus2() {
+    parent.ShowDialog1(800, 500, 'Customer/SltCus2.aspx?f=2&fid=' + parent.$("hfActiveWin").value, '选择客户');
 }
 
 function EditSN(goodsid,unitid,SN,nums)

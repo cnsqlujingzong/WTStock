@@ -15,3 +15,12 @@ F:\WTStock\CodingFormat\obj\Debug\CodingFormat.Form1.resources
 F:\WTStock\CodingFormat\obj\Debug\CodingFormat.Properties.Resources.resources
 F:\WTStock\CodingFormat\obj\Debug\CodingFormat.csproj.GenerateResource.Cache
 F:\WTStock\CodingFormat\obj\Debug\CodingFormat.Form2.resources
+F:\workspace\WTStock\CodingFormat\bin\Debug\CodingFormat.exe
+F:\workspace\WTStock\CodingFormat\bin\Debug\CodingFormat.pdb
+F:\workspace\WTStock\CodingFormat\obj\Debug\CodingFormat.csprojResolveAssemblyReference.cache
+F:\workspace\WTStock\CodingFormat\obj\Debug\CodingFormat.Form1.resources
+F:\workspace\WTStock\CodingFormat\obj\Debug\CodingFormat.Form2.resources
+F:\workspace\WTStock\CodingFormat\obj\Debug\CodingFormat.Properties.Resources.resources
+F:\workspace\WTStock\CodingFormat\obj\Debug\CodingFormat.csproj.GenerateResource.Cache
+F:\workspace\WTStock\CodingFormat\obj\Debug\CodingFormat.exe
+F:\workspace\WTStock\CodingFormat\obj\Debug\CodingFormat.pdb

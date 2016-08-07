@@ -1,3 +1,4 @@
+using EF;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -81,6 +82,15 @@ public partial class Headquarters_Sell_SellMod : Page, IRequiresSessionState
         model.BrandName = FunLibrary.ChkInput(tbwangdian.Text);
         model.BrandTaxRate = decimal.Parse(FunLibrary.ChkInput(ps[1]));
         model.BrandTaxRateType = FunLibrary.ChkInput(ps[0]);
+
+        model.isDai = int.Parse(ddl_isdai.SelectedValue);
+        if (model.isDai == 1)
+        {
+            model.CustomerID2 = int.Parse(this.hfCusID2.Value);
+            model.LinkMan2 = FunLibrary.ChkInput(this.ddl_LinkMan2.SelectedItem.Text);
+            model.Tel2 = FunLibrary.ChkInput(this.tbTel2.Text);
+            model.Adr2 = FunLibrary.ChkInput(this.tbAdr2.Text);
+        }
 
         decimal num2 = 0M;
         if (!this.tbInvoiceAmount.Text.Trim().Equals(""))
@@ -174,10 +184,12 @@ public partial class Headquarters_Sell_SellMod : Page, IRequiresSessionState
             if (this.BillUpdate(out str, out flag2) == 0)
             {
                 this.SysInfo("window.alert('操作成功！该" + this.lbType.Text + "单已保存');parent.CloseDialog('1');");
+                WTLog.WriteLog("销售单", this.id.ToString(), "编辑销售单", "销售单保存成功!", str);
             }
             else
             {
                 this.SysInfo("window.alert(\"" + str + "\");");
+                WTLog.WriteLog("销售单", this.id.ToString(), "编辑销售单", "失败!", str);
             }
         }
     }
@@ -213,6 +225,7 @@ public partial class Headquarters_Sell_SellMod : Page, IRequiresSessionState
                 if (isLowPricePower && !flag2)
                 {
                     this.SysInfo("window.alert('销售单保存成功!审核失败！没有“允许低于最低销售价出库”的权限');");
+                    WTLog.WriteLog("销售单", this.id.ToString(), "编辑销售单->审核", "销售单保存成功!审核失败！",str);
                 }
                 else
                 {
@@ -228,6 +241,7 @@ public partial class Headquarters_Sell_SellMod : Page, IRequiresSessionState
                         sell.ChkSell(1, this.id, result, out str);
                     }
                     this.SysInfo("window.alert('" + str + "');parent.CloseDialog('1');");
+                    WTLog.WriteLog("销售单", this.id.ToString(), "编辑销售单->审核", "销售单保存成功!审核成功！", str);
                 }
             }
             else
@@ -277,12 +291,46 @@ public partial class Headquarters_Sell_SellMod : Page, IRequiresSessionState
             }
         }
     }
+    protected void btnCusInfo2_Click(object sender, EventArgs e)
+    {
+        if (this.hfCusID2.Value != "")
+        {
+            DataTable table = DALCommon.GetDataList("CustomerList", "_Name,LinkMan,Tel,Adr", " [ID]=" + this.hfCusID2.Value).Tables[0];
+            if (table.Rows.Count > 0)
+            {
+                this.tbCusName2.Text = table.Rows[0]["_Name"].ToString();
+                // this.tbLinkMan.Text = table.Rows[0]["LinkMan"].ToString();
+                //this.tbTel.Text = table.Rows[0]["Tel"].ToString();
+                this.tbAdr2.Text = table.Rows[0]["Adr"].ToString();
+                DataTable dataTable2 = DALCommon.GetDataList("CustomerLinkMan", " CustomerID,_Name,tel_Office,tel_Mobile ", " [CustomerID]=" + this.hfCusID2.Value).Tables[0];
+
+                ddl_LinkMan2.Items.Clear();
+                this.tbTel2.Text = "";
+                ListItem li0 = new ListItem("请选择联系人", "-1");
+                ListItem li1 = new ListItem(table.Rows[0]["LinkMan"].ToString(), table.Rows[0]["Tel"].ToString());
+                ddl_LinkMan2.Items.Add(li0);
+                ddl_LinkMan2.Items.Add(li1);
+                if (dataTable2.Rows.Count > 0)
+                {
+                    foreach (DataRow item in dataTable2.Rows)
+                    {
+                        string tel = string.IsNullOrEmpty(item["tel_Office"].ToString()) ? item["tel_Mobile"].ToString() : item["tel_Office"].ToString();
+                        ddl_LinkMan2.Items.Add(new ListItem(item["_Name"].ToString(), tel));
+                    }
+                }
+            }
+        }
+    }
     protected void ddl_LinkMan_SelectedIndexChanged(object sender, EventArgs e)
     {
         this.tbLinkMan.Text = ddl_LinkMan.SelectedItem.Text;
         this.tbTel.Text = ddl_LinkMan.SelectedValue == "-1" ? "" : ddl_LinkMan.SelectedValue;
     }
-
+    protected void ddl_LinkMan2_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        this.tbLinkMan2.Text = ddl_LinkMan2.SelectedItem.Text;
+        this.tbTel2.Text = ddl_LinkMan2.SelectedValue == "-1" ? "" : ddl_LinkMan2.SelectedValue;
+    }
     protected void btnId_Click(object sender, EventArgs e)
     {
         string str = string.Empty;
@@ -711,11 +759,13 @@ public partial class Headquarters_Sell_SellMod : Page, IRequiresSessionState
                     num2++;
                 }
                 this.hfOperationID.Value = model.OperationID;
-                this.tbCusName.Text = model.CusName;
+              
                 this.tbAutoNO.Text = model.AutoNO;
                 this.hfCusID.Value = model.CustomerID.ToString();
                 this.tbRemark.Text = model.Remark;
               //  this.tbLinkMan.Text = model.LinkMan;
+
+                this.tbCusName.Text = model.CusName;
                 ddl_LinkMan.Items.Clear();
                 this.tbTel.Text = "";
                 ListItem li0 = new ListItem("请选择联系人", "-1");
@@ -734,10 +784,37 @@ public partial class Headquarters_Sell_SellMod : Page, IRequiresSessionState
                 }
 
                 ddl_LinkMan.SelectedValue = model.Tel;
-
-
                 this.tbTel.Text = model.Tel;
                 this.tbAdr.Text = model.Adr;
+
+
+                ddl_isdai.SelectedValue = string.IsNullOrEmpty(model.isDai.ToString()) ? "0" : model.isDai.ToString();
+                if(model.isDai==1){
+                this.tbCusName2.Text = model.CusName2;
+                ddl_LinkMan2.Items.Clear();
+                this.tbTel2.Text = "";
+                ListItem li02 = new ListItem("请选择联系人", "-1");
+                ListItem li12 = new ListItem(model.LinkMan2, model.Tel2);
+                ddl_LinkMan2.Items.Add(li02);
+                ddl_LinkMan2.Items.Add(li12);
+                DataTable dataTable22 = DALCommon.GetDataList("CustomerLinkMan", " CustomerID,_Name,tel_Office,tel_Mobile ", " [CustomerID]=" + this.hfCusID2.Value).Tables[0];
+
+                if (dataTable22.Rows.Count > 0)
+                {
+                    foreach (DataRow item in dataTable22.Rows)
+                    {
+                        string tel = string.IsNullOrEmpty(item["tel_Office"].ToString()) ? item["tel_Mobile"].ToString() : item["tel_Office"].ToString();
+                        ddl_LinkMan2.Items.Add(new ListItem(item["_Name"].ToString(), tel));
+                    }
+                }
+
+                ddl_LinkMan2.SelectedValue = model.Tel2;
+                this.tbTel2.Text = model.Tel2;
+                this.tbAdr2.Text = model.Adr2;
+            }
+
+
+
                 this.ddlChargeAccount.SelectedValue = model.AccountID.ToString();
                 this.tbInvoiceNO.Text = model.InvoiceNO.Trim();
                 this.tbInvoiceDate.Text = model.InvoiceDate.Equals(DateTime.MinValue) ? "" : model.InvoiceDate.ToString("yyyy-MM-dd");

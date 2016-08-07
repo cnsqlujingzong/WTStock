@@ -1,3 +1,4 @@
+using EF;
 using System;
 using System.Data;
 using System.Web;
@@ -308,10 +309,12 @@ public partial class Headquarters_Sell_SchSell : Page, IRequiresSessionState
 				this.hfRecID.Value,
 				"');"
 			});
+            WTLog.WriteLog("销售单", this.hfRecID.Value, "审核销售单", "审核失败", empty);
 		}
 		else
 		{
 			text = "ChkID('" + this.hfRecID.Value + "');";
+            WTLog.WriteLog("销售单", this.hfRecID.Value,"审核销售单","审核成功");
             //by coding  创建发货单
      
 
@@ -354,8 +357,8 @@ public partial class Headquarters_Sell_SchSell : Page, IRequiresSessionState
                 DALRcvSnd dALRcvSnd = new DALRcvSnd();
                 int iTbid = 0;
                 int result = dALRcvSnd.Add(rcvSndInfo, out iTbid);
-            
 
+                WTLog.WriteLog("出库单", iTbid.ToString(), "审核销售单:" + spn.Rows[0]["BillID"].ToString() + "自动创建", "关联合同：" + spn.Rows[0]["BillID"].ToString());
 
 
 		}
@@ -469,10 +472,12 @@ public partial class Headquarters_Sell_SchSell : Page, IRequiresSessionState
 				this.hfRecID.Value,
 				"');"
 			});
+            WTLog.WriteLog("销售单", iTbid.ToString(), "反审核销售单", "反审核失败",empty);
 		}
 		else
 		{
 			text = "ChkID('" + this.hfRecID.Value + "');";
+            WTLog.WriteLog("销售单", iTbid.ToString(), "反审核销售单", "反审核成功");
 		}
 		this.SysInfo(text);
 	}
@@ -490,6 +495,7 @@ public partial class Headquarters_Sell_SchSell : Page, IRequiresSessionState
 		if (num == 0)
 		{
 			this.hfRecID.Value = "-1";
+            WTLog.WriteLog("销售单", iTbid.ToString(), "删除销售单", "成功");
 		}
 		else
 		{
@@ -501,6 +507,7 @@ public partial class Headquarters_Sell_SchSell : Page, IRequiresSessionState
 				this.hfRecID.Value,
 				"');"
 			}));
+            WTLog.WriteLog("销售单", iTbid.ToString(), "删除销售单", "失败",empty);
 			this.ShowDetail();
 		}
 	}

@@ -66,6 +66,7 @@
     <Compile Include="DAL\Cd_ImgStock.cs" />
     <Compile Include="DAL\Cd_CusTree.cs" />
     <Compile Include="DAL\CusLinkManDAL.cs" />
+    <Compile Include="DAL\WTLog.cs" />
     <Compile Include="DataCache.cs" />
     <Compile Include="MessageBox.cs" />
     <Compile Include="Model\Cd_ProAtts.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Model\Cd_ProTypeAttr.cs" />
     <Compile Include="Model\Cd_ImgStock.cs" />
     <Compile Include="Model\Cd_CusTree.cs" />
+    <Compile Include="Model\WTLog.cs" />
     <Compile Include="PostMSG.cs" />
     <Compile Include="RequestUtil.cs" />
     <Compile Include="UpperRMB.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Utility\DESEncrypt.cs" />
     <Compile Include="Utility\PubConstant.cs" />
     <Compile Include="Utility\SQLHelper.cs" />
+    <Compile Include="WTLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

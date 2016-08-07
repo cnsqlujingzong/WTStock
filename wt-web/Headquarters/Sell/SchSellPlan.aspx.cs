@@ -1,3 +1,4 @@
+using EF;
 using System;
 using System.Data;
 using System.IO;
@@ -274,10 +275,12 @@ public partial class Headquarters_Sell_SchSellPlan : Page, IRequiresSessionState
 				this.hfRecID.Value,
 				"');"
 			});
+            WTLog.WriteLog("销售订单", this.hfRecID.Value, "审核", "失败", empty);
 		}
 		else
 		{
 			text = "ChkID('" + this.hfRecID.Value + "');";
+            WTLog.WriteLog("销售订单", this.hfRecID.Value, "审核", "成功");
 		}
 		this.SysInfo(text);
 	}
@@ -305,10 +308,12 @@ public partial class Headquarters_Sell_SchSellPlan : Page, IRequiresSessionState
 				this.hfRecID.Value,
 				"');"
 			});
+            WTLog.WriteLog("销售订单", this.hfRecID.Value, "反审核", "失败",empty);
 		}
 		else
 		{
 			text = "ChkID('" + this.hfRecID.Value + "');";
+            WTLog.WriteLog("销售订单", this.hfRecID.Value, "反审核", "成功");
 		}
 		this.SysInfo(text);
 	}
@@ -336,10 +341,12 @@ public partial class Headquarters_Sell_SchSellPlan : Page, IRequiresSessionState
 				this.hfRecID.Value,
 				"');"
 			});
+            WTLog.WriteLog("销售订单", this.hfRecID.Value, "终止", "失败",empty);
 		}
 		else
 		{
 			text = "ChkID('" + this.hfRecID.Value + "');";
+            WTLog.WriteLog("销售订单", this.hfRecID.Value, "终止", "成功");
 		}
 		this.SysInfo(text);
 	}
@@ -357,6 +364,7 @@ public partial class Headquarters_Sell_SchSellPlan : Page, IRequiresSessionState
 		if (num == 0)
 		{
 			this.hfRecID.Value = "-1";
+            WTLog.WriteLog("销售订单", this.hfRecID.Value, "删除", "成功");
 		}
 		else
 		{
@@ -369,7 +377,9 @@ public partial class Headquarters_Sell_SchSellPlan : Page, IRequiresSessionState
 				"');"
 			}));
 			this.ShowDetail();
+    WTLog.WriteLog("销售订单", this.hfRecID.Value, "删除", "失败",empty);
 		}
+    
 	}
 
 	protected void btnExcel_Click(object sender, EventArgs e)

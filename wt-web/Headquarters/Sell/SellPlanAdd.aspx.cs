@@ -1,3 +1,4 @@
+using EF;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -693,14 +694,17 @@ public partial class Headquarters_Sell_SellPlanAdd : Page, IRequiresSessionState
 			int iTbid;
 			int num = this.BillAdd(out iTbid);
 			if (num == 0)
-			{
+			{    
+                WTLog.WriteLog("销售订单", iTbid.ToString(), "新建订单", "保存成功!");
 				DALSellPlan dALSellPlan = new DALSellPlan();
 				string empty = string.Empty;
 				int iOperator = 0;
 				int.TryParse((string)this.Session["Session_wtUserID"], out iOperator);
 				dALSellPlan.ChkSellPlan(1, iTbid, iOperator, out empty);
+                WTLog.WriteLog("销售订单", iTbid.ToString(), "审核订单", empty);
 				this.SysInfo("window.alert(\"" + empty + "\");");
 				this.ClearText();
+            
 			}
 			else
 			{
@@ -739,6 +743,7 @@ public partial class Headquarters_Sell_SellPlanAdd : Page, IRequiresSessionState
 			{
 				this.SysInfo("window.alert('操作成功！该销售订单已保存');");
 				this.ClearText();
+                WTLog.WriteLog("销售订单", num.ToString(), "新建订单");
 			}
 			else
 			{

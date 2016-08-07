@@ -24,3 +24,16 @@ F:\WTStock\OtherClassLibrary\bin\Debug\Library.pdb
 F:\WTStock\OtherClassLibrary\obj\Debug\OtherClassLibrary.csprojResolveAssemblyReference.cache
 F:\WTStock\OtherClassLibrary\obj\Debug\OtherClassLibrary.dll
 F:\WTStock\OtherClassLibrary\obj\Debug\OtherClassLibrary.pdb
+F:\workspace\WTStock\OtherClassLibrary\bin\Debug\OtherClassLibrary.dll
+F:\workspace\WTStock\OtherClassLibrary\bin\Debug\OtherClassLibrary.pdb
+F:\workspace\WTStock\OtherClassLibrary\bin\Debug\DAL.dll
+F:\workspace\WTStock\OtherClassLibrary\bin\Debug\Model.dll
+F:\workspace\WTStock\OtherClassLibrary\bin\Debug\DB.dll
+F:\workspace\WTStock\OtherClassLibrary\bin\Debug\Library.dll
+F:\workspace\WTStock\OtherClassLibrary\bin\Debug\DAL.pdb
+F:\workspace\WTStock\OtherClassLibrary\bin\Debug\Model.pdb
+F:\workspace\WTStock\OtherClassLibrary\bin\Debug\DB.pdb
+F:\workspace\WTStock\OtherClassLibrary\bin\Debug\Library.pdb
+F:\workspace\WTStock\OtherClassLibrary\obj\Debug\OtherClassLibrary.csprojResolveAssemblyReference.cache
+F:\workspace\WTStock\OtherClassLibrary\obj\Debug\OtherClassLibrary.dll
+F:\workspace\WTStock\OtherClassLibrary\obj\Debug\OtherClassLibrary.pdb

@@ -1,3 +1,4 @@
+using EF;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -145,10 +146,12 @@ public partial class Headquarters_Sell_SellPlanMod : Page, IRequiresSessionState
             if (this.BillUpdate(out str) == 0)
             {
                 this.SysInfo("window.alert('操作成功！该销售订单已保存');parent.CloseDialog('1');");
+                WTLog.WriteLog("销售订单", this.id.ToString(), "修改订单", "成功",str);
             }
             else
             {
                 this.SysInfo("window.alert(\"" + str + "\");");
+                WTLog.WriteLog("销售订单", this.id.ToString(), "修改订单", "失败",str);
             }
         }
     }
@@ -180,10 +183,12 @@ public partial class Headquarters_Sell_SellPlanMod : Page, IRequiresSessionState
             string str;
             if (this.BillUpdate(out str) == 0)
             {
+                WTLog.WriteLog("销售订单", this.id.ToString(), "修改订单","成功");
                 DALSellPlan plan = new DALSellPlan();
                 int result = 0;
                 int.TryParse((string)this.Session["Session_wtUserID"], out result);
                 plan.ChkSellPlan(1, this.id, result, out str);
+                WTLog.WriteLog("销售订单", this.id.ToString(), "修改订单->审核", str);
                 this.SysInfo("window.alert('" + str + "');parent.CloseDialog('1');");
             }
             else
