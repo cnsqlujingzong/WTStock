@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{A5E043AF-DB1C-4C1C-A938-B5CEB4C5B914}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>F:\wt_files1\wt_files\bin\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\DALIPControl.cs" />
+    <Compile Include="DAL\DALIPManage.cs" />
+    <Compile Include="DAL\DALUserException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wt.DAL\DALAbsenceSet.cs" />
+    <Compile Include="wt.DAL\DALAccount.cs" />
+    <Compile Include="wt.DAL\DALAllocate.cs" />
+    <Compile Include="wt.DAL\DALArrearage.cs" />
+    <Compile Include="wt.DAL\DALAssociator.cs" />
+    <Compile Include="wt.DAL\DALAttendanceDetail.cs" />
+    <Compile Include="wt.DAL\DALAttendanceTime.cs" />
+    <Compile Include="wt.DAL\DALBaseInfo.cs" />
+    <Compile Include="wt.DAL\DALBeginArrearage.cs" />
+    <Compile Include="wt.DAL\DALBeginStock.cs" />
+    <Compile Include="wt.DAL\DALBillDeduct.cs" />
+    <Compile Include="wt.DAL\DALBranchList.cs" />
+    <Compile Include="wt.DAL\DALBroughtBack.cs" />
+    <Compile Include="wt.DAL\DALChargeItem.cs" />
+    <Compile Include="wt.DAL\DALCommon.cs" />
+    <Compile Include="wt.DAL\DALComplaint.cs" />
+    <Compile Include="wt.DAL\DALConsumablesTrack.cs" />
+    <Compile Include="wt.DAL\DALCoordinates.cs" />
+    <Compile Include="wt.DAL\DALCustomerAccessory.cs" />
+    <Compile Include="wt.DAL\DALCustomerDept.cs" />
+    <Compile Include="wt.DAL\DALCustomerList.cs" />
+    <Compile Include="wt.DAL\DALCustomerMembers.cs" />
+    <Compile Include="wt.DAL\DALCustomerTrack.cs" />
+    <Compile Include="wt.DAL\DALDataClass.cs" />
+    <Compile Include="wt.DAL\DALDeviceAccessory.cs" />
+    <Compile Include="wt.DAL\DALDeviceConfig.cs" />
+    <Compile Include="wt.DAL\DALDeviceConfItem.cs" />
+    <Compile Include="wt.DAL\DALDeviceList.cs" />
+    <Compile Include="wt.DAL\DALDisassembling.cs" />
+    <Compile Include="wt.DAL\DALExpense.cs" />
+    <Compile Include="wt.DAL\DALExtendedSet.cs" />
+    <Compile Include="wt.DAL\DALFeedBack.cs" />
+    <Compile Include="wt.DAL\DALGoods.cs" />
+    <Compile Include="wt.DAL\DALGoodsGone.cs" />
+    <Compile Include="wt.DAL\DALIncomeExpenses.cs" />
+    <Compile Include="wt.DAL\DALInnerAllocate.cs" />
+    <Compile Include="wt.DAL\DALLateSet.cs" />
+    <Compile Include="wt.DAL\DALLease.cs" />
+    <Compile Include="wt.DAL\DALLeaseCharge.cs" />
+    <Compile Include="wt.DAL\DALLendingReturn.cs" />
+    <Compile Include="wt.DAL\DALMaintenanceContract.cs" />
+    <Compile Include="wt.DAL\DALMaintenancePlan.cs" />
+    <Compile Include="wt.DAL\DALMeterReading.cs" />
+    <Compile Include="wt.DAL\DALNetServices.cs" />
+    <Compile Include="wt.DAL\DALNOPlan.cs" />
+    <Compile Include="wt.DAL\DALOA_Annunciate.cs" />
+    <Compile Include="wt.DAL\DALOA_Doc.cs" />
+    <Compile Include="wt.DAL\DALOA_Mail.cs" />
+    <Compile Include="wt.DAL\DALOfferItem.cs" />
+    <Compile Include="wt.DAL\DALPriceAdjust.cs" />
+    <Compile Include="wt.DAL\DALProductModel.cs" />
+    <Compile Include="wt.DAL\DALPurchase.cs" />
+    <Compile Include="wt.DAL\DALPurchasePlan.cs" />
+    <Compile Include="wt.DAL\DALQtyList.cs" />
+    <Compile Include="wt.DAL\DALRcvSnd.cs" />
+    <Compile Include="wt.DAL\DALRegulate.cs" />
+    <Compile Include="wt.DAL\DALRepository.cs" />
+    <Compile Include="wt.DAL\DALRight.cs" />
+    <Compile Include="wt.DAL\DALSaleContract.cs" />
+    <Compile Include="wt.DAL\DALSaleContractDetail.cs" />
+    <Compile Include="wt.DAL\DALSell.cs" />
+    <Compile Include="wt.DAL\DALSellPlan.cs" />
+    <Compile Include="wt.DAL\DalSerAttach.cs" />
+    <Compile Include="wt.DAL\DALServiceLevel.cs" />
+    <Compile Include="wt.DAL\DALServiceOffer.cs" />
+    <Compile Include="wt.DAL\DALServices.cs" />
+    <Compile Include="wt.DAL\DALServicesDeviceConf.cs" />
+    <Compile Include="wt.DAL\DALServicesItem.cs" />
+    <Compile Include="wt.DAL\DALServicesItemList.cs" />
+    <Compile Include="wt.DAL\DALServicesMaterial.cs" />
+    <Compile Include="wt.DAL\DALServicesProcess.cs" />
+    <Compile Include="wt.DAL\DALServicesPush.cs" />
+    <Compile Include="wt.DAL\DALServicesType.cs" />
+    <Compile Include="wt.DAL\DALServicesVisit.cs" />
+    <Compile Include="wt.DAL\DALShippingStyle.cs" />
+    <Compile Include="wt.DAL\DALSmsRcv.cs" />
+    <Compile Include="wt.DAL\DALSmsSnd.cs" />
+    <Compile Include="wt.DAL\DALSmsStrategy.cs" />
+    <Compile Include="wt.DAL\DALSmsTmp.cs" />
+    <Compile Include="wt.DAL\DALStaffList.cs" />
+    <Compile Include="wt.DAL\DALStockCheck.cs" />
+    <Compile Include="wt.DAL\DALStockDept.cs" />
+    <Compile Include="wt.DAL\DALStockIN.cs" />
+    <Compile Include="wt.DAL\DALStockList.cs" />
+    <Compile Include="wt.DAL\DALStockOUT.cs" />
+    <Compile Include="wt.DAL\DALStockSN.cs" />
+    <Compile Include="wt.DAL\DALSupplierList.cs" />
+    <Compile Include="wt.DAL\DALSys.cs" />
+    <Compile Include="wt.DAL\DALSysParm.cs" />
+    <Compile Include="wt.DAL\DALSysVali.cs" />
+    <Compile Include="wt.DAL\DALTaskList.cs" />
+    <Compile Include="wt.DAL\DALToolBar.cs" />
+    <Compile Include="wt.DAL\DALTroubleList.cs" />
+    <Compile Include="wt.DAL\DALUserManage.cs" />
+    <Compile Include="wt.DAL\DALVisitContent.cs" />
+    <Compile Include="wt.DAL\DALVisitResult.cs" />
+    <Compile Include="wt.DAL\DALWarranty.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DB\DB.csproj">
+      <Project>{b7147d93-d21b-4010-9294-e29bb77eed7f}</Project>
+      <Name>DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{224b2677-81e9-4e41-aece-1c4d75ef0f86}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

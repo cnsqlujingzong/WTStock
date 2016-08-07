@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Kset>
+  <txetbox Name="fjName">
+  </txetbox>
+  <txetbox Name="fjCity">东侨</txetbox>
+  <txetbox Name="fjDress">
+  </txetbox>
+  <txetbox Name="fjTel">
+  </txetbox>
+  <txetbox Name="fjPhone">
+  </txetbox>
+  <txetbox Name="Other1">
+  </txetbox>
+  <txetbox Name="Other2">
+  </txetbox>
+  <txetbox Name="Other3">
+  </txetbox>
+  <txetbox Name="Other4">张世良</txetbox>
+  <txetbox Name="Other5">
+  </txetbox>
+  <txetbox Name="Other6">
+  </txetbox>
+</Kset>

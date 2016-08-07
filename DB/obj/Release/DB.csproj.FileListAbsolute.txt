@@ -1,0 +1,17 @@
+C:\Users\Administrator\Desktop\wt_itfiles\wt_itfiles\wt_files\编译生成的DLL\DB.dll
+C:\Users\Administrator\Desktop\wt_itfiles\wt_itfiles\wt_files\编译生成的DLL\DB.pdb
+C:\Users\Administrator\Desktop\wt_itfiles\wt_itfiles\wt_files\源码\DB\obj\Release\DB.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\wt_itfiles\wt_itfiles\wt_files\源码\DB\obj\Release\DB.dll
+C:\Users\Administrator\Desktop\wt_itfiles\wt_itfiles\wt_files\源码\DB\obj\Release\DB.pdb
+F:\wt_files1\wt_files\bin\DB.dll
+F:\wt_files1\wt_files\bin\DB.pdb
+C:\Users\Administrator\Desktop\源码\DB\obj\Release\DB.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\源码\DB\obj\Release\DB.dll
+C:\Users\Administrator\Desktop\源码\DB\obj\Release\DB.pdb
+E:\workspace\st\源码20160413等2个文件\源码20160413\DB\obj\Release\DB.csprojResolveAssemblyReference.cache
+E:\workspace\st\源码20160413等2个文件\源码20160413\DB\obj\Release\DB.dll
+E:\workspace\st\源码20160413等2个文件\源码20160413\DB\obj\Release\DB.pdb
+E:\workspace\st\源码20160413等2个文件\源码20160413\DB\bin\Debug\DB.dll
+E:\workspace\st\源码20160413等2个文件\源码20160413\DB\bin\Debug\DB.pdb
+E:\workspace\st\源码20160413等2个文件\源码20160413\DB\bin\Debug\Library.dll
+E:\workspace\st\源码20160413等2个文件\源码20160413\DB\bin\Debug\Library.pdb

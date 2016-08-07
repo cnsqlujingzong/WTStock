@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<Kset>
+  <Lable Name="lday">
+    <pointx>166</pointx>
+    <pointy>412</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="lmouth">
+    <pointx>126</pointx>
+    <pointy>411</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="lyear">
+    <pointx>75</pointx>
+    <pointy>411</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="SPosttxt">
+    <pointx>533</pointx>
+    <pointy>366</pointy>
+    <attrib>False</attrib>
+  </Lable>
+  <Lable Name="Other5">
+    <pointx>247</pointx>
+    <pointy>400</pointy>
+    <attrib>False</attrib>
+  </Lable>
+  <Lable Name="Other4">
+    <pointx>146</pointx>
+    <pointy>381</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="Other3">
+    <pointx>319</pointx>
+    <pointy>301</pointy>
+    <attrib>False</attrib>
+  </Lable>
+  <Lable Name="Other2">
+    <pointx>91</pointx>
+    <pointy>297</pointy>
+    <attrib>False</attrib>
+  </Lable>
+  <Lable Name="fjPhone">
+    <pointx>164</pointx>
+    <pointy>231</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="fjTel">
+    <pointx>317</pointx>
+    <pointy>235</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="fjDress">
+    <pointx>71</pointx>
+    <pointy>184</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="Other1">
+    <pointx>130</pointx>
+    <pointy>127</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="fjCity">
+    <pointx>294</pointx>
+    <pointy>98</pointy>
+    <attrib>False</attrib>
+  </Lable>
+  <Lable Name="fjName">
+    <pointx>155</pointx>
+    <pointy>85</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="sjPhone">
+    <pointx>540</pointx>
+    <pointy>228</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="sjTel">
+    <pointx>705</pointx>
+    <pointy>232</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="sjDress">
+    <pointx>448</pointx>
+    <pointy>193</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="sOther1">
+    <pointx>514</pointx>
+    <pointy>143</pointy>
+    <attrib>False</attrib>
+  </Lable>
+  <Lable Name="sCity">
+    <pointx>630</pointx>
+    <pointy>116</pointy>
+    <attrib>True</attrib>
+  </Lable>
+  <Lable Name="sjName">
+    <pointx>501</pointx>
+    <pointy>114</pointy>
+    <attrib>True</attrib>
+  </Lable>
+</Kset>

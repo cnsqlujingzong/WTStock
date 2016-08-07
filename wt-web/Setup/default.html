@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>安装向导将帮助您完成维通.NET(IT专业版)的设置</title>
+    <style type="text/css">
+    body{ margin:0; padding:0; font:12px Verdana;text-align:center; color:#4b4b4b;}
+    p{ margin:15px 0;}
+    .tb td{ height:28px; padding-left:30px;}
+    .tb{ margin:5px 0 5px 0;}
+    .d1{height:28px; border-bottom:1px #aac1de solid; border-right:1px #aac1de solid;background:#c1d9f3; line-height:25px; padding-left:30px; font-size:14px;}
+    .tx{ width:200px;}
+    .btn{  height:24px; font:12px Verdana; margin-top:2px;}
+    </style>
+</head>
+<body onload="ChkEmo();">    
+        <div id="sdiv1">
+        <div style="margin:50px auto 0 auto; width:700px; height:400px; text-align:left;">
+            <div class="d1" style="  background:#c1d9f3 url(../Public/Images/dmcls.gif) no-repeat 7px 3px;">
+                第一步：环境检测
+            </div>
+            <table cellpadding="0" cellspacing="0" class="tb">
+                <tr><td>1、StateServer服务状态是否开启 <span id="csp0"><img src="../Public/Images/load2.gif" /></span></td></tr>
+                <tr><td>2、日志目录Log的读写权限 <span id="csp1" style="color:#ff0000"><%--<img src="../Public/Images/dmove.gif" />--%></span></td></tr>
+                <tr><td>3、缓存文件目录Xml的读写权限 <span id="csp2"></span></td></tr>
+                <tr><td>4、图片上传目录Images的读写权限 <span id="csp3"><%--<img src="../Public/Images/dmcal.gif" />--%></span></td></tr>
+                <tr><td>5、文档上传目录Document的读写权限 <span id="csp4"></span></td></tr>
+                <tr><td>6、Setup目录的删除权限 <span id="csp5"></span></td></tr>
+                <tr><td>7、web.config的读写权限 <span id="csp6"></span></td></tr>
+                <tr><td>8、Asp.net Ajax是否支持 <span id="csp7"></span></td></tr>
+            </table>
+            <div class="d1" style="padding-left:20px;">
+                <table cellpadding="0" cellspacing="0" style="width:100%">
+                    <tr>
+                        <td style="font-size:12px; color:#aa0000;">如过存在无法通过的检测，请查看安装帮助里的常见问题。</td>
+                        <td style="text-align:right; padding-right:15px;"><input id="btnNext" type="button" value="下一步:数据库配置" onclick="ChkNext();" class="btn" disabled="disabled" /></td>
+                    </tr>
+                </table>
+            </div>
+       </div>
+       </div>
+       
+       
+       <div id="sdiv2" style="display:none;">
+       <div style="margin:50px auto 0 auto; width:700px; height:400px; text-align:left;">
+            <div class="d1" style="  background:#c1d9f3 url(../Public/Images/dmcls.gif) no-repeat 7px 3px;">
+                第二步：数据库配置
+            </div>
+            <table cellpadding="0" cellspacing="0" class="tb">
+                <tr>
+                    <td>数据库服务器名或ip</td>
+                    <td>
+                    <input id="tbServerIP" type="text" value="." class="tx" />
+                    <span style="color:#ff0000"> * </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>数据库名</td>
+                    <td>
+                    <input id="tbServerName" type="text" value="wt_it" class="tx" />
+                    <span style="color:#ff0000"> * </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>数据库用户名</td>
+                    <td>
+                    <input id="tbServerSa" type="text" value="sa" class="tx" />
+                    <span style="color:#ff0000"> * </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>数据库用户口令</td>
+                    <td>
+                    <input id="tbServerPwd" type="password" class="tx" />
+                    <span id="tsp" style="display:none;"><img src="../Public/Images/load2.gif" alt="" /> <span style="color:#ff0000">正在测试连接，请稍等...</span></span>
+                    
+                    </td>
+                </tr>
+                
+            </table>
+             <div class="d1" style="padding-left:20px;">
+                <table cellpadding="0" cellspacing="0" style="width:100%">
+                    <tr>
+                        <td style="font-size:12px; color:#aa0000;">设置安装后，您可以手工移除Setup目录，防止重复配置</td>
+                        <td style="text-align:right; padding-right:15px;"><input id="btnEnter" type="button" value="完成安装:" onclick="ChkEnter();" class="btn" /></td>
+                    </tr>
+                </table>
+            </div>
+       </div>
+       </div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+var XML_Http_Request = false;
+function createXMLHttpRequest(){
+    XML_Http_Request = false;
+    
+    if(window.XMLHttpRequest){        //for Mozilla
+        XML_Http_Request = new XMLHttpRequest();
+        if(XML_Http_Request.overrideMimeType){
+            XML_Http_Request.overrideMimeType("text/xml");
+        }
+    }
+    else if(window.ActiveXObject){   //for IE
+        try{
+            XML_Http_Request = new ActiveXObject("Msxml2.XMLHTTP");
+        }catch(e){
+            try{
+                XML_Http_Request = new ActiveXObject("Microsoft.XMLHTTP");
+            }catch(e){}
+        }
+    }
+}
+function send_Request(str)
+{    
+    createXMLHttpRequest(); 
+    if(!XML_Http_Request)
+    {
+        window.alert("Cannot create XMLHttpRequest instance!");
+        return false;
+    }
+    var parmurl="n="+Math.round(Math.random()*10000); 
+    
+    if(str=="em"){
+    XML_Http_Request.onreadystatechange = process_Request;       
+    XML_Http_Request.open("POST","Environment.aspx",true);}
+    if(str=="db"){
+    var sip=document.getElementById("tbServerIP").value;
+    var sdb=document.getElementById("tbServerName").value;
+    var ssa=document.getElementById("tbServerSa").value;
+    var spw=document.getElementById("tbServerPwd").value;
+    parmurl=parmurl+"&parm1="+sip+"&parm2="+sdb+"&parm3="+ssa+"&parm4="+spw;
+    XML_Http_Request.onreadystatechange = process_Request_db;       
+    XML_Http_Request.open("POST","DbConnection.aspx",true);}
+    
+    XML_Http_Request.setRequestHeader("Content-Type","application/x-www-form-urlencoded;"); 
+    XML_Http_Request.send(parmurl);
+}
+ 
+function process_Request(){
+    if(XML_Http_Request.readyState == 4)
+    {
+        if(XML_Http_Request.status == 200)
+        {  
+            var rtninfo=XML_Http_Request.responseText;
+            var rstr=rtninfo.split("^");
+            for(var i=0;i<rstr.length;i++)
+            {
+                document.getElementById("csp"+i).innerHTML=rstr[i]=="1"?"<img src='../Public/Images/dmove.gif' />":"<img src='../Public/Images/dmcal.gif' />";
+            }
+            
+            if(rstr.length==8)
+            {
+                if(rstr[0]=="1"&&rstr[6]=="1"&&rstr[7]=="1")
+                {
+                    document.getElementById("btnNext").disabled=false;
+                }
+            }
+        }
+        else
+        {
+	        document.getElementById("csp1").innerHTML="检测环境失败，没有权限访问aspx页面";
+	        return false;
+	    }
+    }else
+    {
+        //正在获得提示数据 
+    }
+}
+
+function ChkEmo()
+{
+    window.setTimeout("send_Request('em')",1000);
+}
+
+function ChkNext()
+{
+    document.getElementById("sdiv2").style.display="block";
+    document.getElementById("sdiv1").style.display="none";
+    document.getElementById("tbServerPwd").focus();
+}
+function ChkEnter()
+{
+    if(document.getElementById("tbServerIP").value=="")
+    {
+        alert("数据库服务器名或ip不能为空");
+        document.getElementById("tbServerIP").focus();
+        return false;
+    }
+    if(document.getElementById("tbServerName").value=="")
+    {
+        alert("数据库名不能为空");
+        document.getElementById("tbServerName").focus();
+        return false;
+    }
+    if(document.getElementById("tbServerSa").value=="")
+    {
+        alert("数据库用户名不能为空");
+        document.getElementById("tbServerSa").focus();
+        return false;
+    }
+    document.getElementById("btnEnter").disabled=true;
+    send_Request('db');
+}
+
+function process_Request_db(){
+    if(XML_Http_Request.readyState == 4)
+    {
+        if(XML_Http_Request.status == 200)
+        {  
+            var rtninfo=XML_Http_Request.responseText;
+            if(rtninfo=="0")
+            {
+                alert("数据库连接失败，请检查输入.");
+                document.getElementById("tbServerPwd").focus();
+            }else{
+                if(rtninfo=="11"){
+                alert("数据库连接成功.");
+                location.href="../Default.aspx";
+                }
+                if(rtninfo=="10"){
+                alert("数据库连接成功，安装目录setup删除失败.");
+                location.href="../Default.aspx";
+                }
+            }
+            document.getElementById("btnEnter").disabled=false;
+            document.getElementById("tsp").style.display="none";
+        }
+    }else
+    {
+        document.getElementById("tsp").style.display="";//正在获得提示数据 
+    }
+}
+
+
+</script>

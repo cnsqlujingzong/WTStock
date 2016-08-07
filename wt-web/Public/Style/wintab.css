@@ -1,0 +1,44 @@
+﻿/*未激活窗口样式*/
+.Tab_InactiveLeftBorder
+{
+	height:22px;width:2px;display:block; float:left;background:url(../Images/Tab/Tab_InactiveLeftBorder.png) repeat-x;
+}
+.Tab_InactiveMiddle
+{
+	height:22px;display:block; float:left;background:url(../Images/Tab/Tab_InactiveMiddle.png) repeat-x; padding-left:7px; padding-right:7px; line-height:26px;cursor: default;
+}
+.Tab_InactiveMiddleClose
+{
+	height:22px;display:block; float:left;
+}
+.Tab_InactiveRightBorder
+{
+	height:22px;width:2px; display:block; float:left;background:url(../Images/Tab/Tab_InactiveRightBorder.png)  repeat-x;
+}
+
+/*激活窗口样式*/
+.Tab_ActiveLeftBorder
+{
+	height:22px;width:3px; display:block; float:left;background:url(../Images/Tab/Tab_ActiveLeftBorder.png) no-repeat;
+}
+.Tab_ActiveMiddle
+{
+	height:22px;display:block; float:left;background:url(../Images/Tab/Tab_ActiveMiddle.png) repeat-x; padding-left:5px; padding-right:5px; line-height:26px;cursor: default;
+}
+.Tab_ActiveMiddleClose
+{
+	height:22px;display:block; float:left;background:url(../Images/Tab/Tab_ActiveMiddle.png) repeat-x;cursor: default;
+}
+.Tab_ActiveRightBorder
+{
+	height:22px;width:3px; display:block; float:left;background:url(../Images/Tab/Tab_ActiveRightBorder.png) no-repeat;
+}
+
+/*标签样式*/
+#mytitle{background:#E7E6E2; border-bottom:#9EAFC3 1px solid; height:24px;width:100%; position:absolute;z-index:10;}
+#FScro{width:50px;height:21px; padding:0px; padding-top:3px;}
+#FScro div{width:16px;height:16px;overflow:hidden; float:left; padding:0px; padding-left:5px;}
+#WinFinfo{position:relative;padding:3px 0px 0px 0px;overflow:hidden;height:21px}
+#WinList{position:relative;height:21px;overflow:hidden}
+#WinPage{position:absolute;z-index:1;top:0px;left:0px}
+

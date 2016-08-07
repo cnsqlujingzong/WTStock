@@ -1,0 +1,10 @@
+E:\workspace\st\WTStock\Model\bin\Debug\Model.dll
+E:\workspace\st\WTStock\Model\bin\Debug\Model.pdb
+E:\workspace\st\WTStock\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\workspace\st\WTStock\Model\obj\Debug\Model.dll
+E:\workspace\st\WTStock\Model\obj\Debug\Model.pdb
+F:\WTStock\Model\bin\Debug\Model.dll
+F:\WTStock\Model\bin\Debug\Model.pdb
+F:\WTStock\Model\obj\Debug\Model.dll
+F:\WTStock\Model\obj\Debug\Model.pdb
+F:\WTStock\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

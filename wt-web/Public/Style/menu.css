@@ -1,0 +1,358 @@
+﻿/*---------------------------*/
+#dtop{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:1;
+}
+
+#menu{ 
+	background:url(../Images/bgtitle.jpg) repeat-x;
+	height:22px;
+	overflow:hidden;
+}
+#menu_par ul{margin:0; padding:0;}
+.menu_tb{ height:22px;}
+#menu_par li
+{
+    display:block;
+    height:22px;
+    float:left;
+}
+
+/*标题图片*/
+#sptitle{ 
+	height:22px;
+	width:26px;
+	background:url(../Images/dtico.gif) no-repeat 3px -2px;
+}
+
+/*标题样式*/
+#menu_par li a
+{
+	display:block;
+    width:60px;
+    height:22px;
+    line-height:24px;
+    text-align:center;
+    color:#fff;
+    text-decoration:none;
+}
+
+#menu_par li a:hover
+{
+	display:block;
+    background:url(../Images/bgmud.jpg) repeat-x;
+    width:60px;
+    height:22px;
+    line-height:24px;
+    text-align:center;
+}
+
+#isheight{height:2px;background:#E7E6E2; font-size:0px;}
+/*---------------------------*/
+.fcolor{ background-color:#00ff00; } /*firefox*/
+*html .fcolor{ background-color:#0000ff;} /*ie6*/
+*+html .fcolor{ background-color:#ff0000;} /*ie7*/
+
+/*--------------------------------*/
+/*子菜单样式*/
+#row1,#row2,#row3,#row4,#row5,#row6,#row7,#row8,#row9,#row10,#row11,#row12,#row13,#row14,#row15,#row16,#row17,#row18,#row19,#row20,#row21,#row22,#row23{
+	line-height:21px;text-align:left;padding-left:5px;height:21px;width:133px;display:block;background:url(../Images/dmrow.gif) no-repeat 130px 5px;
+}
+#row1:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row2:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row3:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+
+#row4:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row5:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row6:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row7:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row8:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row9:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row10:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row11:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row12:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row13:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row14:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row15:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row16:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row17:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row18:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row19:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row20:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row21:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row22:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+#row23:hover{
+	color:#FFFFFF;background:#0063A2 url(../Images/dmrow3.gif) no-repeat 130px 5px;
+}
+.KsMenu{position:absolute;z-index:9997;width:162px;left:0px;display:none; padding:0px;border-left:1px #5CAEDD solid;border-top:1px #5CAEDD solid;border-bottom:1px #00629A solid;border-right:1px #00629A solid; background:#ffffff;}
+.KsMenu2{ background:#0000ff;position:absolute;z-index:9998;width:141px;padding:0px 0px 0px 22px;left:0px;background:url(../Images/ksbg.gif);}
+.KsMenu2 a{line-height:21px;text-align:left;padding-left:5px;height:21px;width:133px;display:block;}
+.KsMenu2 a:hover{color:#FFFFFF;background:#0063A2;}
+.KsMenu2 div{width:136px;margin:0px 0px 0px 2px;clear:both;background:#CCC;height:1px;overflow:hidden}
+.menu_s_sub{
+    display:none;
+    position:absolute;
+}
+.WinCss{position:absolute;overflow:hidden;}
+.WinCss_Foot{position:relative;float:left;display:inline;height:21px;}
+.WinCon2{overflow:hidden;width:100%;height:100%;}
+/*---------------------------------------*/
+#tool
+{
+	background:#ECE9D8;
+	height:40px;
+	border-bottom:#848284 1px solid;
+	border-top:#fff 1px solid;
+}
+#tool li
+{
+    float:left;
+    margin-left:5px;
+}
+
+#tool a{
+	display:block;
+	text-align:center;
+	padding:20px 2px 0px 2px;
+	text-decoration:none;
+	color:#000;
+	
+	cursor:default;
+	border:1px #ECE9D8 solid;
+}
+
+#tool a:hover
+{
+    border-left:1px #fff solid;
+    border-top:1px #fff solid;
+    border-right:1px #BEBBAD solid;
+    border-bottom:1px #BEBBAD solid;
+}
+
+.tool_d
+{
+    padding-top:2px !important;
+    padding-top:3px;
+    padding-left:7px;
+}
+/*子窗口*/
+#divDialog
+{
+	border: 1px #02339C solid;
+	display: none; visibility: hidden; position: absolute; z-index:9992;
+}
+#divIco
+{
+    background: url(../Images/dmrpt.gif) no-repeat 3px 3px;
+    padding-left: 18px;
+    padding-top:4px;
+    float:left;
+}
+#divTitle
+{
+    background: url(../Images/bgmud.jpg) repeat-x ;
+    color: #fff;
+	font-weight:bold;
+	cursor:default; display:block;
+	height:21px;
+}
+#divClose
+{
+	float: right; padding-right:2px;
+	padding-top:2px;
+}
+
+#iframeDialog
+{
+    width:100%;
+    height:95%;
+}
+
+*html #iframeDialog
+{
+    width:100%;
+    height:100%;
+}
+#divBackground
+{
+	position: absolute; z-index: 9991; visibility: hidden; display: none; top: 0px; left: 0px; width: 100%; height: 100%; filter: alpha(opacity=0);
+}
+/*---------*/
+#divDialog1
+{
+	border: 1px #02339C solid;
+	display: none; visibility: hidden; position: absolute; z-index:9994;
+}
+#divIco1
+{
+    background: url(../Images/dmrpt.gif) no-repeat 3px 3px;
+    padding-left: 18px;
+    padding-top:4px;
+    float:left;
+}
+#divTitle1
+{
+    background: url(../Images/bgmud.jpg) repeat-x ;
+    color: #fff;
+	font-weight:bold;
+	cursor:default; display:block;
+	height:21px;
+}
+#divClose1
+{
+	float: right; padding-right:2px;
+	padding-top:2px;
+}
+
+#iframeDialog1
+{
+    width:100%;
+    height:95%;
+}
+
+*html #iframeDialog1
+{
+    width:100%;
+    height:100%;
+}
+#divBackground1
+{
+	position: absolute; z-index: 9993; visibility: hidden; display: none; top: 0px; left: 0px; width: 100%; height: 100%; filter: alpha(opacity=0);
+}
+/*---------*/
+#divDialog2
+{
+	border: 1px #02339C solid;
+	display: none; visibility: hidden; position: absolute; z-index:9996;
+}
+#divIco2
+{
+    background: url(../Images/dmrpt.gif) no-repeat 3px 3px;
+    padding-left: 18px;
+    padding-top:4px;
+    float:left;
+}
+#divTitle2
+{
+    background: url(../Images/dtbg.jpg) repeat-x ;
+    color: #fff;
+	font-weight:bold;
+	cursor:default; display:block;
+	height:21px;
+}
+#divClose2
+{
+	float: right; padding-right:2px;
+	padding-top:2px;
+}
+
+#iframeDialog2
+{
+    width:100%;
+    height:95%;
+}
+
+*html #iframeDialog2
+{
+    width:100%;
+    height:100%;
+}
+#divBackground2
+{
+	position: absolute; z-index: 9995; visibility: hidden; display: none; top: 0px; left: 0px; width: 100%; height: 100%; filter: alpha(opacity=0);
+}
+/*---------*/
+#divDialog3
+{
+	border: 1px #02339C solid;
+	display: none; visibility: hidden; position: absolute; z-index:9998;
+}
+#divIco3
+{
+    background: url(../Images/dmrpt.gif) no-repeat 3px 3px;
+    padding-left: 18px;
+    padding-top:4px;
+    float:left;
+}
+#divTitle3
+{
+    background: url(../Images/dtbg.jpg) repeat-x ;
+    color: #fff;
+	font-weight:bold;
+	cursor:default; display:block;
+	height:21px;
+}
+#divClose3
+{
+	float: right; padding-right:2px;
+	padding-top:2px;
+}
+
+#iframeDialog3
+{
+    width:100%;
+    height:95%;
+}
+
+*html #iframeDialog3
+{
+    width:100%;
+    height:100%;
+}
+#divBackground3
+{
+	position: absolute; z-index: 9997; visibility: hidden; display: none; top: 0px; left: 0px; width: 100%; height: 100%; filter: alpha(opacity=0);
+}
+/*---------*/
+#test
+{
+	width:190px; position:absolute; top:13px; right:10px; display:none; z-index:9999; background:#e9e7e3; border:1px #16397f solid; padding:5px;
+}
+

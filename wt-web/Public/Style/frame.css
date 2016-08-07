@@ -1,0 +1,141 @@
+﻿body{ font:12px Verdana,sans-serif,宋体; background:#fff; margin:0px; }
+html,body{ height:100%; width:100%;} /* 同时设置html是为了兼容FF */
+*{
+	margin: 0px;
+	padding: 0px;
+	/*-border: thin none;------*/ 
+}
+a{ font-size:12px;}
+
+.ftool
+{
+    height:29px; 
+    background:url(../Images/bg_tool.jpg) repeat-x;
+}
+.ftool2{background:#ECE9D8; height:21px; padding-top:4px;}
+
+.ftoolleft
+{
+	display:block;
+    float:left;
+    height:28px;
+}
+
+.ftoolright
+{
+	display:block;
+	float:right;
+	padding-right:10px;
+	height:28px;
+}
+
+.clearfloat
+{
+	clear:both;
+}
+
+/*底部*/
+.fbon
+{
+    height:23px; border-top:1px #fff solid;
+    line-height:23px;
+    overflow:hidden;
+}
+.fbom
+{
+     border-top:1px #808080 solid;
+     background:#E9E9E9;
+}
+#fbon li
+{
+    display:block;
+    height:23px;
+    line-height:23px;
+    padding-left:25px;
+    padding-right:10px;
+    float:left;
+}
+.bs1
+{
+    padding-left:10px;
+}
+#fbon .li1{ background:url(../Images/tubiao2_24.gif) no-repeat 7px 3px;}
+#fbon .li2{ background:url(../Images/tubiao2_27.gif) no-repeat 10px 3px; color:#0000ff;}
+#fbon .li3{ background:url(../Images/tubiao2_29.gif) no-repeat 6px 3px; color:#0000ff;}
+#fbon .li4{ background:url(../Images/tubiao2_32.gif) no-repeat 7px 4px;}
+
+/*色块*/
+.sred
+{
+    padding-left:15px;
+    background:url(../Images/red.gif) no-repeat;
+}
+.stin
+{
+    padding-left:15px;
+    background:url(../Images/tin.gif) no-repeat;
+}
+.sblue
+{
+    padding-left:15px;
+    background:url(../Images/blue.gif) no-repeat;
+}
+.sgay
+{
+    padding-left:15px;
+    background:url(../Images/gay.gif) no-repeat;
+}
+.sgreen
+{
+    padding-left:15px;
+    background:url(../Images/green.gif) no-repeat;
+}
+.syellow
+{
+    padding-left:15px;
+    background:url(../Images/yellow.gif) no-repeat;
+}
+.syellows
+{
+    padding-left:15px;
+    background:url(../Images/yellows.gif) no-repeat;
+}
+.sblack
+{
+    padding-left:15px;
+    background:url(../Images/black.gif) no-repeat;
+}
+
+.tred
+{
+    background:url(../Images/red.gif) no-repeat center center;
+}
+.ttin
+{
+    background:url(../Images/tin.gif) no-repeat center center;
+}
+.tblue
+{
+    background:url(../Images/blue.gif) no-repeat center center;
+}
+.tgay
+{
+    background:url(../Images/gay.gif) no-repeat center center;
+}
+.tgreen
+{
+    background:url(../Images/green.gif) no-repeat center center;
+}
+.tyellow
+{
+    background:url(../Images/yellow.gif) no-repeat center center;
+}
+.tyellows
+{
+    background:url(../Images/yellows.gif) no-repeat center center;
+}
+.tblack
+{
+    background:url(../Images/black.gif) no-repeat center center;
+}
+/*---*/

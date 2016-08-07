@@ -1,0 +1,20 @@
+﻿html{
+margin:0px;overflow:hidden;height:100%;width:100%;
+}
+/*background:#0B78BD;*/
+body{height:100%;width:100%;overflow:hidden;margin:0px;font-family:"Verdana","宋体";font-size:12px;}
+img{border:0px}
+form{margin:0px}
+
+*{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	border-top:thin none;
+	/*-border: thin none;------*/ 
+}
+a{cursor:default;}
+a:link {color:#333333;text-decoration:none}
+a:visited {text-decoration:none;color:#333333}
+a:hover {text-decoration:none}
+a:active {text-decoration:none;color:#333333}

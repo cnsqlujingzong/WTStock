@@ -1,0 +1,59 @@
+﻿/*未激活窗口样式*/
+.tabs_left
+{
+	height:21px;width:3px;display:inline; float:left;background:url(../Images/Tabs/tab-left.gif) no-repeat;
+}
+.tabs
+{
+	height:21px;display:inline; float:left;background:url(../Images/Tabs/tab.gif) repeat-x; padding-left:7px; padding-right:7px; line-height:21px;cursor: default;
+}
+.tabs_right
+{
+	height:21px;width:4px;display:inline; float:left;background:url(../Images/Tabs/tab-right.gif) no-repeat;
+}
+
+/*鼠标滑过样式*/
+.tabs_hoverleft
+{
+	height:21px;width:3px; display:inline; float:left;background:url(../Images/Tabs/tab-hover-left.gif) no-repeat;
+}
+.tabs_hover
+{
+	height:21px;display:inline; float:left;background:url(../Images/Tabs/tab-hover.gif) repeat-x;padding-left:7px; padding-right:7px; line-height:21px;cursor: default;
+}
+.tabs_hoverright
+{
+	height:21px;width:4px; display:inline; float:left;background:url(../Images/Tabs/tab-hover-right.gif) no-repeat;
+}
+
+/*激活窗口样式*/
+.tabs_activeleft
+{
+	height:21px;width:3px; display:inline; float:left;background:url(../Images/Tabs/tab-active-left.gif) no-repeat;
+}
+.tabs_active
+{
+	height:21px;display:inline; float:left;background:url(../Images/Tabs/tab-active.gif) repeat-x;padding-left:7px; padding-right:7px; line-height:21px;cursor: default;
+}
+.tabs_activeright
+{
+	height:21px;width:4px; display:inline; float:left;background:url(../Images/Tabs/tab-active-right.gif) no-repeat;
+}
+
+/*标签样式*/
+#mytabs
+{
+    height:21px;font:12px Verdana,sans-serif,宋体; background:url(../Images/Tabs/tab-line.gif) repeat-x left bottom;
+}
+
+#info1,#info2,#info3,#info4,#info5,#info6,#info7,#info8,#info9,#info10,#info11,#info12,#info13{background:#ffffff;clear:both;text-align:left;margin:0px; padding:0px; overflow:auto; border:#838D93 1px solid; border-top:none;}
+
+#mytabs2
+{
+    height:21px;font:12px Verdana,sans-serif,宋体; background:url(../Images/Tabs/tab-line.gif) repeat-x left bottom;
+}
+
+#infos1,#infos2,#infos3,#infos4,#infos5,#infos6,#infos7,#infos8,#infos9,#infos10,#infos11,#infos12,#infos13{background:#ffffff;clear:both;text-align:left;margin:0px; padding:0px; overflow:auto; border:#838D93 1px solid; border-top:none; height:100%; width:100%;}
+
+.hd {display:none;}
+.swb {display:block;}

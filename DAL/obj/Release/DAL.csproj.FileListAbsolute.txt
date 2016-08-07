@@ -1,0 +1,16 @@
+F:\wt_files1\wt_files\bin\DAL.dll
+F:\wt_files1\wt_files\bin\DAL.pdb
+C:\Users\Administrator\Desktop\源码\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\源码\DAL\obj\Release\DAL.dll
+C:\Users\Administrator\Desktop\源码\DAL\obj\Release\DAL.pdb
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\obj\Release\DAL.dll
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\obj\Release\DAL.pdb
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\DAL.dll
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\DAL.pdb
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\DB.dll
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\Model.dll
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\Library.dll
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\DB.pdb
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\Model.pdb
+E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\Library.pdb

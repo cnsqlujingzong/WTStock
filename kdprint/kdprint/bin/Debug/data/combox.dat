@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<combox>
+  <Lable Name="申通快递">
+    <pointx>1</pointx>
+    <pointy>申通.jpg</pointy>
+    <danhao>668808930082</danhao>
+    <Kuang>230</Kuang>
+    <Gao>127</Gao>
+    <Pleft>0</Pleft>
+    <Pright>0</Pright>
+    <BigFont>35</BigFont>
+    <Bigwidth>100</Bigwidth>
+  </Lable>
+  <Lable Name="韵达快运">
+    <pointx>1</pointx>
+    <pointy>韵达快运.jpg</pointy>
+    <danhao>1000187712022</danhao>
+    <Kuang>230</Kuang>
+    <Gao>127</Gao>
+    <Pleft>0</Pleft>
+    <Pright>0</Pright>
+    <BigFont>35</BigFont>
+    <Bigwidth>100</Bigwidth>
+  </Lable>
+  <Lable Name="EMS">
+    <pointx>0</pointx>
+    <pointy>EMS.JPG</pointy>
+    <danhao>1441111113</danhao>
+    <Kuang>230</Kuang>
+    <Gao>127</Gao>
+    <Pleft>0</Pleft>
+    <Pright>0</Pright>
+    <BigFont>35</BigFont>
+    <Bigwidth>100</Bigwidth>
+  </Lable>
+</combox>

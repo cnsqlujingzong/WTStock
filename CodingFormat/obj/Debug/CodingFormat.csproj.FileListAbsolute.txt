@@ -1,0 +1,17 @@
+E:\workspace\st\WTStock\CodingFormat\bin\Debug\CodingFormat.exe
+E:\workspace\st\WTStock\CodingFormat\bin\Debug\CodingFormat.pdb
+E:\workspace\st\WTStock\CodingFormat\obj\Debug\CodingFormat.csprojResolveAssemblyReference.cache
+E:\workspace\st\WTStock\CodingFormat\obj\Debug\CodingFormat.Form1.resources
+E:\workspace\st\WTStock\CodingFormat\obj\Debug\CodingFormat.Properties.Resources.resources
+E:\workspace\st\WTStock\CodingFormat\obj\Debug\CodingFormat.csproj.GenerateResource.Cache
+E:\workspace\st\WTStock\CodingFormat\obj\Debug\CodingFormat.exe
+E:\workspace\st\WTStock\CodingFormat\obj\Debug\CodingFormat.pdb
+F:\WTStock\CodingFormat\obj\Debug\CodingFormat.exe
+F:\WTStock\CodingFormat\obj\Debug\CodingFormat.pdb
+F:\WTStock\CodingFormat\bin\Debug\CodingFormat.exe
+F:\WTStock\CodingFormat\bin\Debug\CodingFormat.pdb
+F:\WTStock\CodingFormat\obj\Debug\CodingFormat.csprojResolveAssemblyReference.cache
+F:\WTStock\CodingFormat\obj\Debug\CodingFormat.Form1.resources
+F:\WTStock\CodingFormat\obj\Debug\CodingFormat.Properties.Resources.resources
+F:\WTStock\CodingFormat\obj\Debug\CodingFormat.csproj.GenerateResource.Cache
+F:\WTStock\CodingFormat\obj\Debug\CodingFormat.Form2.resources

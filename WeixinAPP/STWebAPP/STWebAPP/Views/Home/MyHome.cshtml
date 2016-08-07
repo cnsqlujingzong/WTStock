@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "个人主页";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-bars mui-pull-left mui-plus-visible"></a>
+			<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>
+			<h1 class="mui-title">个人主页</h1>
+</header>
+<div class="mui-content">
+    <ul id="list" class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell" style="padding:20px 15px">
+					<a class="mui-navigate-right" href="Home/ServicesAllot">
+						服务处理
+					</a>
+				</li>
+        <li class="mui-table-view-cell" style="padding:20px 15px">
+            <a class="mui-navigate-right" href="Home/MyTask">
+                个人任务
+            </a>
+        </li>
+       @* <li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">
+						actionsheet（操作表）
+					</a>
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right" href="examples/actionsheet.html">
+								H5模式actionsheet
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-plus-visible">
+							<a class="mui-navigate-right" href="examples/actionsheet-plus.html">
+								原生模式actionsheet
+							</a>
+						</li>
+					</ul>
+				</li>*@
+        </ul>
+</div>

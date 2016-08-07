@@ -1,0 +1,58 @@
+
+body{ margin:0; padding:0; font-size:12px; font-family:Verdana,"ËÎÌו";}
+ul,li{ margin:0; padding:0; list-style:none;}
+a{ color:#1b4f74;}
+.item{ font-weight:bold; font-size:14px; padding:12px 0 6px 45px; background:url(../images/item1.gif) no-repeat 25px 12px;}
+.tool{ height:28px; margin:0 10px; background:#d0e2f6; border-bottom:1px #aac1de solid; text-align:right;}
+
+.bt1{ width:71px; height:21px; line-height:21px; background:url(../images/buttom1.gif) no-repeat; border:none; color:#4a6988; font-size:12px; font-family:"ËÎÌו";
+padding-left:10px !important;
+padding-left:10px;
+}
+.bt3{background:url(../images/buttom3.gif) no-repeat;}
+.bt8{background:url(../images/buttom8.gif) no-repeat; width:91px;}
+.nss{ padding:0 10px 0 20px; background:url(../images/reg.gif) no-repeat;}
+.tb1 td{
+	padding-left:15px;
+	height:30px;
+}
+.pin
+{
+    width:130px;
+}
+.pt1{ background:url(../images/li8.gif) no-repeat 1px -2px; padding-left:23px; color:#04d; font-weight:bold; font-size:14px; margin:8px 0;}
+
+.tb2{ padding-top:3px; margin:0 0 0 auto;}
+.tb2 td{ padding-right:5px; color:#4b4b4b;}
+.p1{ font-size:14px; margin:0; padding:10px 0 0 20px;}
+
+.list{margin:0 15px;}
+#list a{text-decoration:underline;}
+#list a:hover{ background:#1b4f74; color:#fff;}
+
+#GridView1{ color:#4b4b4b; width:98%;}
+#GridView1 td{ padding:2px 5px; padding-bottom:0; border-bottom:1px #dfdfdf solid;}
+#GridView1 th{ padding:2px 5px; padding-bottom:3px !important; padding-bottom:0; border-bottom:1px #dfdfdf solid;text-align:left;}
+
+#GridView2{ color:#4b4b4b; width:98%;}
+#GridView2 td{ padding:2px 5px; padding-bottom:0; border-bottom:1px #dfdfdf solid;}
+#GridView2 th{ padding:2px 5px; padding-bottom:3px !important; padding-bottom:0; border-bottom:1px #dfdfdf solid;text-align:left;}
+
+.cb1{ margin-bottom:2px;}
+#span_info{ background:#008800; color:#fff; padding:1px 20px; font-size:12px; font-weight:normal;}
+
+#d_page{ color:#4b4b4b; padding:8px 0 0 10px;}
+#d_page a{color:#1b4f74;}
+.rsp1_r{ color:#008000; padding-left:20px; background:url(../images/right.gif) no-repeat;}
+
+.pindl
+{
+	width:136px;
+	height:22px;
+}
+.bview{background:url(../images/view.gif) no-repeat 2px -1px; height:16px;width:16px;border:none;cursor: default; }
+
+.isinDiv{ height:22px;margin-top:1px;}
+.pinin{width:116px;position: absolute;}
+.autot{position: absolute; width:130px;}
+.pininsl{width:136px;height:22px;clip: rect(auto auto auto 119px); position: absolute;}

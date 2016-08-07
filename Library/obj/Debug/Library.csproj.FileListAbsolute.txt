@@ -1,0 +1,9 @@
+E:\workspace\st\WTStock\Library\bin\Debug\Library.dll
+E:\workspace\st\WTStock\Library\bin\Debug\Library.pdb
+E:\workspace\st\WTStock\Library\obj\Debug\Library.csprojResolveAssemblyReference.cache
+E:\workspace\st\WTStock\Library\obj\Debug\Library.dll
+E:\workspace\st\WTStock\Library\obj\Debug\Library.pdb
+F:\WTStock\Library\bin\Debug\Library.dll
+F:\WTStock\Library\bin\Debug\Library.pdb
+F:\WTStock\Library\obj\Debug\Library.dll
+F:\WTStock\Library\obj\Debug\Library.pdb

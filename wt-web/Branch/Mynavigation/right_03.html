@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>right_04</title>
+<link href="../../Headquarters/Mynavigation/css.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body onclick="parent.parent.Sethidden1();">
+<div id="main">
+<div id="top">
+<div class="left">
+</div>
+<div class="lefts" style="background: url(../../Headquarters/Mynavigation/images/R-top_04.jpg) no-repeat"></div>
+<div class="right">
+</div>
+</div>
+<div id="content" style="overflow:auto;">
+<div id="divc">
+    <div class="leftc" id="nav_left" style="background:url(../../Headquarters/Mynavigation/images/XSGL.jpg) no-repeat 70px 60px">
+        <a href="#" title="销售订单" onclick="parent.parent.SetFrame('xsdd','Sell/SellPlanAdd.aspx', '销售订单');" style="top:83px; left:80px;"></a>
+        <a href="#" title="销售开单" onclick="parent.parent.SetFrame('xskd','Sell/SellAdd.aspx', '销售开单');" style="top:82px; left:225px;"></a>
+        <a href="#" title="当前库存" onclick="parent.parent.SetFrame('dqkc','Stock/StockAdm.aspx','当前库存');" style="top:82px; left:385px;"></a>
+        <a href="#" title="销售退货" onclick="parent.parent.SetFrame('xsth','Sell/SellReturn.aspx', '销售退货');" style="top:82px; left:538px;"></a>
+        <a href="#" title="应收应付" onclick="parent.parent.SetFrame('ysyf','Financial/ArrearageAdm.aspx','应收应付');" style="top:221px; left:380px;"></a>
+    </div>
+    <div class="rightc" id="nav_right">
+        <ul>
+            <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('xsrbb','Stat/StSellDay.aspx','销售日报表');">销售日报表</a></li>
+            <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('xsybb','Stat/StSellMonth.aspx','销售月报表');">销售月报表</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('cpxshzb','Stat/StSellg.aspx','产品销售汇总表');">产品销售汇总表</a></li>
+	        <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('khxshzb','Stat/StSellc.aspx','客户销售汇总表');">客户销售汇总表</a></li>
+	        <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('xsmxhzb','Stat/StSellDe.aspx','销售明细汇总表');">销售明细汇总表</a></li>
+	        <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('cpthhzb2','Stat/StSellReturng.aspx','产品退货汇总表');">产品退货汇总表</a></li>
+	        <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('khthhzb','Stat/StSellReturnc.aspx','客户退货汇总表');">客户退货汇总表</a></li>
+	        <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('thmxhzb2','Stat/StSellReturnDe.aspx','退货明细汇总表');">退货明细汇总表</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+var ph=document.body.clientHeight;
+if(ph<450)
+    document.getElementById("divc").style.height=450+"px";
+else
+    document.getElementById("divc").style.height=(ph-30)+"px";
+document.getElementById("content").style.height=(ph-30)+"px";
+var pw=document.body.clientWidth;
+if(pw<900)
+    document.getElementById("divc").style.width=900+"px";
+else
+    document.getElementById("divc").style.width=pw+"px";
+document.getElementById("content").style.width=pw+"px";
+</script>

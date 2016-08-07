@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Kset>
+  <Lable Name="lday">
+    <pointx>168</pointx>
+    <pointy>399</pointy>
+  </Lable>
+  <Lable Name="lmouth">
+    <pointx>129</pointx>
+    <pointy>400</pointy>
+  </Lable>
+  <Lable Name="lyear">
+    <pointx>76</pointx>
+    <pointy>399</pointy>
+  </Lable>
+  <Lable Name="Other6">
+    <pointx>277</pointx>
+    <pointy>314</pointy>
+  </Lable>
+  <Lable Name="Other5">
+    <pointx>226</pointx>
+    <pointy>334</pointy>
+  </Lable>
+  <Lable Name="Other4">
+    <pointx>248</pointx>
+    <pointy>399</pointy>
+  </Lable>
+  <Lable Name="Other3">
+    <pointx>149</pointx>
+    <pointy>376</pointy>
+  </Lable>
+  <Lable Name="Other2">
+    <pointx>118</pointx>
+    <pointy>317</pointy>
+  </Lable>
+  <Lable Name="fjPhone">
+    <pointx>292</pointx>
+    <pointy>233</pointy>
+  </Lable>
+  <Lable Name="fjTel">
+    <pointx>179</pointx>
+    <pointy>234</pointy>
+  </Lable>
+  <Lable Name="fjDress">
+    <pointx>79</pointx>
+    <pointy>155</pointy>
+  </Lable>
+  <Lable Name="Other1">
+    <pointx>140</pointx>
+    <pointy>188</pointy>
+  </Lable>
+  <Lable Name="fjCity">
+    <pointx>126</pointx>
+    <pointy>134</pointy>
+  </Lable>
+  <Lable Name="fjName">
+    <pointx>139</pointx>
+    <pointy>212</pointy>
+  </Lable>
+  <Lable Name="sjPhone">
+    <pointx>677</pointx>
+    <pointy>233</pointy>
+  </Lable>
+  <Lable Name="sjTel">
+    <pointx>548</pointx>
+    <pointy>236</pointy>
+  </Lable>
+  <Lable Name="sjDress">
+    <pointx>452</pointx>
+    <pointy>160</pointy>
+  </Lable>
+  <Lable Name="sOther1">
+    <pointx>554</pointx>
+    <pointy>363</pointy>
+  </Lable>
+  <Lable Name="sCity">
+    <pointx>700</pointx>
+    <pointy>105</pointy>
+  </Lable>
+  <Lable Name="sjName">
+    <pointx>527</pointx>
+    <pointy>106</pointy>
+  </Lable>
+</Kset>

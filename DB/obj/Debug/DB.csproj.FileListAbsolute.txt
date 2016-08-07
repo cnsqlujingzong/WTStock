@@ -1,0 +1,14 @@
+E:\workspace\st\WTStock\DB\bin\Debug\DB.dll
+E:\workspace\st\WTStock\DB\bin\Debug\DB.pdb
+E:\workspace\st\WTStock\DB\bin\Debug\Library.dll
+E:\workspace\st\WTStock\DB\bin\Debug\Library.pdb
+E:\workspace\st\WTStock\DB\obj\Debug\DB.csprojResolveAssemblyReference.cache
+E:\workspace\st\WTStock\DB\obj\Debug\DB.dll
+E:\workspace\st\WTStock\DB\obj\Debug\DB.pdb
+F:\WTStock\DB\bin\Debug\DB.dll
+F:\WTStock\DB\bin\Debug\DB.pdb
+F:\WTStock\DB\bin\Debug\Library.dll
+F:\WTStock\DB\bin\Debug\Library.pdb
+F:\WTStock\DB\obj\Debug\DB.csprojResolveAssemblyReference.cache
+F:\WTStock\DB\obj\Debug\DB.dll
+F:\WTStock\DB\obj\Debug\DB.pdb

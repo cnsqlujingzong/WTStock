@@ -1,0 +1,257 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>top</title>
+<style type="text/css">
+<!--
+#top {
+	background-image: url(images/top_bg.jpg);
+	background-repeat: repeat-x;
+	height: 82px;
+	width: 100%;
+}
+#top_left {
+    background-image: url(images/logo.jpg);
+	background-repeat: repeat-x;
+	float: left;
+	height:82px;
+	width: 225px;
+}
+#top_right {
+	background: url(images/top_right.jpg);
+	float: right;
+	height: 82px;
+	width: 766px;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	width:100%;
+}
+#top_nav {
+	float: right;
+	margin-top: 12px;
+	height: 56px;
+}
+#top_nav li {
+	float: left;
+	height: 56px;
+	width: 66px;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+#top_nav a
+{
+    display: block;
+    float: left;
+	height: 56px;
+	width: 66px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+li {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#dposts
+{
+position:absolute;left:255px;top:62px;height:18px;overflow:hidden;white-space:nowrap;font-size:14px;
+}
+#dposts a{text-decoration:none;color:#333;font-size:14px;padding-left:15px;display:inline-block;}
+#dposts a:hover{text-decoration:underline;color:#900;}
+#dposts div{position:absolute;}
+#dposts img{margin-right:15px;margin-left:5px;}
+-->
+</style>
+</head>
+
+<body onclick="parent.parent.Sethidden1();">
+<div id="top">
+<div id="top_left"></div>
+<div id="top_right">
+<div id="top_nav">
+<ul>
+<li><a href="http://www.differsoft.com" target="_blank" title="官方网站"></a></li>
+<li><a href="http://bbs.differsoft.com" target="_blank" title="BBS论坛"></a></li>
+<li><a href="http://www.18bg.com" target="_blank" title="18云办公"></a></li>
+</ul>
+</div>
+</div>
+</div>
+<span style="position:absolute;top:62px;left:220px;font-size:14px;font-weight:bold;cursor:pointer;" onclick="parent.parent.SetFrame('gggl','Office/AnnunciateAdm.aspx','公告管理');">公告</span>
+<div id="dposts" onmouseover="ispeed=0;" onmouseout="ispeed=3">
+<div id="dscroll0" style="right:0px;"></div>
+<div id="dscroll1" style="right:0px;"></div>
+<div id="dscroll2" style="right:0px;"></div>
+<div id="dscroll3" style="right:0px;"></div>
+<div id="dscroll4" style="right:0px;"></div>
+</div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+var dframewidth=document.body.scrollWidth-500;
+$("dposts").style.width=dframewidth+"px"
+var ishow=0;
+var icount=5;
+var ispeed=3;
+var bstart=0;
+var hasc=0;
+var time;
+var timecount=0;
+var XML_Http_Request = false;
+function createXMLHttpRequest(){
+    XML_Http_Request = false;
+    
+    if(window.XMLHttpRequest){        //for Mozilla
+        XML_Http_Request = new XMLHttpRequest();
+        if(XML_Http_Request.overrideMimeType){
+            XML_Http_Request.overrideMimeType("text/xml");
+        }
+    }
+    else if(window.ActiveXObject){   //for IE
+        try{
+            XML_Http_Request = new ActiveXObject("Msxml2.XMLHTTP");
+        }catch(e){
+            try{
+                XML_Http_Request = new ActiveXObject("Microsoft.XMLHTTP");
+            }catch(e){}
+        }
+    }
+}
+function $() 
+{ 
+    var elements = new Array(); 
+    for (var i = 0; i < arguments.length; i++) 
+    { 
+        var element = arguments[i]; 
+        if (typeof element == 'string') 
+            element = document.getElementById(element); 
+        if(arguments.length == 1) 
+            return element; 
+        elements.push(element); 
+    } 
+    return elements; 
+}
+function getPosts()
+{
+    createXMLHttpRequest(); 
+    if(!XML_Http_Request)
+    {
+        window.alert("Cannot create XMLHttpRequest instance!");
+        return false;
+    }
+    var parmurl="n="+Math.round(Math.random()*10000); 
+    XML_Http_Request.onreadystatechange = writePosts;       
+    XML_Http_Request.open("POST","../../API/GetPosts.ashx",true);
+    XML_Http_Request.setRequestHeader("Content-Type","application/x-www-form-urlencoded;"); 
+    XML_Http_Request.send(parmurl);
+}
+function writePosts(){
+    if(XML_Http_Request.readyState == 4)
+    {
+        if(XML_Http_Request.status == 200)
+        {  
+            var rtninfo=XML_Http_Request.responseText;
+            if(rtninfo=="-1")
+            {
+                window.setTimeout("getPosts()",60000);
+            }
+            else 
+            {
+                var ipre=(ishow+icount-1)%icount;
+                if(rtninfo=="0")
+                {
+                    $("dscroll"+ishow).innerHTML="";
+                }
+                else
+                {
+                    $("dscroll"+ishow).innerHTML=rtninfo;
+                }
+                var dwidth=$("dscroll"+ishow).scrollWidth+15;
+                var needcount=parseInt(dframewidth/dwidth,10);
+                if(rtninfo!="0"&&icount<(2+needcount))
+                {
+                    icount=2+needcount;
+                    for(i=0;i<icount;i++)
+                    {
+                        if($("dscroll"+i)==null)
+                        {
+                            var adddiv=document.createElement("div");
+                            adddiv.id="dscroll"+i;
+                            //adddiv.style.left="0px";
+                            $("dposts").appendChild(adddiv);
+                        }
+                    }
+                }
+                var sleft;
+                if(bstart==0)
+                {
+                    sleft=0;
+                    bstart=1;
+                    $("dscroll"+ishow).style.right=sleft-dwidth+"px";
+                    RollStep();
+                }else
+                {
+                    sleft=parseInt($("dscroll"+ipre).style.right.replace("px",""),10);
+                    $("dscroll"+ishow).style.right=sleft-dwidth+"px";
+                } 
+            }
+        }
+        else
+        {
+	        return false;
+	    }
+    }else
+    {
+        //正在获得提示数据 
+    }
+}
+function RollStep()
+{
+    hasc=0;
+    for(i=0;i<icount;i++)
+    {
+        var ileft
+        if($("dscroll"+(ishow+i)%icount)&&$("dscroll"+(ishow+i)%icount).innerHTML!="")
+        {
+//            var preleft=parseInt($("dscroll"+(ishow+i+icount-1)%icount).style.left.replace("px",""),10);
+//            var tw=$("dscroll"+(ishow+i+icount-1)%icount).scrollWidth+15;
+            ileft=parseInt($("dscroll"+(ishow+i)%icount).style.right.replace("px",""),10);
+//            if(preleft>0&&ileft>preleft-tw)
+//                ileft=preleft-tw;
+            $("dscroll"+(ishow+i)%icount).style.right=ileft+ispeed+"px";
+            hasc++;
+            timecount += 30;
+        }
+        if(ileft-100>dframewidth)
+        {
+            $("dscroll"+(ishow+i)%icount).innerHTML="";
+        }
+    }
+    var isleft=parseInt($("dscroll"+ishow).style.right.replace("px",""),10);
+    var dwidth=$("dscroll"+ishow).scrollWidth+5;
+    if(hasc>0)
+    {
+        time=setTimeout("RollStep()",120);
+    }else
+    {
+        bstart=0;
+        window.setTimeout("getPosts()",60000);
+    }
+    if(hasc>0&&(isleft+dwidth)>50)
+    {
+        ishow=(ishow+1)%icount;
+        writePosts();
+        if(timecount>=60000)
+        {
+            timecount=0;
+            getPosts();
+        }
+    }
+}
+getPosts();
+</script>

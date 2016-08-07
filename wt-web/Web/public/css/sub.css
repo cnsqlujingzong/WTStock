@@ -1,0 +1,45 @@
+/*top-----*/
+body{ margin:0; padding:0; font-size:12px; font-family:Verdana,"ËÎÌו";}
+#r_main{ width:758px; margin:0 auto; margin-top:28px;}
+#r_top{ border-bottom:3px #9fc1d7 solid; padding-bottom:3px;}
+#r_logo{ float:left;}
+#r_word{ float:left;padding:42px 0 0 5px; color:#999;}
+#r_path{ float:right;padding:42px 10px 0 5px; color:#999;}
+#r_path a{ color:#4a6988; padding-left:10px; background:url(../images/li5.gif) no-repeat 3px 5px;}
+.sp1{ background:url(../images/li4.gif) no-repeat 4px 2px; padding-left:15px;}
+/*----*/
+
+#r_center{ padding-top:15px;}
+#r_title{ font-size:14px;font-weight:bold; padding-left:30px; background: #e5eef4 url(../images/reg.gif) no-repeat 10px 5px; height:27px; line-height:27px;}
+#r_p{ padding-left:35px;}
+.p1{ font-size:12px; color:#333; margin:10px 0 3px 0;}
+#r_p a{ color:#4a6988;}
+.rsp1{ color:#ff0000; padding-left:3px; font-size:12px;}
+.rsp2{ color:#999; padding-left:3px; font-size:12px;}
+
+.rsp1_w{ color:#ff0000; padding-left:20px; background:url(../images/error.gif) no-repeat;}
+.rsp1_r{ color:#008000; padding-left:20px; background:url(../images/right.gif) no-repeat;}
+
+
+/*input------------*/
+.in1{ padding:2px 5px; width:130px; height:18px; border:1px #999 solid;font-family:Verdana;}
+.in2{ border-bottom:1px #d4d0c8 solid; border-right:1px #d4d0c8 solid; border-top: 2px #efefef groove; border-left:2px #efefef groove;}
+.bt1{ width:86px; height:25px; line-height:25px; background:url(../images/bt1.jpg) no-repeat; border:none; color:#4a6988; font-size:12px; font-family:"ËÎÌו";
+padding-left:5px !important;
+padding-left:5px;
+}
+/*-----*/
+
+
+/*foot-------------*/
+#r_foot{ height:81px; text-align:center; border-top:1px #ddd solid; margin-top:20px;}
+#r_foot ul{ padding-top:10px;}
+#r_foot li{ display:inline; padding-left:10px; color:#666;}
+.li3{ background:url(../images/li2.gif) 1px 0px no-repeat;}
+#r_foot a{ color:#4a6988;}
+/**-----/
+
+
+/*------*/
+.ap1{text-indent:2em; line-height:200%;font-size:12px; color:#000; margin:10px 0 3px 0;}
+.ap2{line-height:200%; font-size:12px; color:#036; margin:10px 0 3px 0; font-weight:bold;}

@@ -1,0 +1,2 @@
+﻿2016-07-04 22:48:01,878 ThreadID:[7] Log Level:INFO  Class:STWebAPP.Controllers.HomeController Desp:****************进入Index 登录*****************
+2016-07-04 22:48:01,885 ThreadID:[7] Log Level:INFO  Class:STWebAPP.Controllers.HomeController Desp:memberCode:

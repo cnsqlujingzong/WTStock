@@ -1,0 +1,28 @@
+﻿
+/*分页*/
+#d_page .tdPage a
+{
+    font-family:Verdana;
+    color:#000;
+    text-decoration:none;
+    padding:2px;
+    border: 1px #cccccc solid;
+}
+#d_page .tdPage span
+{
+    font-family:Verdana;
+    color:#cc2c00;
+    padding:2px;
+    border: 1px #cccccc solid;
+}
+#d_page .tdPage a:hover
+{
+    background:#efefef;
+    color:#000;
+}
+
+#d_page .page_input
+{
+    border:none;
+    border-bottom:1px #000000 solid;
+}

@@ -1,0 +1,16 @@
+E:\kdprint\kdprint\bin\Debug\kdprint.exe.config
+E:\kdprint\kdprint\obj\x86\Debug\kdprint.exe
+E:\kdprint\kdprint\obj\x86\Debug\kdprint.pdb
+E:\kdprint\kdprint\bin\Debug\kdprint.exe.manifest
+E:\kdprint\kdprint\bin\Debug\kdprint.application
+E:\kdprint\kdprint\bin\Debug\kdprint.exe
+E:\kdprint\kdprint\bin\Debug\kdprint.pdb
+E:\kdprint\kdprint\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\kdprint\kdprint\obj\x86\Debug\kdprint.Design.resources
+E:\kdprint\kdprint\obj\x86\Debug\kdprint.Form1.resources
+E:\kdprint\kdprint\obj\x86\Debug\kdprint.Nkuidi.resources
+E:\kdprint\kdprint\obj\x86\Debug\kdprint.Properties.Resources.resources
+E:\kdprint\kdprint\obj\x86\Debug\kdprint.csproj.GenerateResource.Cache
+E:\kdprint\kdprint\obj\x86\Debug\kdprint.TrustInfo.xml
+E:\kdprint\kdprint\obj\x86\Debug\kdprint.exe.manifest
+E:\kdprint\kdprint\obj\x86\Debug\kdprint.application

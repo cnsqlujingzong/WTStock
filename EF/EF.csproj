@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6590EAE2-A7E1-4B65-B283-D6CF98845567}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EF</RootNamespace>
+    <AssemblyName>EF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppString.cs" />
+    <Compile Include="DAL\Cd_ProAtts.cs" />
+    <Compile Include="DAL\Cd_Product.cs" />
+    <Compile Include="DAL\Cd_ProductFiles.cs" />
+    <Compile Include="DAL\Cd_productType.cs" />
+    <Compile Include="DAL\Cd_ProImg.cs" />
+    <Compile Include="DAL\Cd_ProTypeAttr.cs" />
+    <Compile Include="DAL\Cd_ImgStock.cs" />
+    <Compile Include="DAL\Cd_CusTree.cs" />
+    <Compile Include="DAL\CusLinkManDAL.cs" />
+    <Compile Include="DataCache.cs" />
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="Model\Cd_ProAtts.cs" />
+    <Compile Include="Model\Cd_Product.cs" />
+    <Compile Include="Model\Cd_ProductFiles.cs" />
+    <Compile Include="Model\Cd_productType.cs" />
+    <Compile Include="Model\Cd_ProImg.cs" />
+    <Compile Include="Model\Cd_ProTypeAttr.cs" />
+    <Compile Include="Model\Cd_ImgStock.cs" />
+    <Compile Include="Model\Cd_CusTree.cs" />
+    <Compile Include="PostMSG.cs" />
+    <Compile Include="RequestUtil.cs" />
+    <Compile Include="UpperRMB.cs" />
+    <Compile Include="UserInter.cs" />
+    <Compile Include="Utility\CommandInfo.cs" />
+    <Compile Include="DAL\Cd_UserInt.cs" />
+    <Compile Include="Utility\DbHelperOleDb.cs" />
+    <Compile Include="Utility\DbHelperSQL.cs" />
+    <Compile Include="Model\Cd_UserInt.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\DESEncrypt.cs" />
+    <Compile Include="Utility\PubConstant.cs" />
+    <Compile Include="Utility\SQLHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{a5e043af-db1c-4c1c-a938-b5ceb4c5b914}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{224b2677-81e9-4e41-aece-1c4d75ef0f86}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

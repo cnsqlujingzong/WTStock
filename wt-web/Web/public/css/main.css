@@ -1,0 +1,50 @@
+/* CSS Document */
+body{ margin:0; padding:0; font-size:12px; font-family:Verdana,"ËÎÌו";}
+ul,li{ margin:0; padding:0;}
+#i_main{ width:980px; background:#efefef; margin:0 auto;}
+#i_top{ padding: 6px 0 5px 18px; background:#fff;}
+#i_logo{ float:left;}
+#i_word{ float:left; padding:35px 0 0 5px; color:#999;}
+#i_menu{height:36px; background:url(../images/line.jpg) repeat-x; text-align:right;}
+#i_menu ul{padding:15px 25px 0 0;}
+#i_menu li{ display:inline; padding-left:20px;}
+#i_menu a{ color:#fff;}
+.li1{ background:url(../images/li1.gif) 12px 4px no-repeat;}
+.li2{ background:url(../images/li2.gif) 6px 0px no-repeat;}
+
+#i_left{ float:left; background:#efefef;}
+#i_right{ float:right;}
+#i_sl{ height:11px; background:url(../images/sline.jpg) repeat-x; width:248px;}
+#i_sr{ height:11px; background:url(../images/sline.jpg) no-repeat left top; width:731px; border-right:1px #ccc solid;font-size:0;}
+#i_srr{ height:402px; width:730px;border:1px #ccc solid; border-top:none;}
+#i_itr{ padding:8px 0 18px 50px;}
+p{ margin: 10px 0; color:#333;}
+#i_girl{ height:305px; background:url(../images/girl.jpg) no-repeat left top;}
+#i_girl ul{ list-style: none; padding:130px 0 0 270px;}
+#i_girl li{ line-height:25px; padding-left:9px; background:url(../images/li3.gif) no-repeat left 12px;color:#333;}
+#i_girl a{ text-decoration:none; color:#333;}
+#i_girl a:hover{ text-decoration:underline; color:#4a6988;}
+#i_sll{ padding:12px 0 0 12px;}
+
+.s1{ color:#999; line-height:150%;}
+.s2{ color:#4a6988; line-height:150%;}
+.s1_i{color:#fff; line-height:150%; background:#ff0000; padding:0 7px;}
+.s1_o{color:#fff; line-height:150%; background:#008000; padding:0 7px;}
+
+.tb1 td{ padding-left:15px; color:#333; vertical-align:top; height:50px !important;height:45px;  }
+.t1{ padding-top:4px}
+.in1{ padding:2px 5px; width:130px; height:18px; border:1px #999 solid;font-family:Verdana;}
+.in2{ border-bottom:1px #d4d0c8 solid; border-right:1px #d4d0c8 solid; border-top: 2px #efefef groove; border-left:2px #efefef groove;}
+.bt1{ width:86px; height:25px; line-height:25px; background:url(../images/bt1.jpg) no-repeat; border:none; color:#4a6988; font-size:12px; font-family:"ËÎÌו";
+padding-left:5px !important;
+padding-left:5px;
+}
+#i_reg{ border-top:1px #ccc solid; margin:0 20px; padding-top:10px; text-align:center; color:#333;}
+#i_reg a{ color:#4a6988;}
+
+#i_foot{ height:81px; text-align:center;}
+#i_foot ul{ padding-top:20px;}
+#i_foot li{ display:inline; padding-left:10px; color:#666;}
+.li3{ background:url(../images/li2.gif) 1px 0px no-repeat;}
+#i_foot a{ color:#666;}
+#i_foot a:hover{ color:#4a6988;}

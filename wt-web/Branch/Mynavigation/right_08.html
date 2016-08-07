@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>right_08</title>
+<link href="../../Headquarters/Mynavigation/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onclick="parent.parent.Sethidden1();">
+<div id="main">
+<div id="top">
+<div class="left">
+</div>
+<div class="lefts" style="background: url(../../Headquarters/Mynavigation/images/R-top_08.jpg) no-repeat"></div>
+<div class="right">
+</div>
+</div>
+<div id="content" style="overflow:auto;">
+<div id="divc">
+    <div class="leftc" id="nav_left" style="background:url(../../Headquarters/Mynavigation/images/ZLQB.jpg) no-repeat 50px 30px">
+        <a href="#d" title="新建业务" onclick="parent.parent.SetFrame('xjyw','Lease/LeaseAdd.aspx', '新建业务');" style="top:172px; left:58px;"></a>
+        <a href="#d" title="业务审核" onclick="parent.parent.SetFrame('ywsh','Lease/LeaseChk.aspx', '业务审核');" style="top:172px; left:183px;"></a>
+        <a href="#d" title="抄表登记" onclick="parent.parent.SetFrame('cbdj','Lease/MeterReading.aspx', '抄表登记');" style="top:172px; left:307px;"></a>
+        <a href="#d" title="结算审核" onclick="parent.parent.SetFrame('jssh','Lease/Settlement.aspx', '结算审核');" style="top:168px; left:456px;"></a>
+        <a href="#d" title="业务查询" onclick="parent.parent.SetFrame('ywcx','Lease/SchLease.aspx','业务查询');" style="top:172px; left:578px;"></a>
+        
+        <a href="#d" title="设备退换" onclick="parent.parent.SetFrame('sbgh','Lease/ChangeMachine.aspx', '设备退换');" style="top:285px; left:379px;"></a>
+        <a href="#d" title="合同解约" onclick="parent.parent.SetFrame('htjy','Lease/Release.aspx', '合同解约');" style="top:43px; left:379px;"></a>
+        <a href="#d" title="退押金" onclick="parent.parent.SetFrame('fyfk','Financial/PaymentAdd.aspx','付应付款');" style="top:43px; left:520px;"></a>
+    </div>
+    <div class="rightc" id="nav_right">
+        <ul>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('jsdhzb','Stat/StLeaseCharge.aspx','结算单汇总表');">结算单汇总表</a></li>
+			<li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('jsdmxb','Stat/StLeaseChargeDe.aspx','结算单明细表');">结算单明细表</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+var ph=document.body.clientHeight;
+if(ph<450)
+    document.getElementById("divc").style.height=450+"px";
+else
+    document.getElementById("divc").style.height=(ph-30)+"px";
+document.getElementById("content").style.height=(ph-30)+"px";
+var pw=document.body.clientWidth;
+if(pw<900)
+    document.getElementById("divc").style.width=900+"px";
+else
+    document.getElementById("divc").style.width=pw+"px";
+document.getElementById("content").style.width=pw+"px";
+</script>

@@ -1,0 +1,27 @@
+D:\用户目录\我的文档\新建文件夹 (6)\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\用户目录\我的文档\新建文件夹 (6)\bin\Debug\DAL.dll
+D:\用户目录\我的文档\新建文件夹 (6)\bin\Debug\DAL.pdb
+D:\用户目录\我的文档\新建文件夹 (6)\obj\Debug\DAL.dll
+D:\用户目录\我的文档\新建文件夹 (6)\obj\Debug\DAL.pdb
+E:\workspace\st\WTStock\DAL\bin\Debug\DAL.dll
+E:\workspace\st\WTStock\DAL\bin\Debug\DAL.pdb
+E:\workspace\st\WTStock\DAL\bin\Debug\DB.dll
+E:\workspace\st\WTStock\DAL\bin\Debug\Model.dll
+E:\workspace\st\WTStock\DAL\bin\Debug\Library.dll
+E:\workspace\st\WTStock\DAL\bin\Debug\DB.pdb
+E:\workspace\st\WTStock\DAL\bin\Debug\Model.pdb
+E:\workspace\st\WTStock\DAL\bin\Debug\Library.pdb
+E:\workspace\st\WTStock\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\workspace\st\WTStock\DAL\obj\Debug\DAL.dll
+E:\workspace\st\WTStock\DAL\obj\Debug\DAL.pdb
+F:\WTStock\DAL\bin\Debug\DAL.dll
+F:\WTStock\DAL\bin\Debug\DAL.pdb
+F:\WTStock\DAL\bin\Debug\DB.dll
+F:\WTStock\DAL\bin\Debug\Model.dll
+F:\WTStock\DAL\bin\Debug\Library.dll
+F:\WTStock\DAL\bin\Debug\DB.pdb
+F:\WTStock\DAL\bin\Debug\Model.pdb
+F:\WTStock\DAL\bin\Debug\Library.pdb
+F:\WTStock\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\WTStock\DAL\obj\Debug\DAL.dll
+F:\WTStock\DAL\obj\Debug\DAL.pdb

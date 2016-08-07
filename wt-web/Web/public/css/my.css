@@ -1,0 +1,57 @@
+
+body{ margin:0; padding:0; font-size:12px; font-family:Verdana,"ËÎÌו";}
+ul,li{ margin:0; padding:0; list-style:none;}
+#m_main{ width:98%; background:#fff; margin:0 auto;}
+#m_top{ padding-top:6px;}
+#m_logo{ float:left;}
+#m_word{ float:left; padding:35px 0 0 5px; color:#000;}
+#m_word a{ color:#0044dd; text-decoration:none;}
+.sp1{ background:url(../images/li4.gif) no-repeat 4px 2px; padding-left:15px;}
+#m_tright{ float:right;}
+#m_menu li{ display:inline; padding:0 3px 0 11px; background:url(../images/li2.gif) no-repeat left 0px;}
+#m_menu a{ color:#666; text-decoration:none;}
+#m_menu a:hover{ color:#0044dd; text-decoration:underline;}
+#m_menu{ border-bottom:1px #dfdfdf solid; padding-bottom:3px;}
+#m_menu .li1{ background:url(../images/li1.gif) no-repeat 3px 2px;}
+.a2{ background:url(../images/li6.gif) no-repeat right -2px; padding-right:10px;}
+#m_user{ text-align:right; color:#666; padding-top:17px;}
+.sp2{ color:#0044dd;}
+.sp3{ background:url(../images/user.gif) no-repeat left center; padding-left:20px;}
+.sp4{ background:url(../images/account.gif) no-repeat left center; padding-left:17px;}
+
+#m_left{ width:160px;float:left;}
+.menu{ height:28px; background:url(../images/menu.jpg) no-repeat left center; font-size:14px; font-weight:bold; padding-left:30px; line-height:28px; margin-top:5px;}
+#m_left ul{ padding:3px 0 0 18px;}
+#m_left li{ background:url(../images/li7.gif) no-repeat left center; padding: 3px 0 2px 13px;}
+#m_left a{ color:#333; text-decoration:underline;}
+#m_left a:hover{ color:#ff0000; text-decoration:underline;}
+#m_right{ border:1px #cedeeb solid; margin-left:160px; height:650px;}
+
+
+#m_foot{ height:41px; text-align:center;}
+#m_foot ul{ padding-top:10px;}
+#m_foot li{ display:inline; padding-left:10px; color:#04d;}
+.li3{ background:url(../images/li2.gif) 1px 0px no-repeat;}
+#m_foot a{ color:#04d; text-decoration:none;}
+#m_foot a:hover{ text-decoration:underline;}
+
+#divDialog
+{
+	border: 1px #4e86c4 solid;
+}
+#divIco
+{
+    padding-left: 10px;
+}
+#divTitle
+{
+    background: #89b6e9;
+    color: #fff;
+    line-height:200%;
+	font-weight:bold;
+	padding-top:2px;
+}
+#iframeDialog
+{
+    width:100%;
+}

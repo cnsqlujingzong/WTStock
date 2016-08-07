@@ -1,0 +1,65 @@
+d:\my document\visual studio 2010\Projects\kdprint\kdprint\bin\Debug\kdprint.exe
+d:\my document\visual studio 2010\Projects\kdprint\kdprint\bin\Debug\kdprint.pdb
+d:\my document\visual studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\ResolveAssemblyReference.cache
+d:\my document\visual studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\kdprint.Form1.resources
+d:\my document\visual studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\kdprint.Properties.Resources.resources
+d:\my document\visual studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\GenerateResource.read.1.tlog
+d:\my document\visual studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\GenerateResource.write.1.tlog
+d:\my document\visual studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\kdprint.exe
+d:\my document\visual studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\kdprint.pdb
+D:\My Document\Visual Studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\kdprint.Nkuidi.resources
+D:\My Document\Visual Studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\kdprint.Start.resources
+D:\My Document\Visual Studio 2010\Projects\kdprint\kdprint\bin\Debug\kdprint.exe.config
+D:\My Document\Visual Studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+D:\My Document\Visual Studio 2010\Projects\kdprint\kdprint\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\bin\Debug\kdprint.exe.config
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\kdprint.exe
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\kdprint.pdb
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\bin\Debug\kdprint.exe.manifest
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\bin\Debug\kdprint.application
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\bin\Debug\kdprint.exe
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\bin\Debug\kdprint.pdb
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\kdprint.Design.resources
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\kdprint.Form1.resources
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\kdprint.Nkuidi.resources
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\kdprint.Properties.Resources.resources
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\kdprint.Start.resources
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\kdprint.TrustInfo.xml
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\kdprint.exe.manifest
+C:\Users\Administrator\Desktop\新建文件夹 (4)\kdprint\kdprint\obj\x86\Debug\kdprint.application
+C:\Users\Administrator\Desktop\kdprint\kdprint\bin\Debug\kdprint.exe.config
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.exe
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.pdb
+C:\Users\Administrator\Desktop\kdprint\kdprint\bin\Debug\kdprint.exe.manifest
+C:\Users\Administrator\Desktop\kdprint\kdprint\bin\Debug\kdprint.application
+C:\Users\Administrator\Desktop\kdprint\kdprint\bin\Debug\kdprint.exe
+C:\Users\Administrator\Desktop\kdprint\kdprint\bin\Debug\kdprint.pdb
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.Design.resources
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.Form1.resources
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.Nkuidi.resources
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.Properties.Resources.resources
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.TrustInfo.xml
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.exe.manifest
+C:\Users\Administrator\Desktop\kdprint\kdprint\obj\x86\Debug\kdprint.application
+F:\WTStock\kdprint\kdprint\obj\x86\Debug\kdprint.Design.resources
+F:\WTStock\kdprint\kdprint\obj\x86\Debug\kdprint.Form1.resources
+F:\WTStock\kdprint\kdprint\obj\x86\Debug\kdprint.Nkuidi.resources
+F:\WTStock\kdprint\kdprint\obj\x86\Debug\kdprint.Properties.Resources.resources
+F:\WTStock\kdprint\kdprint\obj\x86\Debug\kdprint.csproj.GenerateResource.Cache
+F:\WTStock\kdprint\kdprint\obj\x86\Debug\kdprint.exe
+F:\WTStock\kdprint\kdprint\bin\Debug\kdprint.exe.config
+F:\WTStock\kdprint\kdprint\bin\Debug\kdprint.exe.manifest
+F:\WTStock\kdprint\kdprint\bin\Debug\kdprint.application
+F:\WTStock\kdprint\kdprint\bin\Debug\kdprint.exe
+F:\WTStock\kdprint\kdprint\bin\Debug\kdprint.pdb
+F:\WTStock\kdprint\kdprint\obj\x86\Debug\kdprint.TrustInfo.xml
+F:\WTStock\kdprint\kdprint\obj\x86\Debug\kdprint.exe.manifest
+F:\WTStock\kdprint\kdprint\obj\x86\Debug\kdprint.application
+F:\WTStock\kdprint\kdprint\obj\x86\Debug\kdprint.pdb

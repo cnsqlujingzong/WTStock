@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>right_02</title>
+<link href="css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onclick="parent.parent.Sethidden1();">
+<div id="main">
+<div id="top">
+<div class="left">
+</div>
+<div class="lefts" style="background: url(images/R-top_02.jpg) no-repeat"></div>
+<div class="right">
+</div>
+</div>
+<div id="content" style="overflow:auto;">
+<div id="divc">
+    <div class="leftc" id="nav_left" style="background:url(images/FWGL.jpg) no-repeat 20px 50px">
+        <a href="#d" title="送修确认" onclick="parent.parent.SetFrame('sxqr','Services/ServicesConf.aspx','送修确认');" style="top:80px; left:45px;"></a>
+        <a href="#fwsl" title="服务受理" onclick="parent.parent.ShowDialog(870,600, 'Services/ServicesAdd.aspx', '服务受理');" style="top:157px; left:45px;"></a>
+        <a href="#d" title="服务中心" onclick="parent.parent.SetFrame('fwzx','Services/ServicesAllot.aspx','服务中心');" style="top:168px; left:165px;"></a>
+        <a href="#d" title="自修处理" onclick="parent.parent.SetFrame('zxcl','Services/ServicesAllot.aspx?iflag=2','服务中心-处理中');" style="top:168px; left:275px;"></a>
+        <a href="#d" title="完工结算" onclick="parent.parent.SetFrame('wgjs','Services/ServicesBln.aspx','完工结算');" style="top:168px; left:387px;"></a>
+        <a href="#d" title="审核关闭" onclick="parent.parent.SetFrame('shgb','Services/ServicesOver.aspx','审核关闭');" style="top:168px; left:502px;"></a>
+        <a href="#d" title="服务回访" onclick="parent.parent.SetFrame('fwhf','Services/ServicesCall.aspx','服务回访');" style="top:168px; left:617px;"></a>
+        <a href="#d" title="报修审核" onclick="parent.parent.SetFrame('bxsh','Services/ServicesNet.aspx', '报修审核');" style="top:226px; left:45px;"></a>
+        <a href="#d" title="送修发货" onclick="parent.parent.SetFrame('sxfh','Services/ServicesSnd.aspx','送修发货');" style="top:272px; left:165px;"></a>
+        <a href="#d" title="收货结算" onclick="parent.parent.SetFrame('shjs','Services/ServicesRcv.aspx','收货结算');" style="top:272px; left:387px;"></a>
+    </div>
+    <div class="rightc" id="nav_right">
+        <ul>
+            <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('fwrbb','Stat/StServiceDay.aspx','服务日报表');">服务日报表</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('fwybb','Stat/StServiceMon.aspx','服务月报表');">服务月报表</a></li>
+	        <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('fwhzb','Stat/StServicec.aspx','服务汇总表');">服务汇总表</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('fwmxb','Stat/StServiceDe.aspx','服务明细表');">服务明细表</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('fwxmhzb','Stat/StSerItem.aspx','服务项目汇总表');">服务项目汇总表</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('fwxmmxb','Stat/StSerItemDe.aspx','服务项目明细表');">服务项目明细表</a></li>
+	        <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('fwdgl','Stat/StBillView.aspx','服务单概览');">服务单概览</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('fwdfb','Stat/StBillFrom.aspx','服务单分布');">服务单分布</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('jsyyj','Stat/StTechnician.aspx','技术员业绩');">技术员业绩</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('cqdtj','Stat/StExtServices.aspx','超期单统计');">超期单统计</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('fwddt','Stat/StSerMap.aspx','服务单地图');">服务单地图</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('xpfbtb','Stat/StRepairDis.aspx','修品分布图表');">修品分布图表</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('gzfbtb','Stat/StFaultDis.aspx','故障分布图表');">故障分布图表</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+var ph=document.body.clientHeight;
+if(ph<450)
+    document.getElementById("divc").style.height=450+"px";
+else
+    document.getElementById("divc").style.height=(ph-30)+"px";
+document.getElementById("content").style.height=(ph-30)+"px";
+var pw=document.body.clientWidth;
+if(pw<900)
+    document.getElementById("divc").style.width=900+"px";
+else
+    document.getElementById("divc").style.width=pw+"px";
+document.getElementById("content").style.width=pw+"px";
+</script>

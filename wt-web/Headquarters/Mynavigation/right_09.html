@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>right_09</title>
+<link href="css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onclick="parent.parent.Sethidden1();">
+<div id="main">
+<div id="top">
+<div class="left">
+</div>
+<div class="lefts" style="background: url(images/R-top_09.jpg) no-repeat"></div>
+<div class="right">
+</div>
+</div>
+<div id="content" style="overflow:auto;">
+<div id="divc">
+    <div class="leftc" id="nav_left" style="background:url(images/KHGX1.jpg) no-repeat 160px 20px">
+        <a href="#khfl" title="客户分类" onclick="parent.parent.ShowDialog(600, 380, 'Customer/CusClassAdm.aspx', '客户分类');" style="top:32px; left:283px;"></a>
+        <a href="#hyjb" title="会员级别" onclick="parent.parent.ShowDialog(600, 380, 'Customer/MembersAdm.aspx', '会员级别');" style="top:32px; left:375px;"></a>
+        <a href="#d" title="报修会员" onclick="parent.parent.SetFrame('bxhygl','Customer/AssAdm.aspx','报修会员管理');" style="top:132px; left:170px;"></a>
+        <a href="#d" title="机器档案" onclick="parent.parent.SetFrame('jqda','Customer/DeviceListAdm.aspx','机器档案');" style="top:132px; left:485px;"></a>
+        <a href="#d" title="投诉管理" onclick="parent.parent.SetFrame('tsgl','Customer/ComplaintAdm.aspx','投诉管理');" style="top:235px; left:170px;"></a>
+        <a href="#d" title="服务合同" onclick="parent.parent.SetFrame('fwht','Customer/MaintenanceContract.aspx','服务合同');" style="top:235px; left:485px;"></a>
+        <a href="#d" title="耗材跟踪" onclick="parent.parent.SetFrame('hcgz','Customer/ConsumablesTrack.aspx','耗材跟踪');" style="top:325px; left:248px;"></a>
+        <a href="#d" title="保养派工" onclick="parent.parent.SetFrame('bypg','Customer/MaintenanceAllot.aspx','保养派工');" style="top:325px; left:328px;"></a>
+        <a href="#d" title="客户跟踪" onclick="parent.parent.SetFrame('khgz','Customer/CustomerTrack.aspx','客户跟踪');" style="top:325px; left:408px;"></a>
+        <a href="#d" title="客户档案" onclick="parent.parent.SetFrame('khda','Customer/CusListAdm.aspx','客户档案');" style="top:175px; left:328px;"></a>
+    </div>
+    <div class="rightc" id="nav_right">
+        <ul>
+			<li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('khzzqk','Stat/StCustomerAdd.aspx','客户增长情况');">客户增长情况</a></li>
+	        <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('khjzph','Stat/StCusValueList.aspx','客户价值排行');">客户价值排行</a></li>
+	        <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('khlyfx','Stat/AnSatisCusFrom.aspx','客户来源分析');">客户来源分析</a></li>
+		    <li class="li_div"><a href="#d" onclick="parent.parent.SetFrame('khlbfx','Stat/AnSatisCusClass.aspx','客户类别分析');">客户类别分析</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+var ph=document.body.clientHeight;
+if(ph<450)
+    document.getElementById("divc").style.height=450+"px";
+else
+    document.getElementById("divc").style.height=(ph-30)+"px";
+document.getElementById("content").style.height=(ph-30)+"px";
+var pw=document.body.clientWidth;
+if(pw<900)
+    document.getElementById("divc").style.width=900+"px";
+else
+    document.getElementById("divc").style.width=pw+"px";
+document.getElementById("content").style.width=pw+"px";
+</script>
+

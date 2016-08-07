@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<combox>
+  <Lable Name="圆通">
+    <pointx>1</pointx>
+    <pointy>圆通.jpg</pointy>
+    <danhao>8888888</danhao>
+    <Kuang>230</Kuang>
+    <Gao>127</Gao>
+    <Pleft>0</Pleft>
+    <Pright>0</Pright>
+    <BigFont>40</BigFont>
+    <Bigwidth>80</Bigwidth>
+  </Lable>
+  <Lable Name="as">
+    <pointx>1</pointx>
+    <pointy>as.jpg</pointy>
+    <danhao>8888888</danhao>
+    <Kuang>230</Kuang>
+    <Gao>127</Gao>
+    <Pleft>0</Pleft>
+    <Pright>0</Pright>
+    <BigFont>35</BigFont>
+    <Bigwidth>100</Bigwidth>
+  </Lable>
+  <Lable Name="qrafsdf">
+    <pointx>1</pointx>
+    <pointy>qrafsdf.jpg</pointy>
+    <danhao>8888888</danhao>
+    <Kuang>230</Kuang>
+    <Gao>127</Gao>
+    <Pleft>0</Pleft>
+    <Pright>0</Pright>
+    <BigFont>35</BigFont>
+    <Bigwidth>100</Bigwidth>
+  </Lable>
+  <Lable Name="q34r">
+    <pointx>1</pointx>
+    <pointy>q34r.jpg</pointy>
+    <danhao>8888888</danhao>
+    <Kuang>230</Kuang>
+    <Gao>127</Gao>
+    <Pleft>0</Pleft>
+    <Pright>0</Pright>
+    <BigFont>35</BigFont>
+    <Bigwidth>100</Bigwidth>
+  </Lable>
+</combox>

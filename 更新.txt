@@ -1,0 +1,324 @@
+
+1.BranchList -->添加字段
+					 TR_jsfw  decimal
+					 TR_zzsxx
+					 TR_zzsjx
+					 TR_ptfp
+jc_branch 视图
+					 TR_jsfw  
+					 TR_zzsxx
+					 TR_zzsjx
+					 TR_ptfp
+2.SellPlan---->添加字段 
+	BrandName varchar  
+	BrandTaxRate decimal
+	BrandTaxRateType varchar
+3.Sell---->添加字段
+	 BrandName varchar
+	 BrandTaxRate decimal
+	 BrandTaxRateType varchar
+
+4. 视图 xs_sell---添加字段			
+	BrandName 	 
+	BrandTaxRate 	 
+	BrandTaxRateType 
+	视图 v_xs_selldetail-添加语句
+				
+				SELECT   s.ID, s.DeptID, s.BillID, s.Type, s._Date, s.ChkDate, s.Status, s.OperatorID, s.PersonID, s.CustomerID, s.InCash, 
+                s.ChkOperatorID, s.OperationID, s.Remark, s.AutoNO, s.BranchNO, s.Dept, s.BranchNum, s.OperatorNO, s.Operator, 
+                s.ChargeMode, s.PersonNO, s.Person, s.ChkOperatorNO, s.InvoiceNO, s.DepartmentName, s.ChkOperator, 
+                s.CustomerNO, s.ClassID, s._Name, s.pyCode, s.SndOperatorID, s.LinkMan, s.Tel, s.Adr, s.SndOperator, s.Total, 
+                s.GoodsAmount, s.Profit, s.Types, s.Area, a._Name AS DeptName, sl.StaffDeptID, 
+                CASE s.BrandTaxRateType WHEN 'jsfw' THEN '技术服务' WHEN 'zzsxx' THEN '增值税销项' WHEN 'zzsjx' THEN '增值税进项'
+                 WHEN 'ptfp' THEN '普通发票' ELSE '无' END AS BrandTaxRateType, s.BrandTaxRate, s.BrandName
+FROM      dbo.xs_sell AS s LEFT OUTER JOIN
+                dbo.StaffList AS sl ON s.OperatorID = sl.ID LEFT OUTER JOIN
+                dbo.StaffDept AS a ON sl.StaffDeptID = a.ID
+
+
+
+5.视图 xs_sellplan--添加语句
+	  a.BrandName, a.BrandTaxRate, case a.BrandTaxRateType when 'jsfw' then '技术服务' when 'zzsxx' then '增值税销项' when 'zzsjx' then '增值税进项' when 'ptfp' then '普通发票' else '无' end as BrandTaxRateType, 
+                s.BrandTaxRate, s.BrandName
+5.视图 xs_sell
+				  CASE a.BrandTaxRateType WHEN 'jsfw' THEN '技术服务' WHEN 'zzsxx' THEN '增值税销项' WHEN 'zzsjx' THEN '增值税进项'
+                 WHEN 'ptfp' THEN '普通发票' ELSE '无' END AS BrandTaxRateType
+
+
+表	ServicesList 增加字段
+cmbProver	varchar(50)	Checked
+cmbCity	varchar(50)	Checked
+BranchName	 varchar(50)	Checked
+BranchRatio	decimal(8, 4)	Checked
+BranchRatioType	varchar(50)	Checked
+
+fw_services 试图
+SELECT   a.ID, a.BillID, b._Name AS TakeDept, c._Name AS DisposalDept, a.curStatus, a.bTake, a.PayeeOperID, a.ChkOperatorID, 
+                a.BackSeeOperID, a.Time_Complete, a.TakeOverID, a.DisposalID, d._Name AS ServicesType, e._Name AS TakeStyle, 
+                a.TakeStyleID, a.TypeID, a.IsDismissed, CONVERT(varchar,
+                    (SELECT   COUNT(1) AS Expr1
+                     FROM      dbo.ServiceOffer
+                     WHERE   (BillID = a.ID) AND (bCusConf = 1))) + '/' + CONVERT(varchar,
+                    (SELECT   COUNT(1) AS Expr1
+                     FROM      dbo.ServiceOffer AS ServiceOffer_1
+                     WHERE   (BillID = a.ID))) AS OfferConf, CONVERT(varchar,
+                    (SELECT   COUNT(1) AS Expr1
+                     FROM      dbo.ServicesItem
+                     WHERE   (BillID = a.ID) AND (bComplete = 1))) + '/' + CONVERT(varchar,
+                    (SELECT   COUNT(1) AS Expr1
+                     FROM      dbo.ServicesItem AS ServicesItem_1
+                     WHERE   (BillID = a.ID))) AS SerCount, a.Time_Make, a.Time_TakeOver, a.Time_Start, a.Time_Over, 
+                CONVERT(char(10), a.Time_Payee, 12) AS Time_Payee, a.OperatorID, a.Time_BackSee, a.Time_Close, 
+                f._Name AS Operator, g._Name AS Person, a.PersonID, h._Name AS StartOperator, i._Name AS PayeeOper, 
+                j._Name AS ChkOperator, a.ProductClassID, a.ProductBrandID, a.ProductModelID, k._Name AS BackSeeOper, 
+                q._Name AS CustomerName, q.BranchID, cf._Name AS CustomerFrom, cc._Name AS CustomerClass, q.userdef1, 
+                q.userdef2, q.userdef3, q.userdef4, q.userdef5, q.userdef6, a.LinkMan, a.Tel, a.UsePerson, a.UsePersonDept, 
+                a.UsePersonTel, a.Area, a.Adr, a.ProductSN1, a.ProductSN2, dbo.getTec(a.ID) AS FinTec, CONVERT(char(10), a.BuyDate, 
+                14) AS BuyDate, a.BuyFrom, pc._Name AS ProductClass, pm._Name AS ProductModel, pb._Name AS ProductBrand, 
+                a.Aspect, a.CusType, a.WarrantyID, a.Accessory, a.Fault, m._Name AS Warranty, a.BuyInvoice, a.dPoint, q.SellerID, 
+                CASE WHEN a.curStatus = '已结束' OR
+                a.curStatus = '已取消' THEN dbo.fw_getspendingdate(a.Time_TakeOver,
+                    (SELECT   TOP 1 _Date
+                     FROM      ServicesProcess
+                     WHERE   BillID = a.ID AND DoStyle = '完成关闭'
+                     ORDER BY ID DESC)) ELSE dbo.fw_getspendingdate(a.Time_TakeOver, getdate()) END AS Speding, 
+                CASE WHEN a.curStatus = '已结束' OR
+                a.curStatus = '已取消' THEN (CAST
+                    ((SELECT   datediff(d, a.Time_TakeOver,
+                                          (SELECT   TOP 1 _Date
+                                           FROM      ServicesProcess
+                                           WHERE   BillID = a.ID AND DoStyle = '完成关闭'
+                                           ORDER BY ID DESC))) AS int)) ELSE (CAST
+                    ((SELECT   datediff(d, a.Time_TakeOver, getdate())) AS int)) END AS Time, CASE WHEN a.curStatus = '已结束' OR
+                a.curStatus = '已取消' THEN (CAST
+                    ((SELECT   datediff(ss, a.Time_TakeOver,
+                                          (SELECT   TOP 1 _Date
+                                           FROM      ServicesProcess
+                                           WHERE   BillID = a.ID AND DoStyle = '完成关闭'
+                                           ORDER BY ID DESC))) AS int)) ELSE (CAST
+                    ((SELECT   datediff(ss, a.Time_TakeOver, getdate())) AS int)) END AS Timeout, 
+                CASE WHEN a.bRepair = 0 THEN '' ELSE '√' END AS bRepair, a.SaveID, a.SupplierID, n._Name AS ChargeCorp, 
+                a.DisposalOper, a.SubscribeTime, CONVERT(char(10), a.SubscribeConnectTime, 12) AS SubscribeConnectTime, 
+                CAST(a.SubscribePrice AS decimal(16, 4)) AS SubscribePrice, CAST(a.PreCharge AS decimal(16, 4)) AS PreCharge, 
+                a.RepairStatus, 
+                CASE WHEN a.RepairType = 1 THEN '委外送修' ELSE CASE WHEN a.RepairType = 2 THEN '内部送修' ELSE '' END END AS
+                 RepairType, a.RepairCorpID, CASE WHEN a.RepairType = 1 THEN
+                    (SELECT   _Name
+                     FROM      SupplierList x
+                     WHERE   x.[ID] = a.RepairCorpID) ELSE CASE WHEN a.RepairType = 2 THEN
+                    (SELECT   _Name
+                     FROM      BranchList m
+                     WHERE   m.[ID] = a.RepairCorpID) ELSE '' END END AS RepairCorp, a.Remark, a.CancelReason, a.RepairSndDate, 
+                a.RepairRcvDate, CAST(a.RepairCost AS decimal(16, 4)) AS RepairCost, a.CustomerID, ISNULL(a.WarrantyChargeCorpID, 
+                0) AS WarrantyChargeCorpID, a.PostNO, CAST(a.Postage AS decimal(16, 4)) AS Postage, 
+                CAST(a.MaterailCost AS decimal(16, 4)) AS MaterailCost, CAST(a.ExtraCost AS decimal(16, 4)) AS ExtraCost, 
+                CAST(a.Fee_Materail AS decimal(16, 4)) AS Fee_Materail, CAST(a.Fee_Labor AS decimal(16, 4)) AS Fee_Labor, 
+                CAST(a.Fee_Add AS decimal(16, 4)) AS Fee_Add, CAST(a.WarrantyChargeValue AS decimal(16, 4)) 
+                AS WarrantyChargeValue, CAST(a.ChargeValue AS decimal(16, 4)) AS ChargeValue, CAST(ISNULL(a.Fee_Materail, 0) 
+                + ISNULL(a.Fee_Labor, 0) + ISNULL(a.Fee_Add, 0) AS decimal(16, 4)) AS Fee_Total, CAST(a.Profit AS decimal(16, 4)) 
+                AS Profit, a.WarrantyEndDate, a.WarrantyBound, a.GoodsTo, a.ConnectDate, 
+                CASE WHEN a.bCall = 0 THEN '' WHEN a.bCall = 1 THEN '√' ELSE '☆' END AS bCall, 
+                CASE WHEN a.SmsStatus = 0 THEN '' ELSE '√' END AS SmsStatus, a.ConfirmDate, c.CorpName, q.Coordinates, 
+                c.LinkMan AS CorpLinkMan, c.Tel AS CorpTel, c.Fax AS CorpFax, c.Zip AS CorpZip, c.Area AS CorpArea, c.Adr AS CorpAdr, 
+                CAST(a.InCash AS decimal(16, 4)) AS InCash, r._Name AS _PRI, a.ContractNO, s._Name AS SndStyle, a.SndStyleID, 
+                a.ServiceLevelID, r.ResponseTime, r.RepairTime, a.DeviceNO, a.PreMoney, CAST(ISNULL(a.Fee_Materail, 0) 
+                + ISNULL(a.Fee_Labor, 0) + ISNULL(a.Fee_Add, 0) - ISNULL(a.PreMoney, 0) AS decimal(16, 4)) AS RealMoney, 
+                dbo.fw_getdo(a.ID) AS TakeSteps, dbo.fw_getqty(a.ID) AS QtyType, dbo.fw_getqty2(a.ID) AS OldQtyType, 
+                ISNULL(x.HaveAmount, 0) AS HaveAmount, ISNULL(x.NotChargeAmount, 0) AS NotChargeAmount, a.Path, 
+                CASE WHEN a.bAgain = 0 THEN '' ELSE '√' END AS bAgain, dbo.fw_getdeduct(a.ID) AS Deduct, v._Date AS VisitDate, 
+                v.CusName AS VisitCusName, v.Opinion AS VisitOpinon, v.Remark AS VisitRemark, v.Operator AS VisitOperator, 
+                v.VisitStyle, v.HFQK, v.ID AS VisitID, a.cmbProver, a.cmbCity, a.BranchName, a.BranchRatio, 
+                CASE a.BranchRatioType WHEN 'jsfw' THEN '技术服务' WHEN 'zzsxx' THEN '增值税销项' WHEN 'zzsjx' THEN '增值税进项'
+                 WHEN 'ptfp' THEN '普通发票' ELSE '无' END AS BranchRatioType
+FROM      dbo.ServicesList AS a LEFT OUTER JOIN
+                dbo.BranchList AS b ON a.TakeOverID = b.ID LEFT OUTER JOIN
+                dbo.BranchList AS c ON a.DisposalID = c.ID LEFT OUTER JOIN
+                dbo.ServicesType AS d ON a.TypeID = d.ID LEFT OUTER JOIN
+                dbo.TakeStyle AS e ON a.TakeStyleID = e.ID LEFT OUTER JOIN
+                dbo.StaffList AS f ON a.OperatorID = f.ID LEFT OUTER JOIN
+                dbo.StaffList AS g ON a.PersonID = g.ID LEFT OUTER JOIN
+                dbo.StaffList AS h ON a.StartOperatorID = h.ID LEFT OUTER JOIN
+                dbo.StaffList AS i ON a.PayeeOperID = i.ID LEFT OUTER JOIN
+                dbo.StaffList AS j ON a.ChkOperatorID = j.ID LEFT OUTER JOIN
+                dbo.StaffList AS k ON a.BackSeeOperID = k.ID LEFT OUTER JOIN
+                dbo.ProductClass AS pc ON a.ProductClassID = pc.ID LEFT OUTER JOIN
+                dbo.ProductBrand AS pb ON a.ProductBrandID = pb.ID LEFT OUTER JOIN
+                dbo.ProductModel AS pm ON a.ProductModelID = pm.ID LEFT OUTER JOIN
+                dbo.Warranty AS m ON a.WarrantyID = m.ID LEFT OUTER JOIN
+                dbo.SupplierList AS n ON a.WarrantyChargeCorpID = n.ID LEFT OUTER JOIN
+                dbo.CustomerList AS q ON a.CustomerID = q.ID LEFT OUTER JOIN
+                dbo.CustomerFrom AS cf ON q.FromID = cf.ID LEFT OUTER JOIN
+                dbo.CustomerClass AS cc ON q.ClassID = cc.ID LEFT OUTER JOIN
+                dbo.ServiceLevel AS r ON a.ServiceLevelID = r.ID LEFT OUTER JOIN
+                dbo.ShippingStyle AS s ON a.SndStyleID = s.ID LEFT OUTER JOIN
+                dbo.ArrearageDetail AS x ON a.ID = x.CiteID AND x.RecType = '完工结算' LEFT OUTER JOIN
+                dbo.fw_visitlist AS v ON a.ID = v.BillID
+
+添加新表  用户积分表
+	CREATE TABLE [dbo].[tmp_ms_xx_Cd_UserInt] (
+    [ID]       INT            IDENTITY (1, 1) NOT NULL,
+    [UserID]   INT            NOT NULL,
+    [IntType]  VARCHAR (10)   NULL,
+    [IntQty]   DECIMAL (5, 1) NULL,
+    [Datetime] DATETIME       NULL,
+    [UpUser]   VARCHAR (10)   NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+添加新表 产品表
+CREATE TABLE [dbo].[Cd_Product](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ProName] [nvarchar](50) NULL,
+	[ProSeri] [nvarchar](50) NULL,
+	[ProModel] [nvarchar](50) NULL,
+	[ProDescribe] [nvarchar](50) NULL,
+
+添加新表  产品图片表
+CREATE TABLE [dbo].[Cd_ProImg](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ProID] [int] NULL,
+	[ImgName] [nvarchar](50) NULL,
+	[ImgSrc] [nvarchar](500) NULL,
+
+添加新表  产品文件表
+CREATE TABLE [dbo].[Cd_ProductFiles](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ProID] [int] NULL,
+	[FileName] [nvarchar](50) NULL,
+	[FileSrc] [nvarchar](500) NULL,
+	[FileType] [varbinary](50) NULL,
+
+	fw_service 视图
+
+	SELECT   a.ID, a.BillID, b._Name AS TakeDept, c._Name AS DisposalDept, a.curStatus, a.bTake, a.PayeeOperID, a.ChkOperatorID, 
+                a.BackSeeOperID, a.Time_Complete, a.TakeOverID, a.DisposalID, d._Name AS ServicesType, e._Name AS TakeStyle, 
+                a.TakeStyleID, a.TypeID, a.IsDismissed, CONVERT(varchar,
+                    (SELECT   COUNT(1) AS Expr1
+                     FROM      dbo.ServiceOffer
+                     WHERE   (BillID = a.ID) AND (bCusConf = 1))) + '/' + CONVERT(varchar,
+                    (SELECT   COUNT(1) AS Expr1
+                     FROM      dbo.ServiceOffer AS ServiceOffer_1
+                     WHERE   (BillID = a.ID))) AS OfferConf, CONVERT(varchar,
+                    (SELECT   COUNT(1) AS Expr1
+                     FROM      dbo.ServicesItem
+                     WHERE   (BillID = a.ID) AND (bComplete = 1))) + '/' + CONVERT(varchar,
+                    (SELECT   COUNT(1) AS Expr1
+                     FROM      dbo.ServicesItem AS ServicesItem_1
+                     WHERE   (BillID = a.ID))) AS SerCount, a.Time_Make, a.Time_TakeOver, a.Time_Start, a.Time_Over, 
+                CONVERT(char(10), a.Time_Payee, 12) AS Time_Payee, a.OperatorID, a.Time_BackSee, a.Time_Close, 
+                f._Name AS Operator, g._Name AS Person, a.PersonID, h._Name AS StartOperator, i._Name AS PayeeOper, 
+                j._Name AS ChkOperator, a.ProductClassID, a.ProductBrandID, a.ProductModelID, k._Name AS BackSeeOper, 
+                q._Name AS CustomerName, q.BranchID, cf._Name AS CustomerFrom, cc._Name AS CustomerClass, q.userdef1, 
+                q.userdef2, q.userdef3, q.userdef4, q.userdef5, q.userdef6, a.LinkMan, a.Tel, a.UsePerson, a.UsePersonDept, 
+                a.UsePersonTel, a.Area, a.Adr, a.ProductSN1, a.ProductSN2, dbo.getTec(a.ID) AS FinTec, CONVERT(char(10), a.BuyDate, 
+                14) AS BuyDate, a.BuyFrom, pc._Name AS ProductClass, pm._Name AS ProductModel, pb._Name AS ProductBrand, 
+                a.Aspect, a.CusType, a.WarrantyID, a.Accessory, a.Fault, m._Name AS Warranty, a.BuyInvoice, a.dPoint, q.SellerID, 
+                CASE WHEN a.curStatus = '已结束' OR
+                a.curStatus = '已取消' THEN dbo.fw_getspendingdate(a.Time_TakeOver,
+                    (SELECT   TOP 1 _Date
+                     FROM      ServicesProcess
+                     WHERE   BillID = a.ID AND DoStyle = '完成关闭'
+                     ORDER BY ID DESC)) ELSE dbo.fw_getspendingdate(a.Time_TakeOver, getdate()) END AS Speding, 
+                CASE WHEN a.curStatus = '已结束' OR
+                a.curStatus = '已取消' THEN (CAST
+                    ((SELECT   datediff(d, a.Time_TakeOver,
+                                          (SELECT   TOP 1 _Date
+                                           FROM      ServicesProcess
+                                           WHERE   BillID = a.ID AND DoStyle = '完成关闭'
+                                           ORDER BY ID DESC))) AS int)) ELSE (CAST
+                    ((SELECT   datediff(d, a.Time_TakeOver, getdate())) AS int)) END AS Time, CASE WHEN a.curStatus = '已结束' OR
+                a.curStatus = '已取消' THEN (CAST
+                    ((SELECT   datediff(ss, a.Time_TakeOver,
+                                          (SELECT   TOP 1 _Date
+                                           FROM      ServicesProcess
+                                           WHERE   BillID = a.ID AND DoStyle = '完成关闭'
+                                           ORDER BY ID DESC))) AS int)) ELSE (CAST
+                    ((SELECT   datediff(ss, a.Time_TakeOver, getdate())) AS int)) END AS Timeout, 
+                CASE WHEN a.bRepair = 0 THEN '' ELSE '√' END AS bRepair, a.SaveID, a.SupplierID, n._Name AS ChargeCorp, 
+                a.DisposalOper, a.SubscribeTime, CONVERT(char(10), a.SubscribeConnectTime, 12) AS SubscribeConnectTime, 
+                CAST(a.SubscribePrice AS decimal(16, 4)) AS SubscribePrice, CAST(a.PreCharge AS decimal(16, 4)) AS PreCharge, 
+                a.RepairStatus, 
+                CASE WHEN a.RepairType = 1 THEN '委外送修' ELSE CASE WHEN a.RepairType = 2 THEN '内部送修' ELSE '' END END AS
+                 RepairType, a.RepairCorpID, CASE WHEN a.RepairType = 1 THEN
+                    (SELECT   _Name
+                     FROM      SupplierList x
+                     WHERE   x.[ID] = a.RepairCorpID) ELSE CASE WHEN a.RepairType = 2 THEN
+                    (SELECT   _Name
+                     FROM      BranchList m
+                     WHERE   m.[ID] = a.RepairCorpID) ELSE '' END END AS RepairCorp, a.Remark, a.CancelReason, a.RepairSndDate, 
+                a.RepairRcvDate, CAST(a.RepairCost AS decimal(16, 4)) AS RepairCost, a.CustomerID, ISNULL(a.WarrantyChargeCorpID, 
+                0) AS WarrantyChargeCorpID, a.PostNO, CAST(a.Postage AS decimal(16, 4)) AS Postage, 
+                CAST(a.MaterailCost AS decimal(16, 4)) AS MaterailCost, CAST(a.ExtraCost AS decimal(16, 4)) AS ExtraCost, 
+                CAST(a.Fee_Materail AS decimal(16, 4)) AS Fee_Materail, CAST(a.Fee_Labor AS decimal(16, 4)) AS Fee_Labor, 
+                CAST(a.Fee_Add AS decimal(16, 4)) AS Fee_Add, CAST(a.WarrantyChargeValue AS decimal(16, 4)) 
+                AS WarrantyChargeValue, CAST(a.ChargeValue AS decimal(16, 4)) AS ChargeValue, CAST(ISNULL(a.Fee_Materail, 0) 
+                + ISNULL(a.Fee_Labor, 0) + ISNULL(a.Fee_Add, 0) AS decimal(16, 4)) AS Fee_Total, CAST(a.Profit AS decimal(16, 4)) 
+                AS Profit, a.WarrantyEndDate, a.WarrantyBound, a.GoodsTo, a.ConnectDate, 
+                CASE WHEN a.bCall = 0 THEN '' WHEN a.bCall = 1 THEN '√' ELSE '☆' END AS bCall, 
+                CASE WHEN a.SmsStatus = 0 THEN '' ELSE '√' END AS SmsStatus, a.ConfirmDate, c.CorpName, q.Coordinates, 
+                c.LinkMan AS CorpLinkMan, c.Tel AS CorpTel, c.Fax AS CorpFax, c.Zip AS CorpZip, c.Area AS CorpArea, c.Adr AS CorpAdr, 
+                CAST(a.InCash AS decimal(16, 4)) AS InCash, r._Name AS _PRI, a.ContractNO, s._Name AS SndStyle, a.SndStyleID, 
+                a.ServiceLevelID, r.ResponseTime, r.RepairTime, a.DeviceNO, a.PreMoney, CAST(ISNULL(a.Fee_Materail, 0) 
+                + ISNULL(a.Fee_Labor, 0) + ISNULL(a.Fee_Add, 0) - ISNULL(a.PreMoney, 0) AS decimal(16, 4)) AS RealMoney, 
+                dbo.fw_getdo(a.ID) AS TakeSteps, dbo.fw_getqty(a.ID) AS QtyType, dbo.fw_getqty2(a.ID) AS OldQtyType, 
+                ISNULL(x.HaveAmount, 0) AS HaveAmount, ISNULL(x.NotChargeAmount, 0) AS NotChargeAmount, a.Path, 
+                CASE WHEN a.bAgain = 0 THEN '' ELSE '√' END AS bAgain, dbo.fw_getdeduct(a.ID) AS Deduct, v._Date AS VisitDate, 
+                v.CusName AS VisitCusName, v.Opinion AS VisitOpinon, v.Remark AS VisitRemark, v.Operator AS VisitOperator, 
+                v.VisitStyle, v.HFQK, v.ID AS VisitID, a.cmbProver, a.cmbCity, a.BranchName, a.BranchRatio, a.BranchRatioType
+FROM      dbo.ServicesList AS a LEFT OUTER JOIN
+                dbo.BranchList AS b ON a.TakeOverID = b.ID LEFT OUTER JOIN
+                dbo.BranchList AS c ON a.DisposalID = c.ID LEFT OUTER JOIN
+                dbo.ServicesType AS d ON a.TypeID = d.ID LEFT OUTER JOIN
+                dbo.TakeStyle AS e ON a.TakeStyleID = e.ID LEFT OUTER JOIN
+                dbo.StaffList AS f ON a.OperatorID = f.ID LEFT OUTER JOIN
+                dbo.StaffList AS g ON a.PersonID = g.ID LEFT OUTER JOIN
+                dbo.StaffList AS h ON a.StartOperatorID = h.ID LEFT OUTER JOIN
+                dbo.StaffList AS i ON a.PayeeOperID = i.ID LEFT OUTER JOIN
+                dbo.StaffList AS j ON a.ChkOperatorID = j.ID LEFT OUTER JOIN
+                dbo.StaffList AS k ON a.BackSeeOperID = k.ID LEFT OUTER JOIN
+                dbo.ProductClass AS pc ON a.ProductClassID = pc.ID LEFT OUTER JOIN
+                dbo.ProductBrand AS pb ON a.ProductBrandID = pb.ID LEFT OUTER JOIN
+                dbo.ProductModel AS pm ON a.ProductModelID = pm.ID LEFT OUTER JOIN
+                dbo.Warranty AS m ON a.WarrantyID = m.ID LEFT OUTER JOIN
+                dbo.SupplierList AS n ON a.WarrantyChargeCorpID = n.ID LEFT OUTER JOIN
+                dbo.CustomerList AS q ON a.CustomerID = q.ID LEFT OUTER JOIN
+                dbo.CustomerFrom AS cf ON q.FromID = cf.ID LEFT OUTER JOIN
+                dbo.CustomerClass AS cc ON q.ClassID = cc.ID LEFT OUTER JOIN
+                dbo.ServiceLevel AS r ON a.ServiceLevelID = r.ID LEFT OUTER JOIN
+                dbo.ShippingStyle AS s ON a.SndStyleID = s.ID LEFT OUTER JOIN
+                dbo.ArrearageDetail AS x ON a.ID = x.CiteID AND x.RecType = '完工结算' LEFT OUTER JOIN
+                dbo.fw_visitlist AS v ON a.ID = v.BillID
+
+	视图 fw_services
+	
+	a.BranchName, a.Branchratio, 
+                CASE a.BranchRatioType WHEN 'jsfw' THEN '技术服务' WHEN 'zzsxx' THEN '增值税销项' WHEN 'zzsjx' THEN '增值税进项'
+                 WHEN 'ptfp' THEN '普通发票' ELSE '无' END AS BranchRatioType
+
+Goods 表   增加 PCB列
+ck_goods 视图  pcb
+
+selldetail  添加字段 Huoqi
+sellplandetail 添加字段 Huoqi
+xs_sellplandetail Huoqi
+xs_selldetail Huoqi
+
+StockOut 
+SendName	varchar(50)	Checked
+SendNum	varchar(50)	Checked
+SendMoney	varchar(50)	Checked
+StockIn
+SendName	varchar(50)	Checked
+SendNum	varchar(50)	Checked
+SendMoney	varchar(50)	Checked
+
+custList
+pay_info	varchar(50)	Checked
+pay_type	varchar(50)	Checked
+pay_date	varchar(50)	Checked
+pay_yanshou	varchar(50)	Checked
+pay_tiexi	varchar(50)	Checked
+pay_fapiao	varchar(50)	Checked
+pay_ren	varchar(50)	Checked
+
+
+
