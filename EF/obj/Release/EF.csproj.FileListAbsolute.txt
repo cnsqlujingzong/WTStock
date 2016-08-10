@@ -1,0 +1,14 @@
+E:\workspace\WTStock\EF\bin\Release\EF.dll.config
+E:\workspace\WTStock\EF\bin\Release\EF.dll
+E:\workspace\WTStock\EF\bin\Release\EF.pdb
+E:\workspace\WTStock\EF\bin\Release\DAL.dll
+E:\workspace\WTStock\EF\bin\Release\Model.dll
+E:\workspace\WTStock\EF\bin\Release\DB.dll
+E:\workspace\WTStock\EF\bin\Release\Library.dll
+E:\workspace\WTStock\EF\bin\Release\DAL.pdb
+E:\workspace\WTStock\EF\bin\Release\Model.pdb
+E:\workspace\WTStock\EF\bin\Release\DB.pdb
+E:\workspace\WTStock\EF\bin\Release\Library.pdb
+E:\workspace\WTStock\EF\obj\Release\EF.csprojResolveAssemblyReference.cache
+E:\workspace\WTStock\EF\obj\Release\EF.dll
+E:\workspace\WTStock\EF\obj\Release\EF.pdb
