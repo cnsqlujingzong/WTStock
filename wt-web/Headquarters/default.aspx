@@ -665,6 +665,7 @@ var obj = document.getElementById("divTitleName");
 			<a href="#"  onclick="ShowDialog(600, 310, 'Tool/OnlineList.aspx', '在线用户');">在线用户</a>
 	  <a <%=menu[205] %> href="#" onclick="ShowDialog(800, 500, 'CDIY/UserInter.aspx', '员工打分');">员工打分</a>
 		 <a <%=menu[205] %> href="../CodingPages/Cd_ProType/ProTypeList.aspx" target="_blank">产品仓库</a>
+             <a href="../CodingPages/wtlog.aspx" target="_blank">操作日志</a>
             	</div>
     </div>
     

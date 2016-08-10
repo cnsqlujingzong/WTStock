@@ -19,3 +19,10 @@ F:\workspace\WTStock\DB\bin\Debug\Library.pdb
 F:\workspace\WTStock\DB\obj\Debug\DB.csprojResolveAssemblyReference.cache
 F:\workspace\WTStock\DB\obj\Debug\DB.dll
 F:\workspace\WTStock\DB\obj\Debug\DB.pdb
+E:\workspace\WTStock\DB\bin\Debug\DB.dll
+E:\workspace\WTStock\DB\bin\Debug\DB.pdb
+E:\workspace\WTStock\DB\bin\Debug\Library.dll
+E:\workspace\WTStock\DB\bin\Debug\Library.pdb
+E:\workspace\WTStock\DB\obj\Debug\DB.csprojResolveAssemblyReference.cache
+E:\workspace\WTStock\DB\obj\Debug\DB.dll
+E:\workspace\WTStock\DB\obj\Debug\DB.pdb

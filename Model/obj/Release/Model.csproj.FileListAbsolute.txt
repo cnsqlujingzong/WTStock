@@ -11,3 +11,8 @@ E:\workspace\st\源码20160413等2个文件\源码20160413\Model\obj\Release\Mod
 E:\workspace\st\源码20160413等2个文件\源码20160413\Model\obj\Release\Model.pdb
 E:\workspace\st\源码20160413等2个文件\源码20160413\Model\bin\Debug\Model.dll
 E:\workspace\st\源码20160413等2个文件\源码20160413\Model\bin\Debug\Model.pdb
+E:\workspace\WTStock\Model\bin\Debug\Model.dll
+E:\workspace\WTStock\Model\bin\Debug\Model.pdb
+E:\workspace\WTStock\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+E:\workspace\WTStock\Model\obj\Release\Model.dll
+E:\workspace\WTStock\Model\obj\Release\Model.pdb

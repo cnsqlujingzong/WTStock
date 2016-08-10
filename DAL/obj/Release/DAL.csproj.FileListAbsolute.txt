@@ -14,3 +14,14 @@ E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\Library
 E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\DB.pdb
 E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\Model.pdb
 E:\workspace\st\源码20160413等2个文件\源码20160413\DAL\bin\Debug\Library.pdb
+E:\workspace\WTStock\DAL\bin\Debug\DAL.dll
+E:\workspace\WTStock\DAL\bin\Debug\DAL.pdb
+E:\workspace\WTStock\DAL\bin\Debug\DB.dll
+E:\workspace\WTStock\DAL\bin\Debug\Model.dll
+E:\workspace\WTStock\DAL\bin\Debug\Library.dll
+E:\workspace\WTStock\DAL\bin\Debug\DB.pdb
+E:\workspace\WTStock\DAL\bin\Debug\Model.pdb
+E:\workspace\WTStock\DAL\bin\Debug\Library.pdb
+E:\workspace\WTStock\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+E:\workspace\WTStock\DAL\obj\Release\DAL.dll
+E:\workspace\WTStock\DAL\obj\Release\DAL.pdb

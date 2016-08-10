@@ -10,3 +10,9 @@ F:\workspace\WTStock\WeixinAPP\STWebAPP\BussModule\bin\Debug\log4net.dll
 F:\workspace\WTStock\WeixinAPP\STWebAPP\BussModule\obj\Debug\BussModule.csprojResolveAssemblyReference.cache
 F:\workspace\WTStock\WeixinAPP\STWebAPP\BussModule\obj\Debug\BussModule.dll
 F:\workspace\WTStock\WeixinAPP\STWebAPP\BussModule\obj\Debug\BussModule.pdb
+E:\workspace\WTStock\WeixinAPP\STWebAPP\BussModule\bin\Debug\BussModule.dll
+E:\workspace\WTStock\WeixinAPP\STWebAPP\BussModule\bin\Debug\BussModule.pdb
+E:\workspace\WTStock\WeixinAPP\STWebAPP\BussModule\bin\Debug\log4net.dll
+E:\workspace\WTStock\WeixinAPP\STWebAPP\BussModule\obj\Debug\BussModule.csprojResolveAssemblyReference.cache
+E:\workspace\WTStock\WeixinAPP\STWebAPP\BussModule\obj\Debug\BussModule.dll
+E:\workspace\WTStock\WeixinAPP\STWebAPP\BussModule\obj\Debug\BussModule.pdb

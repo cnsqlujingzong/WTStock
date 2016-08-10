@@ -15,3 +15,10 @@ E:\workspace\st\源码20160413等2个文件\源码20160413\DB\bin\Debug\DB.dll
 E:\workspace\st\源码20160413等2个文件\源码20160413\DB\bin\Debug\DB.pdb
 E:\workspace\st\源码20160413等2个文件\源码20160413\DB\bin\Debug\Library.dll
 E:\workspace\st\源码20160413等2个文件\源码20160413\DB\bin\Debug\Library.pdb
+E:\workspace\WTStock\DB\bin\Debug\DB.dll
+E:\workspace\WTStock\DB\bin\Debug\DB.pdb
+E:\workspace\WTStock\DB\bin\Debug\Library.dll
+E:\workspace\WTStock\DB\bin\Debug\Library.pdb
+E:\workspace\WTStock\DB\obj\Release\DB.csprojResolveAssemblyReference.cache
+E:\workspace\WTStock\DB\obj\Release\DB.dll
+E:\workspace\WTStock\DB\obj\Release\DB.pdb

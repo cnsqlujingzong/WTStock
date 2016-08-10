@@ -343,11 +343,21 @@ public partial class Headquarters_Sell_SchSell : Page, IRequiresSessionState
                     }
                     summary = summary.Substring(0, summary.Length - 1);
                 }
-
-                rcvSndInfo.CorpName = spn.Rows[0]["_Name"].ToString();//关联客户：武汉特斯拉电气有限公司
-                rcvSndInfo.LinkMan = spn.Rows[0]["LinkMan"].ToString();
-                rcvSndInfo.Tel = spn.Rows[0]["Tel"].ToString();
-                rcvSndInfo.Adr = spn.Rows[0]["Adr"].ToString();
+                if (string.IsNullOrEmpty(spn.Rows[0]["isDai"].ToString()) || spn.Rows[0]["isDai"].ToString()=="0")
+                {
+                    rcvSndInfo.CorpName = spn.Rows[0]["_Name"].ToString();
+                    rcvSndInfo.LinkMan = spn.Rows[0]["LinkMan"].ToString();
+                    rcvSndInfo.Tel = spn.Rows[0]["Tel"].ToString();
+                    rcvSndInfo.Adr = spn.Rows[0]["Adr"].ToString();
+                }
+                if (spn.Rows[0]["isDai"].ToString() == "0")
+                {
+                    rcvSndInfo.CorpName = spn.Rows[0]["_Name2"].ToString();
+                    rcvSndInfo.LinkMan = spn.Rows[0]["LinkMan2"].ToString();
+                    rcvSndInfo.Tel = spn.Rows[0]["Tel2"].ToString();
+                    rcvSndInfo.Adr = spn.Rows[0]["Adr2"].ToString();
+                }
+             
                 rcvSndInfo.Zip = "";
                 rcvSndInfo.Summary = summary;
                 rcvSndInfo.SndStyleID = 1;

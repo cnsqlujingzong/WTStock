@@ -13,3 +13,7 @@ F:\workspace\WTStock\Model\bin\Debug\Model.pdb
 F:\workspace\WTStock\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 F:\workspace\WTStock\Model\obj\Debug\Model.dll
 F:\workspace\WTStock\Model\obj\Debug\Model.pdb
+E:\workspace\WTStock\Model\bin\Debug\Model.dll
+E:\workspace\WTStock\Model\bin\Debug\Model.pdb
+E:\workspace\WTStock\Model\obj\Debug\Model.dll
+E:\workspace\WTStock\Model\obj\Debug\Model.pdb

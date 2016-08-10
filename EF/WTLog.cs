@@ -22,6 +22,8 @@ namespace EF
            log.common = common;
            log.BillID = billID;
            log.opt = opt;
+           log.Dtime = DateTime.Now;
+           log.Dtime2 = DateTime.Now;
            bll.Add(log);       
        }
     }
