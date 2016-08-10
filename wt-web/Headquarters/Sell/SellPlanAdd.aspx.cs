@@ -23,27 +23,27 @@ public partial class Headquarters_Sell_SellPlanAdd : Page, IRequiresSessionState
 			if (this.ViewState["List"] == null)
 			{
 				DataTable dataTable = new DataTable();
-				dataTable.Columns.Add(new DataColumn("StockName", typeof(string)));
-				dataTable.Columns.Add(new DataColumn("GoodsNO", typeof(string)));
-				dataTable.Columns.Add(new DataColumn("_Name", typeof(string)));
-				dataTable.Columns.Add(new DataColumn("Spec", typeof(string)));
-				dataTable.Columns.Add(new DataColumn("ProductBrand", typeof(string)));
-				dataTable.Columns.Add(new DataColumn("Unit", typeof(string)));
-				dataTable.Columns.Add(new DataColumn("Qty", typeof(decimal)));
-				dataTable.Columns.Add(new DataColumn("Price", typeof(decimal)));
-				dataTable.Columns.Add(new DataColumn("Dis", typeof(decimal)));
-				dataTable.Columns.Add(new DataColumn("Total", typeof(decimal)));
-				dataTable.Columns.Add(new DataColumn("MainTenancePeriod", typeof(string)));
-				dataTable.Columns.Add(new DataColumn("Remark", typeof(string)));
-				dataTable.Columns.Add(new DataColumn("StockID", typeof(int)));
-				dataTable.Columns.Add(new DataColumn("GoodsID", typeof(int)));
-				dataTable.Columns.Add(new DataColumn("UnitID", typeof(int)));
-				dataTable.Columns.Add(new DataColumn("TaxRate", typeof(decimal)));
-				dataTable.Columns.Add(new DataColumn("TaxAmount", typeof(decimal)));
-				dataTable.Columns.Add(new DataColumn("GoodsAmount", typeof(decimal)));
-                dataTable.Columns.Add(new DataColumn("Huoqi", typeof(string)));
-                dataTable.Columns.Add(new DataColumn("chengse", typeof(string)));
-                dataTable.Columns.Add(new DataColumn("baozhuang", typeof(string)));
+				dataTable.Columns.Add(new DataColumn("StockName", typeof(string)));//1
+				dataTable.Columns.Add(new DataColumn("GoodsNO", typeof(string)));//2
+				dataTable.Columns.Add(new DataColumn("_Name", typeof(string)));//3
+				dataTable.Columns.Add(new DataColumn("Spec", typeof(string)));//4
+				dataTable.Columns.Add(new DataColumn("ProductBrand", typeof(string)));//5
+				dataTable.Columns.Add(new DataColumn("Unit", typeof(string)));//6
+				dataTable.Columns.Add(new DataColumn("Qty", typeof(decimal)));//7
+				dataTable.Columns.Add(new DataColumn("Price", typeof(decimal)));//8
+				dataTable.Columns.Add(new DataColumn("Dis", typeof(decimal)));//9
+				dataTable.Columns.Add(new DataColumn("Total", typeof(decimal)));//10
+				dataTable.Columns.Add(new DataColumn("MainTenancePeriod", typeof(string)));//11
+				dataTable.Columns.Add(new DataColumn("Remark", typeof(string)));//12
+				dataTable.Columns.Add(new DataColumn("StockID", typeof(int)));//13
+				dataTable.Columns.Add(new DataColumn("GoodsID", typeof(int)));//14
+				dataTable.Columns.Add(new DataColumn("UnitID", typeof(int)));//15
+				dataTable.Columns.Add(new DataColumn("TaxRate", typeof(decimal)));//16
+				dataTable.Columns.Add(new DataColumn("TaxAmount", typeof(decimal)));//17
+				dataTable.Columns.Add(new DataColumn("GoodsAmount", typeof(decimal)));//18
+                dataTable.Columns.Add(new DataColumn("Huoqi", typeof(string)));//19
+                dataTable.Columns.Add(new DataColumn("chengse", typeof(string)));//20
+                dataTable.Columns.Add(new DataColumn("baozhuang", typeof(string)));//21
 				this.ViewState["List"] = dataTable;
 			}
 			return (DataTable)this.ViewState["List"];

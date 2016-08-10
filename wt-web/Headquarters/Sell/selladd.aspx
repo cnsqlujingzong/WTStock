@@ -198,7 +198,7 @@
                         </asp:TemplateField>
                             <asp:TemplateField HeaderText="成色">
                             <ItemTemplate>
-                                <asp:DropDownList ID="ddl_chengse" runat="server">
+                                <asp:DropDownList ID="ddl_chengse" runat="server" SelectedValue='<%# string.IsNullOrEmpty(Eval("chengse").ToString())?"99成":Eval("chengse") %>'>
                                     <asp:ListItem Value="99成">99成</asp:ListItem>
                                      <asp:ListItem Value="原装">原装</asp:ListItem>
                                      <asp:ListItem Value="拆机">拆机</asp:ListItem>  
@@ -208,7 +208,7 @@
                         </asp:TemplateField>
                                <asp:TemplateField HeaderText="包装">
                             <ItemTemplate>
-                               <asp:DropDownList ID="ddl_baozhuang" runat="server">
+                               <asp:DropDownList ID="ddl_baozhuang" runat="server" SelectedValue='<%# string.IsNullOrEmpty( Eval("baozhuang").ToString())?"新的":Eval("baozhuang") %>'>
                                       <asp:ListItem Value="新的">新的</asp:ListItem>
                                      <asp:ListItem Value="原装">原装</asp:ListItem>
                                      <asp:ListItem Value="普通">普通</asp:ListItem>  
