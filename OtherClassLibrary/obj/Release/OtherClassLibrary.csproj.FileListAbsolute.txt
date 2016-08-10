@@ -21,16 +21,3 @@ E:\workspace\st\源码20160413等2个文件\源码20160413\OtherClassLibrary\bin
 E:\workspace\st\源码20160413等2个文件\源码20160413\OtherClassLibrary\bin\Debug\Model.pdb
 E:\workspace\st\源码20160413等2个文件\源码20160413\OtherClassLibrary\bin\Debug\DB.pdb
 E:\workspace\st\源码20160413等2个文件\源码20160413\OtherClassLibrary\bin\Debug\Library.pdb
-E:\workspace\WTStock\OtherClassLibrary\bin\Debug\OtherClassLibrary.dll
-E:\workspace\WTStock\OtherClassLibrary\bin\Debug\OtherClassLibrary.pdb
-E:\workspace\WTStock\OtherClassLibrary\bin\Debug\DAL.dll
-E:\workspace\WTStock\OtherClassLibrary\bin\Debug\Model.dll
-E:\workspace\WTStock\OtherClassLibrary\bin\Debug\DB.dll
-E:\workspace\WTStock\OtherClassLibrary\bin\Debug\Library.dll
-E:\workspace\WTStock\OtherClassLibrary\bin\Debug\DAL.pdb
-E:\workspace\WTStock\OtherClassLibrary\bin\Debug\Model.pdb
-E:\workspace\WTStock\OtherClassLibrary\bin\Debug\DB.pdb
-E:\workspace\WTStock\OtherClassLibrary\bin\Debug\Library.pdb
-E:\workspace\WTStock\OtherClassLibrary\obj\Release\OtherClassLibrary.csprojResolveAssemblyReference.cache
-E:\workspace\WTStock\OtherClassLibrary\obj\Release\OtherClassLibrary.dll
-E:\workspace\WTStock\OtherClassLibrary\obj\Release\OtherClassLibrary.pdb

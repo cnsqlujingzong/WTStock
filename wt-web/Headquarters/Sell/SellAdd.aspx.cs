@@ -108,8 +108,8 @@ public partial class Headquarters_Sell_SellAdd : Page, IRequiresSessionState
                             row[0x12] = decimal.Parse(table2.Rows[num2]["TaxAmount"].ToString());
                             row[0x13] = decimal.Parse(table2.Rows[num2]["GoodsAmount"].ToString());
                             row[0x14] = table2.Rows[num2]["Huoqi"].ToString();
-                            row[21] = table2.Rows[num2]["chengse"].ToString();
-                            row[22] = table2.Rows[num2]["baozhuang"].ToString();
+                            row[0x15] = table2.Rows[num2]["chengse"].ToString();
+                            row[0x16] = table2.Rows[num2]["baozhuang"].ToString();
                             this.tbInCash.Text = this.tbGoodsAmount.Text = Convert.ToDouble((decimal)(decimal.Parse(this.tbGoodsAmount.Text) + decimal.Parse(table2.Rows[num2]["GoodsAmount"].ToString()))).ToString("#0.00");
                             this.tbAQty.Text = Convert.ToDouble((decimal)(decimal.Parse(this.tbAQty.Text) + decimal.Parse(table2.Rows[num2]["Qty"].ToString()))).ToString("#0.00");
                             this.tbAmount.Text = Convert.ToDouble((decimal)(decimal.Parse(this.tbAmount.Text) + decimal.Parse(table2.Rows[num2]["Total"].ToString()))).ToString("#0.00");
@@ -1355,29 +1355,29 @@ public partial class Headquarters_Sell_SellAdd : Page, IRequiresSessionState
             if (this.ViewState["List"] == null)
             {
                 DataTable table = new DataTable();
-                table.Columns.Add(new DataColumn("StockName", typeof(string)));//0
-                table.Columns.Add(new DataColumn("GoodsNO", typeof(string)));//1
-                table.Columns.Add(new DataColumn("_Name", typeof(string)));//2
-                table.Columns.Add(new DataColumn("Spec", typeof(string)));//3
-                table.Columns.Add(new DataColumn("ProductBrand", typeof(string)));//4
-                table.Columns.Add(new DataColumn("Unit", typeof(string)));//5
-                table.Columns.Add(new DataColumn("Qty", typeof(decimal)));//6
-                table.Columns.Add(new DataColumn("Price", typeof(decimal)));//7
-                table.Columns.Add(new DataColumn("Dis", typeof(decimal)));//8
-                table.Columns.Add(new DataColumn("Total", typeof(decimal)));//9
-                table.Columns.Add(new DataColumn("SN", typeof(string)));//10
-                table.Columns.Add(new DataColumn("MainTenancePeriod", typeof(string)));//11
-                table.Columns.Add(new DataColumn("PeriodEnd", typeof(string)));//12
-                table.Columns.Add(new DataColumn("Remark", typeof(string)));//13
-                table.Columns.Add(new DataColumn("StockID", typeof(int)));//14
-                table.Columns.Add(new DataColumn("GoodsID", typeof(int)));//15
-                table.Columns.Add(new DataColumn("UnitID", typeof(int)));//16
-                table.Columns.Add(new DataColumn("TaxRate", typeof(decimal)));//17
-                table.Columns.Add(new DataColumn("TaxAmount", typeof(decimal)));//18
-                table.Columns.Add(new DataColumn("GoodsAmount", typeof(decimal)));//19
-                table.Columns.Add(new DataColumn("Huoqi", typeof(string)));//20
-                table.Columns.Add(new DataColumn("chengse", typeof(string)));//21
-                table.Columns.Add(new DataColumn("baozhuang", typeof(string)));//22
+                table.Columns.Add(new DataColumn("StockName", typeof(string)));
+                table.Columns.Add(new DataColumn("GoodsNO", typeof(string)));
+                table.Columns.Add(new DataColumn("_Name", typeof(string)));
+                table.Columns.Add(new DataColumn("Spec", typeof(string)));
+                table.Columns.Add(new DataColumn("ProductBrand", typeof(string)));
+                table.Columns.Add(new DataColumn("Unit", typeof(string)));
+                table.Columns.Add(new DataColumn("Qty", typeof(decimal)));
+                table.Columns.Add(new DataColumn("Price", typeof(decimal)));
+                table.Columns.Add(new DataColumn("Dis", typeof(decimal)));
+                table.Columns.Add(new DataColumn("Total", typeof(decimal)));
+                table.Columns.Add(new DataColumn("SN", typeof(string)));
+                table.Columns.Add(new DataColumn("MainTenancePeriod", typeof(string)));
+                table.Columns.Add(new DataColumn("PeriodEnd", typeof(string)));
+                table.Columns.Add(new DataColumn("Remark", typeof(string)));
+                table.Columns.Add(new DataColumn("StockID", typeof(int)));
+                table.Columns.Add(new DataColumn("GoodsID", typeof(int)));
+                table.Columns.Add(new DataColumn("UnitID", typeof(int)));
+                table.Columns.Add(new DataColumn("TaxRate", typeof(decimal)));
+                table.Columns.Add(new DataColumn("TaxAmount", typeof(decimal)));
+                table.Columns.Add(new DataColumn("GoodsAmount", typeof(decimal)));
+                table.Columns.Add(new DataColumn("Huoqi", typeof(string)));
+                table.Columns.Add(new DataColumn("chengse", typeof(string)));
+                table.Columns.Add(new DataColumn("baozhuang", typeof(string)));
                 this.ViewState["List"] = table;
             }
             return (DataTable)this.ViewState["List"];
