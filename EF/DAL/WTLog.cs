@@ -22,9 +22,9 @@ namespace Coding.Stock.DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into WTLog(");
-            strSql.Append("source,person,personID,BillID,decribe,common,logtime,Att1,Att2,Dtime,Dtime2)");
+            strSql.Append("source,person,personID,BillID,decribe,common,logtime,Att1,Att2,Dtime,Dtime2,opt)");
             strSql.Append(" values (");
-            strSql.Append("@source,@person,@personID,@BillID,@decribe,@common,@logtime,@Att1,@Att2,@Dtime,@Dtime2)");
+            strSql.Append("@source,@person,@personID,@BillID,@decribe,@common,@logtime,@Att1,@Att2,@Dtime,@Dtime2,@opt)");
             strSql.Append(";select @@IDENTITY");
             SqlParameter[] parameters = {
 					new SqlParameter("@source", SqlDbType.VarChar,50),
@@ -36,9 +36,10 @@ namespace Coding.Stock.DAL
                                 	new SqlParameter("@logtime", SqlDbType.DateTime),
                                     	new SqlParameter("@Att1", SqlDbType.NVarChar,50),
                                         	new SqlParameter("@Att2", SqlDbType.NVarChar,50),
-                                            	new SqlParameter("@Dtime", SqlDbType.DateTime),
-                                                	new SqlParameter("@opt", SqlDbType.VarChar,50),
-					new SqlParameter("@Dtime2", SqlDbType.DateTime)};
+                                            	new SqlParameter("@Dtime", SqlDbType.DateTime),                                                
+					new SqlParameter("@Dtime2", SqlDbType.DateTime),
+                                        	new SqlParameter("@opt", SqlDbType.VarChar,50)
+                                        };
             parameters[0].Value = model.source;
             parameters[1].Value = model.person;
             parameters[2].Value = model.personID;

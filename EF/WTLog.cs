@@ -18,10 +18,14 @@ namespace EF
            log.personID = System.Web.HttpContext.Current.Session["Session_wtUserID"] == null ? "-1" : System.Web.HttpContext.Current.Session["Session_wtUserID"].ToString();
            log.person = System.Web.HttpContext.Current.Session["Session_wtUser"] == null ? "离线用户" : System.Web.HttpContext.Current.Session["Session_wtUser"].ToString();
            log.logtime = DateTime.Now;
+           log.Dtime = DateTime.Now;
+           log.Dtime2 = DateTime.Now;
            log.decribe = decribe;
            log.common = common;
            log.BillID = billID;
            log.opt = opt;
+           log.Att1 = "";
+           log.Att2 = "";
            bll.Add(log);       
        }
     }
