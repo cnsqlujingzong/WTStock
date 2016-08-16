@@ -177,7 +177,9 @@ public partial class Headquarters_Services_SerMod : Page, IRequiresSessionState
                 CreatDropList(tb);
                 if (tb.Rows.Count > 0)
                 {
-                    ddl_branchFax.SelectedValue = dataTable.Rows[0]["BranchRatioType"].ToString() + "-" + dataTable.Rows[0]["BranchRatio"].ToString();
+                    //zzsjx-0.00
+                    ddl_branchFax.SelectedValue = model.BrandTaxRateType + "-" + (model.BrandTaxRate == 0 ? 0 : Math.Round(model.BrandTaxRate, 2));
+                        //dataTable.Rows[0]["BranchRatioType"].ToString() + "-" + Convert.ToDecimal(dataTable.Rows[0]["BranchRatio"]).ToString();
                 }
              
 				this.tbAdr.Text = dataTable.Rows[0]["Adr"].ToString();
@@ -1174,10 +1176,10 @@ public partial class Headquarters_Services_SerMod : Page, IRequiresSessionState
                 ddl_branchFax.Items.Clear();
                 string[] taxs = dataTable.Rows[0]["TR"].ToString().Split('-');
                 ListItem li0 = new ListItem("不含税", "no-0");
-                ListItem li1 = new ListItem("技术服务费：" + Math.Round(decimal.Parse(taxs[0]) * 100, 2) + "%", "jsfw-" + taxs[0]);
-                ListItem li2 = new ListItem("增值税销项：" + Math.Round(decimal.Parse(taxs[1]) * 100, 2) + "%", "zzsxx-" + taxs[1]);
-                ListItem li3 = new ListItem("增值税进项：" + Math.Round(decimal.Parse(taxs[2]) * 100, 2) + "%", "zzsjx-" + taxs[2]);
-                ListItem li4 = new ListItem("普通发票：" + Math.Round(decimal.Parse(taxs[3]) * 100, 2) + "%", "ptfp-" + taxs[3]);
+                ListItem li1 = new ListItem("技术服务费：" + Math.Round(decimal.Parse(taxs[0]) * 100, 2) + "%", "jsfw-" +Math.Round(Convert.ToDecimal(taxs[0]),2));
+                ListItem li2 = new ListItem("增值税销项：" + Math.Round(decimal.Parse(taxs[1]) * 100, 2) + "%", "zzsxx-" + Math.Round(Convert.ToDecimal(taxs[1]),2));
+                ListItem li3 = new ListItem("增值税进项：" + Math.Round(decimal.Parse(taxs[2]) * 100, 2) + "%", "zzsjx-" +Math.Round(Convert.ToDecimal( taxs[2]),2));
+                ListItem li4 = new ListItem("普通发票：" + Math.Round(decimal.Parse(taxs[3]) * 100, 2) + "%", "ptfp-" + Math.Round(Convert.ToDecimal(taxs[3]),2));
                 ddl_branchFax.Items.Add(li0);
                 ddl_branchFax.Items.Add(li1);
                 ddl_branchFax.Items.Add(li2);
@@ -1198,10 +1200,10 @@ public partial class Headquarters_Services_SerMod : Page, IRequiresSessionState
             ddl_branchFax.Items.Clear();
             string[] taxs = dataTable.Rows[0]["TR"].ToString().Split('-');
             ListItem li0 = new ListItem("不含税", "no-0");
-            ListItem li1 = new ListItem("技术服务费：" + Math.Round(decimal.Parse(taxs[0]) * 100, 2) + "%", "jsfw-" + taxs[0]);
-            ListItem li2 = new ListItem("增值税销项：" + Math.Round(decimal.Parse(taxs[1]) * 100, 2) + "%", "zzsxx-" + taxs[1]);
-            ListItem li3 = new ListItem("增值税进项：" + Math.Round(decimal.Parse(taxs[2]) * 100, 2) + "%", "zzsjx-" + taxs[2]);
-            ListItem li4 = new ListItem("普通发票：" + Math.Round(decimal.Parse(taxs[3]) * 100, 2) + "%", "ptfp-" + taxs[3]);
+            ListItem li1 = new ListItem("技术服务费：" + Math.Round(decimal.Parse(taxs[0]) * 100, 2) + "%", "jsfw-" + Math.Round(Convert.ToDecimal(taxs[0]), 2));
+            ListItem li2 = new ListItem("增值税销项：" + Math.Round(decimal.Parse(taxs[1]) * 100, 2) + "%", "zzsxx-" + Math.Round(Convert.ToDecimal(taxs[1]), 2));
+            ListItem li3 = new ListItem("增值税进项：" + Math.Round(decimal.Parse(taxs[2]) * 100, 2) + "%", "zzsjx-" + Math.Round(Convert.ToDecimal(taxs[2]), 2));
+            ListItem li4 = new ListItem("普通发票：" + Math.Round(decimal.Parse(taxs[3]) * 100, 2) + "%", "ptfp-" + Math.Round(Convert.ToDecimal(taxs[3]), 2));
             ddl_branchFax.Items.Add(li0);
             ddl_branchFax.Items.Add(li1);
             ddl_branchFax.Items.Add(li2);

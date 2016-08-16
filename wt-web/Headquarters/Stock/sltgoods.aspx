@@ -35,7 +35,7 @@
                 <asp:TextBox ID="tbCon" runat="server" onkeydown="EnterTextBoxSch(event, this);" CssClass="pink" ToolTip="输入查询关键字"></asp:TextBox>
             </td><td align="left">
                 <asp:Button ID="btnSch" runat="server" Text="查询" CssClass="bt1" UseSubmitBehavior="False" OnClick="btnSch_Click" />
-                <input id="btnNew" type="button" value="新建" class="bt1" onclick="parent.ShowDialog1(620, 425, 'Stock/GoodsAdd.aspx?f=1', '新建产品');"/>
+                <input id="btnNew" type="button" value="新建" class="bt1" onclick="parent.ShowDialog1(620, 500, 'Stock/GoodsAdd.aspx?f=1', '新建产品');"/>
                 </td>
              </tr>
             </table>   

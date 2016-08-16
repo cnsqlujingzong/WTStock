@@ -230,7 +230,7 @@ function ChkInput()
 function NewGoods()
 {
     var classid=$("hfClassID").value;
-    parent.ShowDialog(620, 460, 'Stock/GoodsAdd.aspx?classid='+classid, '新建产品');
+    parent.ShowDialog(620, 500, 'Stock/GoodsAdd.aspx?classid='+classid, '新建产品');
 }
 function ChkEditClass()
 {
